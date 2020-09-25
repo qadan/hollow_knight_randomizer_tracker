@@ -1,0 +1,112 @@
+keys:
+  city_crest:
+    description: False Knight Prize
+    display_name: City Crest
+    part_of: false_knight
+    qualified_name: City_Crest
+    waypoint: Crossroads
+  collectors_map:
+    access_rules:
+    - love_key,$BOSS,mantis_claw
+    - love_key,$BOSS,monarch_wings,SPICYSKIPS
+    description: Defeat the Collector
+    display_name: Collector's Map
+    qualified_name: Collector's_Map
+    waypoint: Tower_of_Love
+    x_coord: 3365
+    y_coord: 1509
+  elegant_key:
+    display_name: Elegant Key
+    part_of: sly_key
+    qualified_name: Elegant_Key
+  godtuner:
+    access_rules:
+    - simple_key:4
+    description: Open Godseeker's coffin
+    display_name: Godtuner
+    qualified_name: Godtuner
+    waypoint: Junk_Pit
+    x_coord: 1851
+    y_coord: 1932
+  kings_brand:
+    access_rules:
+    - $BOSS
+    description: Hornet 2 Prize
+    display_name: King's Brand
+    qualified_name: King's_Brand
+    waypoint: Cast_Off_Shell
+    x_coord: 4069
+    y_coord: 1703
+  love_key:
+    access_rules:
+    - ismas_tear
+    - SKIPACID
+    - SPICYSKIPS,mantis_claw,$DASH,monarch_wings,dashmaster
+    - SPICYSKIPS,mantis_claw,$DASH,monarch_wings,$AIRSTALL
+    - SPICYSKIPS,sharp_shadow,shade_cloak,monarch_wings
+    description: Deep in the Queen's Gardens
+    display_name: Love Key
+    qualified_name: Love_Key
+    waypoint: Bottom_Right_Queen's_Gardens
+    x_coord: 1105
+    y_coord: 1446
+  lumafly_lantern:
+    display_name: Lumafly Lantern
+    part_of: sly
+    qualified_name: Lumafly_Lantern
+  shopkeepers_key:
+    access_rules:
+    - mantis_claw
+    - monarch_wings
+    description: In the Crystal Peak Storerooms
+    display_name: Shopkeeper's Key
+    qualified_name: Shopkeeper's_Key
+    waypoint: Upper_Crystal_Peak
+    x_coord: 2562
+    y_coord: 444
+  simple_key_basin:
+    description: Deep in Ancient Basin
+    display_name: Simple Key (Basin)
+    logic_group: simple_keys
+    qualified_name: Simple_Key-Basin
+    waypoint: Far_Left_Basin
+    x_coord: 1897
+    y_coord: 2342
+  simple_key_city:
+    access_rules:
+    - $DASH
+    - monarch_wings
+    - crystal_heart
+    - MILDSKIPS
+    description: In the City Storerooms
+    display_name: Simple Key (City)
+    logic_group: simple_keys
+    qualified_name: Simple_Key-City
+    waypoint: Left_Elevator
+    x_coord: 2230
+    y_coord: 1285
+  simple_key_lurker:
+    access_rules:
+    - mantis_claw,$BOSS
+    description: Pale Lurker Prize
+    display_name: Simple Key (Lurker)
+    logic_group: simple_keys
+    qualified_name: Simple_Key-Lurker
+    waypoint: Pale_Lurker_Area
+    x_coord: 3845
+    y_coord: 1298
+  simple_key_sly:
+    display_name: Simple Key (Sly)
+    logic_group: simple_keys
+    part_of: sly
+    qualified_name: Simple_Key-Sly
+  tram_pass:
+    access_rules:
+    - mantis_claw
+    - monarch_wings,MILDSKIPS
+    description: In the derelict tram
+    display_name: Tram Pass
+    qualified_name: Tram_Pass
+    waypoint: Failed_Tramway
+    x_coord: 643
+    y_coord: 1707

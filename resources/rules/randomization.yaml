@@ -1,0 +1,69 @@
+---
+randomize_dreamers:
+  display_name: Randomize Dreamers
+  default_state: true
+  image: dreamer.png
+randomize_skills:
+  display_name: Randomize Skills
+  default_state: true
+  image: shade_soul.png
+randomize_charms:
+  display_name: Randomize Charms
+  default_state: true
+  image: grubberflys_elegy.png
+randomize_keys:
+  display_name: Randomize Keys
+  default_state: true
+  image: simple_key.png
+randomize_geo_chests:
+  display_name: Randomize Chests
+  default_state: true
+  image: geo_chest.png
+randomize_mask_shards:
+  display_name: Randomize Shards
+  default_state: true
+  image: mask_shard.png
+randomize_vessel_fragments:
+  display_name: Randomize Fragments
+  default_state: true
+  image: vessel_fragment.png
+randomize_pale_ores:
+  display_name: Randomize Ore
+  default_state: true
+  image: pale_ore.png
+randomize_charm_notches:
+  display_name: Randomize Notches
+  default_state: true
+  image: charm_notch.png
+randomize_rancid_eggs:
+  display_name: Randomize Eggs
+  default_state: true
+  image: rancid_egg.png
+randomize_relics:
+  display_name: Randomize Relics
+  default_state: true
+  image: relics.png
+randomize_maps:
+  display_name: Randomize Maps
+  default_state: true
+  image: map.png
+randomize_stag_stations:
+  display_name: Randomize Stags
+  default_state: true
+  image: stag_station.png
+randomize_grubs:
+  display_name: Randomize Grubs
+  default_state: true
+  image: grub.png
+randomize_shops:
+  display_name: Randomize Shops
+  default_state: true
+  image: geo.png
+randomize_whispering_roots:
+  display_name: Randomize Roots
+  default_state: true
+  image: map_pin_tree.png
+randomize_essence_bosses:
+  display_name: Randomize Essence Bosses
+  default_state: true
+  image: essence.png

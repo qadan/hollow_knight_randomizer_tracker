@@ -1,0 +1,15 @@
+{
+  "name": "Hollow Knight Randomizer 3 (Fantallis)",
+  "game_name": "Hollow Knight Randomizer",
+  "package_version": "1.0.0",
+  "package_uid": "hkr_3_fantallis",
+  "author": "Fantallis",
+  "variants": {
+    "standard": {
+      "display_name": "Map Tracker"
+    },
+    "items_only": {
+      "display_name": "Items Only"
+    }
+  }
+}

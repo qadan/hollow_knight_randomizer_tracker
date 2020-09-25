@@ -1,0 +1,9 @@
+{
+  "tracker_default": {
+    "type": "container",
+    "content": {
+      "type": "layout",
+      "key": "item_grid_tall"
+    }
+  }
+}

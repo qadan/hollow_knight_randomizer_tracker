@@ -1,0 +1,4 @@
+settings:
+  mod_path: /path/to/rando/mod
+  sort_json_keys: true
+  json_indent: 2

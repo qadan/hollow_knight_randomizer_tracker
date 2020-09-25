@@ -1,0 +1,666 @@
+waypoints:
+  lower_basin:
+    child_waypoints:
+      palace_grounds:
+        access_rules:
+          - mantis_claw,monarch_wings
+      far_left_basin:
+        access_rules:
+          - monarch_wings
+          - crystal_heart
+      mid_basin:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+      abyss:
+        access_rules:
+          - kings_brand
+  upper_resting_grounds:
+    child_waypoints:
+      upper_tram:
+        access_rules:
+          - tram_pass
+      spirits_glade:
+        terminus: true
+        _todo: this isn't strictly correct but currently not tracking 200 essence
+        access_rules: null
+      can_stag:
+        access_rules: null
+      lower_resting_grounds:
+        access_rules:
+          - $QUAKE
+  blue_lake:
+    child_waypoints:
+      lower_resting_grounds:
+        access_rules: null
+      crossroads:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+  right_elevator:
+    child_waypoints:
+      lower_resting_grounds:
+        access_rules: null
+      upper_kings_station:
+        access_rules: null
+  upper_tram:
+    child_waypoints:
+      upper_resting_grounds:
+        access_rules:
+          - tram_pass
+      crossroads:
+        access_rules:
+          - tram_pass
+  lower_resting_grounds:
+    child_waypoints:
+      upper_resting_grounds:
+        access_rules:
+          - $DASH
+          - mantis_claw
+          - monarch_wings
+          - MILDSKIPS
+      right_elevator:
+        access_rules: null
+      blue_lake:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+  crystal_peak:
+    child_waypoints:
+      upper_resting_grounds:
+        access_rules:
+          - lumafly_lantern
+          - DARKROOMS
+      upper_crystal_peak:
+        access_rules:
+          - mantis_claw
+          - SPIKETUNNELS,monarch_wings,$DASH
+          - SPIKETUNNELS,monarch_wings,$AIRSTALL
+      crossroads:
+        access_rules:
+          - lumafly_lantern
+      crystallized_mound:
+        access_rules:
+          - lumafly_lantern,monarch_wings,$DASH
+          - lumafly_lantern,crystal_heart
+          - lumafly_lantern,$AIRSTALL,monarch_wings
+          - lumafly_lantern,$AIRSTALL,$DASH
+          - DARKROOMS,monarch_wings,$DASH
+          - DARKROOMS,crystal_heart
+          - DARKROOMS,$AIRSTALL,monarch_wings
+          - DARKROOMS,$AIRSTALL,$DASH
+  spirits_glade:
+    terminus: true
+    child_waypoints:
+      upper_resting_grounds:
+        access_rules: null
+  can_stag:
+    child_waypoints:
+      dirtmouth:
+        access_rules:
+          - dirtmouth_stag
+      crossroads:
+        access_rules:
+          - crossroads_stag
+      palace_grounds:
+        access_rules:
+          - hidden_station_stag
+      greenpath:
+        access_rules:
+          - greenpath_stag
+      beasts_den:
+        access_rules:
+          - distant_village_stag
+      top_left_queens_gardens:
+        access_rules:
+          - queens_gardens_stag,mantis_claw
+          - queens_gardens_stag,monarch_wings
+          - queens_gardens_stag,$DASH,SPICYSKIPS
+      lower_kings_station:
+        access_rules:
+          - kings_station_stag
+      upper_kings_station:
+        access_rules:
+          - kings_station_stag
+          - mantis_claw
+          - monarch_wings
+          - SPICYSKIPS
+      queens_station:
+        access_rules:
+          - queens_station_stag
+      left_elevator:
+        access_rules:
+          - city_storerooms_stag
+      stag_nest:
+        access_rules:
+          - $ALLSTAGS
+          - stag_nest_stag
+      distant_village:
+        access_rules:
+          - distant_village_stag
+      upper_resting_grounds:
+        access_rules:
+          - resting_grounds_stag
+  pale_lurker_area:
+    terminus: true
+    child_waypoints:
+      colosseum:
+        access_rules: null
+  teachers_archives:
+    terminus: true
+    child_waypoints:
+      right_fog_canyon:
+        access_rules: null
+  upper_crystal_peak:
+    child_waypoints:
+      hallownests_crown:
+        access_rules:
+          - mantis_claw,$DASH,monarch_wings
+          - mantis_claw,$DASH,MILDSKIPS
+          - mantis_claw,monarch_wings,MILDSKIPS
+          - mantis_claw,crystal_heart,monarch_wings
+          - mantis_claw,crystal_heart,MILDSKIPS
+      dirtmouth:
+        access_rules:
+          - mantis_claw,crystal_heart
+  howling_cliffs:
+    child_waypoints:
+      kings_pass:
+        access_rules: null
+      greenpath:
+        access_rules: null
+    stag_nest:
+      access_rules:
+        - monarch_wings
+        - MILDSKIPS
+    dirtmouth:
+      access_rules:
+        - crystal_heart
+        - monarch_wings,$DASH
+  mantis_village:
+    child_waypoints:
+      fungal_wastes:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+          - MILDSKIPS
+      mantis_outskirts:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+          - ismas_tear
+          - $DASH,MILDSKIPS
+      far_right_deepnest:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+  mantis_outskirts:
+    child_waypoints:
+      mantis_village:
+        access_rules:
+          - $DASH
+          - mantis_claw
+          - monarch_wings
+          - crystal_heart
+          - ismas_tear
+      fungal_wastes:
+        access_rules:
+          - $DASH
+          - mantis_claw
+          - monarch_wings
+          - ismas_tear
+          - MILDSKIPS
+  lower_left_waterways:
+    child_waypoints:
+      central_left_waterways:
+        access_rules:
+          - mantis_claw,monarch_wings
+      junk_pit:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+  waterways_shaft:
+    child_waypoints:
+      central_left_waterways:
+        access_rules:
+          - $TUNNEL,crystal_heart,mantis_claw
+          - $TUNNEL,crystal_heart,monarch_wings
+          - $TUNNEL,crystal_heart,SPICYSKIPS
+          - $TUNNEL,ismas_tear,mantis_claw
+          - $TUNNEL,ismas_tear,monarch_wings
+          - $TUNNEL,ismas_tear,SPICYSKIPS
+      right_city:
+        access_rules:
+          - mantis_claw,$DASH
+          - mantis_claw,monarch_wings
+          - mantis_claw,crystal_heart
+          - mantis_claw,MILDSKIPS
+      right_waterways:
+        access_rules:
+          - $TUNNEL,mantis_claw,crystal_heart
+          - $TUNNEL,mantis_claw,monarch_wings,$DASH
+          - $TUNNEL,mantis_claw,ismas_tear
+          - $TUNNEL,monarch_wings,ismas_tear
+      upper_basin:
+        access_rules: null
+  right_waterways:
+    child_waypoints:
+      central_left_waterways:
+        access_rules:
+          - mantis_claw,crystal_heart
+      ismas_grove:
+        access_rules:
+          - mantis_claw,crystal_heart,$BOSS
+          - ismas_tear,mantis_claw
+          - ismas_tear,monarch_wings
+          - ismas_tear,MILDSKIPS
+          - SKIPACID
+      waterways_shaft:
+        access_rules:
+          - mantis_claw,crystal_heart
+          - mantis_claw,ismas_tear,monarch_wings,$TUNNEL
+      emilitia:
+        access_rules:
+          - mantis_claw
+  central_left_waterways:
+    child_waypoints:
+      lower_left_waterways:
+        access_rules:
+          - $QUAKE
+      right_city:
+        access_rules:
+          - SPICYSKIPS,monarch_wings,$BOSS
+          - crystal_heart,MILDSKIPS,monarch_wings
+      right_waterways:
+        access_rules:
+          - crystal_heart,mantis_claw
+          - crystal_heart,monarch_wings,ismas_tear
+      waterways_shaft:
+        access_rules:
+          - mantis_claw
+          - monarch_wings,SPICYSKIPS
+          - crystal_heart
+          - ismas_tear,$TUNNEL
+      upper_left_waterways:
+        access_rules:
+          - mantis_claw
+          - monarch_wings,MILDSKIPS
+  junk_pit:
+    terminus: true
+    child_waypoints:
+      lower_left_waterways:
+        access_rules:
+          - mantis_claw
+  dirtmouth:
+    child_waypoints:
+      sly_basement:
+        access_rules:
+          - cyclone_slash
+          - great_slash
+          - dash_slash
+      crystal_peak:
+        access_rules:
+          - mantis_claw,monarch_wings,crystal_heart
+      sly:
+        access_rules: null
+      sly_key:
+        access_rules:
+          - shopkeepers_key
+      kings_pass:
+        access_rules:
+          - mantis_claw
+      crossroads:
+        access_rules: null
+  lower_kingdoms_edge:
+    child_waypoints:
+      hive:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+      lower_tram:
+        access_rules: null
+      central_kingdoms_edge:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+      right_waterways:
+        access_rules:
+          - mantis_claw,crystal_heart
+          - mantis_claw,ismas_tear
+  greenpath_qg:
+    child_waypoints:
+      far_queens_gardens:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+      greenpath:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+  center_right_kingdoms_edge:
+    child_waypoints:
+      oro_bench:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+          - SPICYSKIPS
+      upper_kingdoms_edge:
+        access_rules: null
+      central_kingdoms_edge:
+        access_rules: null
+  upper_deepnest:
+    child_waypoints:
+      deepnest:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+      bottom_left_fungal_wastes:
+        access_rules:
+          - mantis_claw,$DASH
+          - mantis_claw,crystal_heart
+          - mantis_claw,monarch_wings
+          - mantis_claw,SHADESKIPS
+          - mantis_claw,SPICYSKIPS
+          - monarch_wings,SHADESKIPS
+          - monarch_wings,SPICYSKIPS
+  lower_tram:
+    child_waypoints:
+      mid_basin:
+        access_rules:
+          - tram_pass
+      lower_kingdoms_edge:
+        access_rules:
+          - tram_pass
+      deepnest:
+        access_rules:
+          - tram_pass
+  failed_tramway:
+    child_waypoints:
+      deepnest:
+        access_rules: null
+      upper_deepnest:
+        access_rules: null
+  dark_deepnest:
+    child_waypoints:
+      deepnest:
+        access_rules:
+          - monarch_wings,lumafly_lantern
+          - monarch_wings,DARKROOMS
+          - mantis_claw,lumafly_lantern
+          - mantis_claw,DARKROOMS
+          - $DASH,lumafly_lantern
+          - $DASH,DARKROOMS
+      weavers_den:
+        access_rules:
+          - $DASH,mantis_claw
+          - monarch_wings,mantis_claw
+          - monarch_wings,MILDSKIPS
+          - crystal_heart,mantis_claw
+          - $AIRSTALL,mantis_claw
+      beasts_den:
+        access_rules:
+          - mantis_claw
+          - monarch_wings,MILDSKIPS
+      bottom_left_queens_gardens:
+        access_rules:
+          - mantis_claw,monarch_wings,lumafly_lantern
+          - mantis_claw,monarch_wings,DARKROOMS,SPICYSKIPS
+          - mantis_claw,$DASH,MILDSKIPS,lumafly_lantern
+          - mantis_claw,$DASH,MILDSKIPS,DARKROOMS,SPICYSKIPS
+      failed_tramway:
+        access_rules:
+          - mantis_claw
+      distant_village:
+        access_rules:
+          - mantis_claw
+          - monarch_wings,MILDSKIPS
+  bottom_right_queens_gardens:
+    child_waypoints:
+      bottom_left_fungal_wastes:
+        access_rules: null
+      bottom_left_queens_gardens:
+        access_rules: null
+  lake_of_unn:
+    terminus: true
+    child_waypoints:
+      greenpath:
+        access_rules:
+          - $DASH
+          - monarch_wings
+          - mantis_claw,ismas_tear
+          - mantis_claw,crystal_heart
+  stone_sanctuary:
+    terminus: true
+    child_waypoints:
+      greenpath:
+        access_rules: null
+  lower_kings_station:
+    child_waypoints:
+      right_city:
+        access_rules: null
+      upper_kings_station:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+  pleasure_house:
+    terminus: true
+    child_waypoints:
+      right_city:
+        access_rules: null
+  emilitia:
+    child_waypoints:
+      right_waterways:
+        access_rules: null
+      right_city:
+        access_rules: null
+  tower_of_love:
+    child_waypoints:
+      upper_kingdoms_edge:
+        access_rules: null
+      lower_kings_station:
+        access_rules: null
+  bottom_left_queens_gardens:
+    child_waypoints:
+      top_left_queens_gardens:
+        access_rules:
+          - $MINIBOSS,mantis_claw,$DASH
+          - $MINIBOSS,mantis_claw,monarch_wings
+          - $MINIBOSS,monarch_wings,MILDSKIPS
+      dark_deepnest:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+      bottom_right_queens_gardens:
+        access_rules:
+          - mantis_claw
+  far_queens_gardens:
+    terminus: true
+    child_waypoints:
+      top_left_queens_gardens:
+        access_rules:
+          - $DASH
+  upper_basin:
+    child_waypoints:
+      mid_basin:
+        access_rules: null
+      waterways_shaft:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+  bottom_left_fungal_wastes:
+    terminus: true
+    child_waypoints:
+      upper_deepnest:
+        access_rules: null
+  deepnest:
+    child_waypoints:
+      dark_deepnest:
+        access_rules:
+          - lumafly_lantern,mantis_claw
+          - lumafly_lantern,monarch_wings
+          - DARKROOMS,mantis_claw
+          - DARKROOMS,monarch_wings
+      lower_tram:
+        access_rules: null
+      failed_tramway:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+  weavers_den:
+    terminus: true
+    child_waypoints:
+      dark_deepnest:
+        access_rules:
+          - lumafly_lantern
+          - DARKROOMS
+  upper_kingdoms_edge:
+    child_waypoints:
+      center_right_kingdoms_edge:
+        access_rules: null
+      tower_of_love:
+        access_rules: null
+      cast_off_shell:
+        access_rules:
+          - monarch_wings
+          - SPICYSKIPS,mantis_claw
+      top_kingdoms_edge:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+      central_kingdoms_edge:
+        access_rules: null
+  cast_off_shell:
+    terminus: true
+    child_waypoints:
+      center_right_kingdoms_edge:
+        access_rules: null
+  right_city:
+    child_waypoints:
+      left_city:
+        access_rules: null
+      lower_kings_station:
+        access_rules: null
+  soul_sanctum:
+    child_waypoints:
+      left_city:
+        access_rules: null
+      left_elevator:
+        access_rules: null
+  far_left_waterways:
+    terminus: true
+    child_waypoints:
+      upper_left_waterways:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+  top_right_queens_gardens:
+    child_waypoints:
+      left_fog_canyon:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+          - ismas_tear
+          - SKIPACID
+  right_city:
+    child_waypoints:
+      upper_kings_station:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+          - MILDSKIPS,$DASH
+  top_right_queens_gardens:
+    child_waypoints:
+      bottom_right_queens_gardens:
+        access_rules:
+          - $DASH
+          - mantis_claw,crystal_heart
+          - monarch_wings,crystal_heart
+  colosseum:
+    child_waypoints:
+      pale_lurker_area:
+        access_rules:
+          - mantis_claw
+      top_kingdoms_edge:
+        access_rules: null
+  mid_basin:
+    child_waypoints:
+      lower_tram:
+        access_rules:
+          - tram_pass
+      upper_basin:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+      lower_basin:
+        access_rules: null
+  far_right_deepnest:
+    child_waypoints:
+      upper_deepnest:
+        access_rules:
+          - mantis_claw
+  right_city:
+    child_waypoints:
+      central_kingdoms_edge:
+        access_rules: null
+      pleasure_house:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+          - $DASH
+      waterways_shaft:
+        access_rules: null
+  ismas_grove:
+    child_waypoints:
+      right_waterways:
+        access_rules:
+          - ismas_grove
+          - SKIPACID
+  palace_grounds:
+    child_waypoints:
+      can_stag:
+        access_rules: null
+      lower_basin:
+        access_rules: null
+  beasts_den:
+    terminus: true
+    child_waypoints:
+      distant_village:
+        access_rules: null
+  far_left_basin:
+    terminus: true
+    child_waypoints:
+      lower_basin:
+        access_rules:
+          - mantis_claw
+          - monarch_wings
+          - crystal_heart
+  sly:
+    terminus: true
+    child_waypoints:
+      dirtmouth:
+        access_rules: null
+  sly_key:
+    terminus: true
+    child_waypoints:
+      dirtmouth:
+        access_rules: null
+  sly_basement:
+    terminus: true
+    child_waypoints:
+      dirtmouth:
+        access_rules: null
+  leg_eater:
+    terminus: true
+    child_waypoints:
+      fungal_wastes:
+        access_rules: null
+  oro_bench:
+    terminus: true
+    child_waypoints:
+      center_right_kingdoms_edge:
+        access_rules: null
+  overgrown_mound:
+    terminus: true
+    child_waypoints:
+      left_fog_canyon:
+        access_rules: null

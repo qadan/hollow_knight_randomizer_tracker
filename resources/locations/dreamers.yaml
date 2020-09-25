@@ -1,0 +1,38 @@
+dreamers:
+  herrah:
+    access_rules:
+    - mantis_claw,$DREAMNAIL
+    description: The Beast
+    display_name: Herrah
+    part_of: beast_den
+    qualified_name: Herrah
+    waypoint: Beast's_Den
+  lurien:
+    access_rules:
+    - mantis_claw,$DREAMNAIL,monarch_wings,$BOSS
+    - mantis_claw,$DREAMNAIL,MILDSKIPS,$BOSS
+    description: The Watcher
+    display_name: Lurien
+    qualified_name: Lurien
+    waypoint: Right_City
+    x_coord: 2806
+    y_coord: 1085
+  monomon:
+    access_rules:
+    - mantis_claw,$DREAMNAIL,$AERIALMINIBOSS,ismas_tear
+    - mantis_claw,$DREAMNAIL,$AERIALMINIBOSS,crystal_heart
+    description: The Teacher
+    display_name: Monomon
+    qualified_name: Monomon
+    waypoint: Teacher's_Archives
+    x_coord: 1358
+    y_coord: 1192
+  world_sense:
+    access_rules:
+    - lurien,monomon,herrah
+    description: Percentage Tracker
+    display_name: World Sense
+    qualified_name: World_Sense
+    waypoint: Crossroads
+    x_coord: 1996
+    y_coord: 668

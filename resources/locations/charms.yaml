@@ -1,0 +1,333 @@
+charms:
+  baldur_shell:
+    access_rules:
+    - mantis_claw
+    - monarch_wings
+    - $DASH
+    - crystal_heart
+    - SHADESKIPS
+    - $BALDURS,@greenpath
+    description: Kill the Baldur
+    display_name: Baldur Shell
+    qualified_name: Baldur_Shell
+    waypoint: Howling_Cliffs
+    x_coord: 1070
+    y_coord: 637
+  dashmaster:
+    description: Below Bretta
+    display_name: Dashmaster
+    qualified_name: Dashmaster
+    waypoint: Mantis_Outskirts
+    x_coord: 1746
+    y_coord: 1801
+  deep_focus:
+    access_rules:
+    - mantis_claw,crystal_heart
+    - monarch_wings,crystal_heart
+    - SPICYSKIPS,monarch_wings,$DASH
+    description: Crystal dash in western Crystal Peak
+    display_name: Deep Focus
+    qualified_name: Deep_Focus
+    waypoint: Upper_Crystal_Peak
+    x_coord: 2239
+    y_coord: 612
+  defenders_crest:
+    access_rules:
+    - $BOSS,mantis_claw
+    - $BOSS,monarch_wings,SPICYSKIPS
+    description: Dung Defender Prize
+    display_name: Defender's Crest
+    qualified_name: Defender's_Crest
+    waypoint: Central_Left_Waterways
+    x_coord: 2709
+    y_coord: 1768
+  dream_wielder:
+    part_of: seer
+    qualified_name: Dream_Wielder
+    waypoint: Upper_Resting_Grounds
+    display_name: Dream Wielder
+  dreamshield:
+    description: In the Resting Grounds
+    display_name: Dreamshield
+    qualified_name: Dreamshield
+    waypoint: Upper_Resting_Grounds
+    x_coord: 3082
+    y_coord: 821
+  flukenest:
+    access_rules:
+    - vengeful_spirit,shade_soul
+    - howling_wraiths,abyss_shriek
+    - $BOSS,MILDSKIPS
+    description: Flukemarm Prize
+    display_name: Flukenest
+    qualified_name: Flukenest
+    waypoint: Lower_Left_Waterways
+    x_coord: 2194
+    y_coord: 1908
+  fragile_greed:
+    part_of: leg_eater
+    qualified_name: Fragile_Greed
+    display_name: Fragile Greed
+  fragile_heart:
+    part_of: leg_eater
+    qualified_name: Fragile_Heart
+    display_name: Fragile Heart
+  fragile_strength:
+    part_of: leg_eater
+    qualified_name: Fragile_Strength
+    display_name: Fragile Strength
+  fury_of_the_fallen:
+    description: Pogo over the spikes
+    display_name: Fury of the Fallen
+    qualified_name: Fury_of_the_Fallen
+    waypoint: King's_Pass
+    x_coord: 1482
+    y_coord: 624
+  gathering_swarm:
+    part_of: sly
+    qualified_name: Gathering_Swarm
+    display_name: Gathering Swarm
+  glowing_womb:
+    access_rules:
+    - crystal_heart,mantis_claw
+    - crystal_heart,monarch_wings
+    - crystal_heart,$INFECTED
+    - $TUNNEL,mantis_claw
+    - $TUNNEL,monarch_wings
+    - $TUNNEL,$INFECTED
+    description: Crystal dash in Crossroads
+    display_name: Glowing Womb
+    qualified_name: Glowing_Womb
+    waypoint: Crossroads
+    x_coord: 2098
+    y_coord: 766
+  grimmchild:
+    access_rules:
+    - $DREAMNAIL
+    - grimmchild
+    description: Gift from Troupe Master Grimm
+    display_name: Grimmchild
+    part_of: grimms_tent
+    qualified_name: Grimmchild
+    waypoint: Howling_Cliffs
+  grubberflys_elegy:
+    display_name: Grubberfly's Elegy
+    part_of: grubfather
+    qualified_name: Grubberfly's_Elegy
+    waypoint: Crossroads
+  grubsong:
+    part_of: grubfather
+    qualified_name: Grubsong
+    waypoint: Crossroads
+    display_name: Grubsong
+  heavy_blow:
+    part_of: sly_key
+    qualified_name: Heavy_Blow
+    display_name: Heavy Blow
+  hiveblood:
+    access_rules:
+    - $BOSS,mantis_claw,monarch_wings
+    - $BOSS,MILDSKIPS,mantis_claw
+    - $BOSS,MILDSKIPS,monarch_wings
+    description: Hive Treasure
+    display_name: Hiveblood
+    qualified_name: Hiveblood
+    waypoint: Hive
+    x_coord: 3832
+    y_coord: 1955
+  jonis_blessing:
+    access_rules:
+    - DARKROOMS
+    - lumafly_lantern
+    description: Joni's Repose Treasure
+    display_name: Joni's Blessing
+    qualified_name: Joni's_Blessing
+    waypoint: Howling_Cliffs
+    x_coord: 1219
+    y_coord: 472
+  king_fragment:
+    access_rules:
+    - $AWOKEN,mantis_claw,$DASH,monarch_wings,crystal_heart
+    description: White Palace Prize
+    display_name: King Fragment
+    qualified_name: King_Fragment
+    waypoint: Palace_Grounds
+    x_coord: 2798
+    y_coord: 2192
+    inherit_code: true
+  lifeblood_core:
+    access_rules:
+    - $LIFEBLOOD,SPICYSKIPS
+    - $LIFEBLOOD,$DASH,monarch_wings
+    description: Pass the lifeblood barrier
+    display_name: Lifeblood Core
+    logic_group: lifeblood
+    qualified_name: Lifeblood_Core
+    waypoint: Abyss
+    x_coord: 2306
+    y_coord: 2598
+  lifeblood_heart:
+    display_name: Lifeblood Heart
+    logic_group: lifeblood
+    part_of: salubra
+    qualified_name: Lifeblood_Heart
+  longnail:
+    part_of: salubra
+    qualified_name: Longnail
+    display_name: Longnail
+  mark_of_pride:
+    access_rules:
+    - mantis_claw
+    - monarch_wings,MILDSKIPS
+    description: Mantis Village Reward
+    display_name: Mark of Pride
+    qualified_name: Mark_of_Pride
+    waypoint: Mantis_Village
+    x_coord: 1721
+    y_coord: 1671
+  nailmasters_glory:
+    description: In Sly's Basement after all 3 nail skills
+    display_name: Nailmaster's Glory
+    qualified_name: Nailmaster's_Glory
+    waypoint: Sly_Basement
+    part_of: sly_basement
+    x_coord: 1748
+    y_coord: 611
+  queen_fragment:
+    access_rules:
+    - shade_cloak,mantis_claw,$BOSS
+    - shade_cloak,monarch_wings,$BOSS
+    description: Queen's Garden Prize
+    display_name: Queen Fragment
+    qualified_name: Queen_Fragment
+    waypoint: Far_Queen's_Gardens
+    x_coord: 306
+    y_coord: 1108
+    inherit_code: true
+  quick_focus:
+    part_of: salubra
+    qualified_name: Quick_Focus
+    display_name: Quick Focus
+  quick_slash:
+    access_rules:
+    - mantis_claw,$QUAKE,$DASH
+    - monarch_wings,$QUAKE,SPIKETUNNELS
+    description: Below Oro
+    display_name: Quick Slash
+    qualified_name: Quick_Slash
+    waypoint: Oro_Bench
+    x_coord: 3977
+    y_coord: 1867
+  shaman_stone:
+    part_of: salubra
+    qualified_name: Shaman_Stone
+    display_name: Shaman Stone
+  shape_of_unn:
+    access_rules:
+    - $stupidShapeOfUnnRules
+    description: Behind the Lake of Unn
+    display_name: Shape of Unn
+    qualified_name: Shape_of_Unn
+    waypoint: Lake_of_Unn
+    x_coord: 132
+    y_coord: 872
+  sharp_shadow:
+    access_rules:
+    - shade_cloak
+    description: Behind the Deepnest shade gate
+    display_name: Sharp Shadow
+    qualified_name: Sharp_Shadow
+    waypoint: Deepnest
+    x_coord: 1456
+    y_coord: 2140
+  soul_catcher:
+    access_rules:
+    - mantis_claw
+    - $BALDURS
+    - monarch_wings,SHADESKIPS
+    description: Behind the Baldur
+    display_name: Soul Catcher
+    part_of: ancestral_mound
+    qualified_name: Soul_Catcher
+    waypoint: Ancestral_Mound
+  soul_eater:
+    access_rules:
+    - $QUAKE,mantis_claw
+    - $QUAKE,monarch_wings
+    description: Deep in Resting Grounds
+    display_name: Soul Eater
+    qualified_name: Soul_Eater
+    waypoint: Upper_Resting_Grounds
+    x_coord: 3494
+    y_coord: 947
+  spell_twister:
+    access_rules:
+    - mantis_claw
+    - monarch_wings
+    description: Hidden in the Soul Sanctum
+    display_name: Spell Twister
+    qualified_name: Spell_Twister
+    waypoint: Soul_Sanctum
+    x_coord: 2580
+    y_coord: 1174
+  spore_shroom:
+    access_rules:
+    - mantis_claw,ismas_tear
+    - mantis_claw,$DASH
+    - mantis_claw,crystal_heart
+    - monarch_wings,ismas_tear
+    - monarch_wings,$DASH
+    - monarch_wings,crystal_heart
+    description: Platforming in the Fungal Wastes
+    display_name: Spore Shroom
+    qualified_name: Spore_Shroom
+    waypoint: Bottom_Left_Fungal_Wastes
+    x_coord: 1300
+    y_coord: 1517
+  sprintmaster:
+    display_name: Sprintmaster
+    part_of: sly_key
+    qualified_name: Sprintmaster
+  stalwart_shell:
+    part_of: sly
+    qualified_name: Stalwart_Shell
+    display_name: Stalwart Shell
+  steady_body:
+    part_of: salubra
+    qualified_name: Steady_Body
+    display_name: Steady Body
+  thorns_of_agony:
+    access_rules:
+    - $DASH
+    - mantis_claw,crystal_heart
+    description: Evade the charged lumaflies
+    display_name: Thorns of Agony
+    qualified_name: Thorns_of_Agony
+    waypoint: Greenpath
+    x_coord: 1065
+    y_coord: 894
+  void_heart:
+    access_rules:
+    - shade_cloak,$DREAMNAIL,$KINGSOUL,MILDSKIPS
+    - shade_cloak,$DREAMNAIL,$KINGSOUL,mantis_claw
+    - shade_cloak,$DREAMNAIL,$KINGSOUL,monarch_wings
+    description: Deep Abyss Treasure
+    display_name: Void Heart
+    part_of: deep_abyss
+    qualified_name: Void_Heart
+    waypoint: Abyss
+    inherit_code: true
+  wayward_compass:
+    part_of: iselda
+    qualified_name: Wayward_Compass
+    display_name: Wayward Compass
+  weaversong:
+    access_rules:
+    - mantis_claw
+    - monarch_wings
+    description: Hidden in the Weavers' Den
+    display_name: Weaversong
+    qualified_name: Weaversong
+    waypoint: Weaver's_Den
+    x_coord: 717
+    y_coord: 1913

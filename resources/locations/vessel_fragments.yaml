@@ -1,0 +1,57 @@
+vessel_fragments:
+  vessel_fragment_basin:
+    access_rules:
+    - mantis_claw
+    - monarch_wings
+    description: Give 3000 geo to the fountain
+    qualified_name: Vessel_Fragment-Basin
+    waypoint: Mid_Basin
+    x_coord: 2553
+    y_coord: 2098
+  vessel_fragment_city:
+    access_rules:
+    - $MINIBOSS
+    description: Above King's Station
+    qualified_name: Vessel_Fragment-City
+    waypoint: Upper_King's_Station
+    x_coord: 3218
+    y_coord: 1447
+  vessel_fragment_crossroads:
+    description: Left of the Crossroads lift
+    qualified_name: Vessel_Fragment-Crossroads
+    waypoint: Left_Elevator
+    x_coord: 1844
+    y_coord: 952
+  vessel_fragment_deepnest:
+    access_rules:
+    - mantis_claw
+    - monarch_wings
+    description: Above the Deepnest tram
+    qualified_name: Vessel_Fragment-Deepnest
+    waypoint: Deepnest
+    x_coord: 1575
+    y_coord: 1948
+  vessel_fragment_greenpath:
+    access_rules:
+    - mantis_claw
+    - SPICYSKIPS,monarch_wings
+    description: Near the Queen's Garden
+    qualified_name: Vessel_Fragment-Greenpath
+    waypoint: Greenpath
+    x_coord: 834
+    y_coord: 1028
+  vessel_fragment_seer:
+    part_of: seer
+    qualified_name: Vessel_Fragment-Seer
+    waypoint: Upper_Resting_Grounds
+  vessel_fragment_sly1:
+    part_of: sly
+    qualified_name: Vessel_Fragment-Sly1
+  vessel_fragment_sly2:
+    part_of: sly_key
+    qualified_name: Vessel_Fragment-Sly2
+  vessel_fragment_stag_nest:
+    description: At the entrance to Stag Nest
+    part_of: stag_nest
+    qualified_name: Vessel_Fragment-Stag_Nest
+    waypoint: Stag_Nest

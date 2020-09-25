@@ -1,0 +1,80 @@
+{
+  "item_grid_tall": {
+    "type": "array",
+    "orientation": "vertical",
+    "content": [
+      {
+        "type": "itemgrid",
+        "h_alignment": "center",
+        "item_margin": "1,2",
+        "rows": [
+          [
+            "lurien",
+            "monomon",
+            "herrah",
+            "dreamer",
+            "mothwing_cloak",
+            "mantis_claw"
+          ],
+          [
+            "monarch_wings",
+            "crystal_heart",
+            "ismas_tear",
+            "dream_nail",
+            "vengeful_spirit",
+            "desolate_dive"
+          ],
+          [
+            "howling_wraiths",
+            "queen_fragment",
+            "cyclone_slash",
+            "dash_slash",
+            "great_slash",
+            "kings_brand"
+          ],
+          [
+            "city_crest",
+            "lumafly_lantern",
+            "tram_pass",
+            "simple_key",
+            "elegant_key",
+            "shopkeepers_key"
+          ],
+          [
+            "grubs",
+            "love_key",
+            "lifeblood_heart",
+            "lifeblood_core",
+            "mark_of_pride",
+            "sharp_shadow",
+            "weaversong"
+          ],
+          [
+            "spore_shroom",
+            "glowing_womb",
+            "jonis_blessing",
+            "dashmaster",
+            "grubberflys_elegy",
+            "sprintmaster",
+            "grimmchild"
+          ],
+          [
+            "dirtmouth_stag",
+            "crossroads_stag",
+            "greenpath_stag",
+            "queens_station_stag",
+            "queens_gardens_stag",
+            "city_storerooms_stag"
+          ],
+          [
+            "kings_station_stag",
+            "resting_grounds_stag",
+            "distant_village_stag",
+            "hidden_station_stag",
+            "stag_nest_stag"
+          ]
+        ]
+      }
+    ]
+  }
+}

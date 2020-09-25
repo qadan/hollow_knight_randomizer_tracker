@@ -1,0 +1,52 @@
+---
+shops:
+  sly:
+    display_name: Sly
+    description: Save Sly in Crossroads
+    x_coord: 1746
+    y_coord: 592
+    qualified_name: Sly
+    waypoint: Sly
+    group_type: slys_special_magical_goddamn_group
+  sly_key:
+    display_name: Sly (Shop Key)
+    description: Give Sly the Shop Key
+    part_of: sly
+    qualified_name: Sly_(Key)
+    waypoint: Sly
+    access_rules:
+    - shopkeepers_key
+    group_type: group
+  iselda:
+    display_name: Iselda
+    description: Map Shop (Probably a few items here)
+    x_coord: 1798
+    y_coord: 592
+    qualified_name: Iselda
+    waypoint: Dirtmouth
+    group_type: group
+  salubra:
+    display_name: Salubra
+    description: Charm Shop
+    x_coord: 2436
+    y_coord: 977
+    qualified_name: Salubra
+    waypoint: Crossroads
+    access_rules:
+    - mantis_claw
+    - monarch_wings
+    - $DASH
+    - crystal_heart
+    - $INFECTED
+    - $SCREAM,FIREBALLSKIPS
+    - $FIREBALL,FIREBALLSKIPS
+    - SHADESKIPS
+    group_type: group
+  leg_eater:
+    display_name: Leg Eater
+    description: Scam Shop
+    x_coord: 1873
+    y_coord: 1155
+    qualified_name: Leg_Eater
+    waypoint: Leg_Eater
+    group_type: group

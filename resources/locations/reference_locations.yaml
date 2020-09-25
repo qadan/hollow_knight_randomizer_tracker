@@ -1,0 +1,85 @@
+---
+reference_locations:
+  deep_abyss:
+    display_name: Deep Abyss
+    description: Dive beneath Abyss with the Void Heart
+    x_coord: 2402
+    y_coord: 2745
+    waypoint: Abyss
+    access_rules:
+    - $KINGSOUL
+    group_type: sectioned
+  seer:
+    display_name: Seer
+    description: Rewards for Essence
+    x_coord: 3182
+    y_coord: 777
+    qualified_name: Seer
+    waypoint: Upper_Resting_Grounds
+    group_type: group
+  colosseum:
+    display_name: Colosseum
+    description: Rewards for Trials
+    x_coord: 3415
+    y_coord: 1236
+    waypoint: Colosseum
+    group_type: sectioned
+  grimms_tent:
+    display_name: Grimm's Tent
+    x_coord: 1683
+    y_coord: 592
+    waypoint: Dirtmouth
+    access_rules:
+    - grimmchild
+    group_type: sectioned
+  grubfather:
+    display_name: Grubfather
+    description: Rewards for collecting Grubs
+    x_coord: 1650
+    y_coord: 670
+    qualified_name: Grubfather
+    waypoint: Crossroads
+    group_type: group
+  ancestral_mound:
+    display_name: Ancestral Mound
+    x_coord: 1813
+    y_coord: 802
+    waypoint: Ancestral_Mound
+    group_type: sectioned
+  beast_den:
+    display_name: Beast's Den
+    description: Spider Town
+    x_coord: 84
+    y_coord: 1829
+    waypoint: Beast's_Den
+    group_type: sectioned
+  false_knight:
+    display_name: False Knight
+    x_coord: 1899
+    y_coord: 812
+    waypoint: Crossroads
+    group_type: sectioned
+  soul_master:
+    display_name: Soul Master
+    x_coord: 2390
+    y_coord: 1174
+    waypoint: Soul_Sanctum
+    access_rules:
+    - mantis_claw
+    - monarch_wings
+    group_type: sectioned
+  broken_vessel:
+    display_name: Broken Vessel
+    x_coord: 1860
+    y_coord: 2206
+    waypoint: Far_Left_Basin
+    access_rules:
+    - mantis_claw,$MINIBOSS
+    - monarch_wings,MILDSKIPS,$MINIBOSS
+    group_type: sectioned
+  stag_nest:
+    display_name: Stag Nest
+    x_coord: 980
+    y_coord: 272
+    waypoint: Stag_Nest
+    group_type: group

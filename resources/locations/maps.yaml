@@ -1,0 +1,95 @@
+maps:
+  ancient_basin_map:
+    display_name: Ancient Basin Map
+    qualified_name: Ancient_Basin_Map
+    waypoint: Mid_Basin
+    x_coord: 2548
+    y_coord: 2154
+  city_of_tears_map:
+    display_name: City of Tears Map
+    qualified_name: City_of_Tears_Map
+    waypoint: Left_Elevator
+    x_coord: 2442
+    y_coord: 1372
+  crossroads_map:
+    display_name: Crossroads Map
+    qualified_name: Crossroads_Map
+    waypoint: Crossroads
+    x_coord: 1751
+    y_coord: 828
+  crystal_peak_map:
+    display_name: Crystal Peak Map
+    qualified_name: Crystal_Peak_Map
+    waypoint: Upper_Crystal_Peak
+    x_coord: 2475
+    y_coord: 537
+  deepnest_map_right_gives_quill:
+    access_rules:
+    - mantis_claw
+    display_name: Deepnest Map (Quill)
+    qualified_name: Deepnest_Map-Right_[Gives_Quill]
+    waypoint: Far_Right_Deepnest
+    x_coord: 1404
+    y_coord: 1818
+  deepnest_map_upper:
+    display_name: Deepnest Map (Upper)
+    qualified_name: Deepnest_Map-Upper
+    waypoint: Upper_Deepnest
+    x_coord: 1150
+    y_coord: 1661
+  fog_canyon_map:
+    access_rules:
+    - mantis_claw,$DASH
+    - monarch_wings
+    display_name: Fog Canyon Map
+    qualified_name: Fog_Canyon_Map
+    waypoint: Right_Fog_Canyon
+    x_coord: 1307
+    y_coord: 1100
+  fungal_wastes_map:
+    display_name: Fungal Wastes Map
+    qualified_name: Fungal_Wastes_Map
+    waypoint: Fungal_Wastes
+    x_coord: 1430
+    y_coord: 1430
+  greenpath_map:
+    display_name: Greenpath Map
+    qualified_name: Greenpath_Map
+    waypoint: Greenpath
+    x_coord: 1380
+    y_coord: 859
+  howling_cliffs_map:
+    display_name: Howling Cliffs Map
+    qualified_name: Howling_Cliffs_Map
+    waypoint: Howling_Cliffs
+    x_coord: 950
+    y_coord: 414
+  kingdoms_edge_map:
+    display_name: Kingdom's Edge Map
+    qualified_name: Kingdom's_Edge_Map
+    waypoint: Central_Kingdom's_Edge
+    x_coord: 3456
+    y_coord: 1733
+  queens_gardens_map:
+    access_rules:
+    - mantis_claw
+    - monarch_wings
+    display_name: Queen's Gardens Map
+    qualified_name: Queen's_Gardens_Map
+    waypoint: Bottom_Right_Queen's_Gardens
+    x_coord: 951
+    y_coord: 1292
+  resting_grounds_map:
+    display_name: Resting Grounds Map
+    qualified_name: Resting_Grounds_Map
+    waypoint: Upper_Resting_Grounds
+    x_coord: 3256
+    y_coord: 826
+  royal_waterways_map:
+    access_rules:
+    - mantis_claw
+    display_name: Royal Waterways Map
+    qualified_name: Royal_Waterways_Map
+    waypoint: Far_Left_Waterways
+    x_coord: 1836
+    y_coord: 1758
