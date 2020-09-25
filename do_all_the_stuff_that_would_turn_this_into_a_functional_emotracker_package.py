@@ -39,6 +39,7 @@ def prep_a_folder(folder):
     'items',
     'layouts',
     'items_only',
+    'items_only/layouts',
     'locations',
     'maps',
   ]
@@ -57,6 +58,7 @@ def move_some_static_stuff_into_the_folder(folder):
     'static_json/maps/map.json': 'maps',
     'static_json/layouts/*.json': 'layouts',
     'static_json/items_only/*.json': 'items_only',
+    'static_json/items_only/layouts/*.json': 'items_only/layouts',
     'static_lua/*.lua': 'scripts',
     'base_folder_stuff/*': '.',
   }
