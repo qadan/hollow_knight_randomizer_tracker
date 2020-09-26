@@ -90,6 +90,19 @@
                 "type": "layout",
                 "key": "item_grid_tall"
               }
+            },
+            {
+              "type": "group",
+              "header": "Pinned Locations",
+              "dock": "bottom",
+              "content": {
+                "type": "recentpins",
+                "style": "wrap",
+                "h_alignment": "stretch",
+                "v_alignment": "stretch",
+                "orientation": "vertical",
+                "compact": true
+              }
             }
           ]
         },
