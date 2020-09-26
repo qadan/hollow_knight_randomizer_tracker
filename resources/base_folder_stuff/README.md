@@ -32,9 +32,21 @@ By default, no skips are taken into consideration, and cursed mode is turned off
 
 The icons are currently terrible; see the 'TODO' section.
 
+### Windowed Fullscreen
+
+Running Hollow Knight in windowed fullscreen ensures that when you click the tracker outside the window, the window isn't minimized or otherwise hidden.
+
+To do this in Steam:
+
+* Right-click on "Hollow Knight" in your library
+* Left-click on "Properties..."
+* Under the "GENERAL" tab, click "SET LAUNCH OPTIONS..."
+* In the window that pops up, type in "-screen-fullscreen 0 -popupwindow" (without the double quotes)
+* Click "OK" to save your changes, then close the Properties window
+* Launch the game, and it should be in windowed fullscreen.
+
 ## TODO
 
-* Some of the locations should have items grouped together (like salubra, sly's base stuff, etc.)
 * Some of the map spots are too close together; they should either be moved, or reduced into 'part_of' grouped locations.
 * The text-rendered icons are all terrible and need some work. They're generated through imagemagick, and that's fine, but the commands could be seriously improved, or could just make better icons.
 * Some of the icons could be reduced; for example, the lifeblood requirements and dreamers and maybe some of the charms.
