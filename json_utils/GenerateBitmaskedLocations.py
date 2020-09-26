@@ -9,7 +9,7 @@ class GenerateBitmaskedLocations:
 
 
   def bitmask_access_rules(self, randomization_type, location):
-    if randomization_type == 'reference_locations':
+    if randomization_type == 'reference_locations' and location not in ['seer', 'grubfather']:
       return '$can_get_waypoint|{}'.format(location)
     if randomization_type in ['hallownest_seals', 'arcane_eggs', 'wanderers_journals', 'kings_idols']:
       randomization_type = 'relics'
