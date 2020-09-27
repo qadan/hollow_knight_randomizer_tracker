@@ -6878,6 +6878,9 @@ WAYPOINT_TABLE = {
 --   rules defining whether the item is checkable.
 ----
 CHECK_TABLE = {
+  king_fragment = {
+    {536870912, 6},
+  },
   mask_shard_grey_mourner = {
     {32768, 7},
     {8388608, 1},
