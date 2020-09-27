@@ -60,6 +60,18 @@ function add_waypoints_to_bitmask()
 end
 
 ----
+-- Helper to recalculate access if necessary.
+----
+function recalculate_access()
+  if SHOULD_CALCULATE then
+    add_items_to_bitmask()
+    add_simple_keys_to_bitmask()
+    add_waypoints_to_bitmask()
+    SHOULD_CALCULATE = false
+  end
+end
+
+----
 -- Implementation of tracker_on_accessibility_updated().
 --
 -- Zeroes out the PROGRESSION_BITMASK and flags that it should be recalculated

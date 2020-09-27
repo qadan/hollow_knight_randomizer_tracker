@@ -22,6 +22,31 @@
 ----
 
 
+----
+-- ITEM_TABLE and WAYPOINT_TABLE:
+--   Tables containing information to be used to determine the accessibility of
+--   items and waypoints, respectively, using item or waypoint names as keys,
+--   paired with the following values:
+--   - 'bitmask': (Optional) A power of two; the bit representing this item or
+--     waypoint in the PROGRESSION_BITMASK in its group. If absent, this item
+--     does not provide progression.
+--   - 'group': (Optional) A number between 1 and 7; the group in the
+--     PROGRESSION_BITMASK this item or waypoint is represented in. If absent,
+--     this item does not provide progression.
+--   - 'postfix': A list of postfixed, processed logic representing access to
+--     this item or waypoint. Each item is a bitmask/group pair representing
+--     where to look in the PROGRESSION_BITMASK for access. Negative integers
+--     represent operators; -2 is AND, and -1 is OR. Lower numbers are not
+--     considered currently.
+--   - 'status': Currently unused, but should be used in the future to optimize
+--     waypoint logic check passes.
+--
+-- For example, in 'lurien' in the ITEM_TABLE, the first two postfixes are
+-- {2, 6} (the 'right_city' waypoint) and {8192, 1} (the mantis claw). These
+-- will be compared using the {-2, 1} (an AND operator) such that one of the
+-- potential access conditions for the item 'lurien' is access to right_city
+-- with the mantis claw.
+----
 ITEM_TABLE = {
   lurien = {
     bitmask = 256,
@@ -6839,5 +6864,140 @@ WAYPOINT_TABLE = {
       {-1, 1},
     },
     status = 0,
+  },
+}
+
+
+----
+-- CHECK_TABLE:
+--   Table containing mostly identical postfixes to the WAYPOINT and ITEM_TABLEs
+--   but pared down to display only the access necessary to check the location
+--   (e.g., being able to see a whispering root's prize without the Dreamnail).
+--
+--   Each item in the table is paired with the postfix list of accessibility
+--   rules defining whether the item is checkable.
+----
+CHECK_TABLE = {
+  mask_shard_grey_mourner = {
+    {32768, 7},
+    {8388608, 1},
+    {16777216, 1},
+    {-1, 1},
+    {8192, 1},
+    {-2, 1},
+    {-2, 1},
+  },
+  charm_notch_colosseum = {
+    {256, 7},
+  },
+  pale_ore_colosseum = {
+    {256, 7},
+  },
+  whispering_root_crossroads = {
+    {8192, 5},
+    {8192, 1},
+    {-2, 1},
+  },
+  whispering_root_greenpath = {
+    {8388608, 7},
+    {32768, 5},
+    {8192, 1},
+    {-2, 1},
+    {-2, 1},
+  },
+  whispering_root_leg_eater = {
+    {2097152, 5},
+  },
+  whispering_root_mantis_village = {
+    {16777216, 5},
+    {8192, 1},
+    {-2, 1},
+  },
+  whispering_root_deepnest = {
+    {1048576, 6},
+    {65536, 2},
+    {32, 1},
+    {-1, 1},
+    {8192, 1},
+    {32768, 1},
+    {64, 1},
+    {-2, 1},
+    {-1, 1},
+    {-2, 1},
+    {-2, 1},
+  },
+  whispering_root_queens_gardens = {
+    {1048576, 7},
+  },
+  whispering_root_kingdoms_edge = {
+    {4, 7},
+  },
+  whispering_root_waterways = {
+    {2048, 6},
+  },
+  whispering_root_city = {
+    {1073741824, 5},
+  },
+  whispering_root_resting_grounds = {
+    {32768, 7},
+  },
+  whispering_root_spirits_glade = {
+    {65536, 7},
+    {8192, 1},
+    {4096, 1},
+    {65536, 1},
+    {-1, 1},
+    {32768, 1},
+    {16, 1},
+    {2097152, 1},
+    {4194304, 1},
+    {-1, 1},
+    {33554432, 1},
+    {67108864, 1},
+    {-1, 1},
+    {-1, 1},
+    {-2, 1},
+    {-1, 1},
+    {-1, 1},
+    {-2, 1},
+    {-2, 1},
+  },
+  whispering_root_crystal_peak = {
+    {2048, 7},
+    {8192, 1},
+    {32768, 1},
+    {-1, 1},
+    {4096, 1},
+    {65536, 1},
+    {-1, 1},
+    {32768, 1},
+    {-1, 1},
+    {-2, 1},
+    {-2, 1},
+  },
+  whispering_root_howling_cliffs = {
+    {16777216, 7},
+  },
+  whispering_root_ancestral_mound = {
+    {16384, 5},
+    {32768, 1},
+    {8192, 1},
+    {8, 1},
+    {-2, 1},
+    {-1, 1},
+    {-2, 1},
+  },
+  whispering_root_hive = {
+    {128, 7},
+    {8192, 1},
+    {32768, 1},
+    {-2, 1},
+    {64, 1},
+    {8192, 1},
+    {32768, 1},
+    {-1, 1},
+    {-2, 1},
+    {-1, 1},
+    {-2, 1},
   },
 }
