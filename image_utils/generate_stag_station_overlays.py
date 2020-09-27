@@ -14,13 +14,7 @@ def get_letter_pair(station):
 
 
 def get_overlay_params(text):
-  return {
-    'background': 'transparent',
-    'size': '32x32',
-    'pointsize': 15,
-    'gravity': 'southeast',
-    'fill': 'white',
-  }
+  return '-background transparent -size 32x32 -pointsize 15 -gravity southeast -fill white label:\'{}\''.format(text)
 
 
 def get_full_destination(destination, station):
@@ -29,6 +23,6 @@ def get_full_destination(destination, station):
 def generate_stag_station_overlays(destination):
   for station in LocationYaml().get_locations('stag_stations'):
     letter_pair = get_letter_pair(station['display_name'])
-    station_overlay = TextGeneratedImage('', letter_pair, get_overlay_params(letter_pair))
+    station_overlay = TextGeneratedImage('', get_overlay_params(letter_pair))
     station_overlay.front = get_full_destination(destination, station['location_name'])
     station_overlay.generate_image()
