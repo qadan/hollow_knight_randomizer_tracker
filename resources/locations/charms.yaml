@@ -155,6 +155,7 @@ charms:
     x_coord: 2798
     y_coord: 2192
     inherit_code: true
+    check_infix: Palace_Grounds
   lifeblood_core:
     access_rules:
     - $LIFEBLOOD,SPICYSKIPS
