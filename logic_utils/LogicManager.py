@@ -1,4 +1,5 @@
 from xml_utils.xml_aggregator import grouped_xml
+from yaml_utils.LocationYaml import LocationYaml
 
 '''
 Straight python port of the LogicManager from the rando. Doesn't include the
@@ -33,6 +34,7 @@ class LogicManager:
     self.grub_index = 0
 
     self.xml_groups = grouped_xml()
+    self.location_yaml = LocationYaml()
 
 
 
@@ -86,6 +88,9 @@ class LogicManager:
     for item, data in self.xml_groups['items'].get_items():
         self.items[item] = data
         self.items[item]['itemLogic'] = self.shunting_yard(self.items[item]['itemLogic'])
+        location = self.location_yaml.get_by_qualified_name(item)
+        if location and 'check_infix' in location:
+          self.items[item]['checkLogic'] = self.shunting_yard(location['check_infix'])
 
 
   def parse_shop_xml(self):
@@ -169,6 +174,29 @@ class LogicManager:
     }
 
 
+  def process_shunted(self, shunted):
+    postfix = []
+    while shunted:
+      val = shunted.pop()
+      if val == '|':
+        postfix.append((-1, 1))
+      elif val == '+':
+        postfix.append((-2, 1))
+      elif val == 'ESSENCECOUNT':
+        postfix.append((-3, 1))
+      elif val == 'GRUBCOUNT':
+        postfix.append((-4, 1))
+      elif val == '200ESSENCE':
+        postfix.append((-5, 1))
+      else:
+        postfix.append(self.progression_bitmask[val])
+    # Reversing the postfix is immensely faster than performing prepends to the
+    # stack, and ensures the interpreter Lua can also perform quickly using a
+    # plain ol' for loop.
+    postfix.reverse()
+    return postfix
+
+
   def process_logic(self):
     self.add_settings()
 
@@ -201,63 +229,15 @@ class LogicManager:
     self.bitmask_max = self.grub_index
 
     for item in self.get_item_names():
-      postfix = []
-      while self.items[item]['itemLogic']:
-        val = self.items[item]['itemLogic'].pop()
-        if val == '|':
-          postfix.append((-1, 1))
-        elif val == '+':
-          postfix.append((-2, 1))
-        elif val == 'ESSENCECOUNT':
-          postfix.append((-3, 1))
-        elif val == 'GRUBCOUNT':
-          postfix.append((-4, 1))
-        elif val == '200ESSENCE':
-          postfix.append((-5, 1))
-        else:
-          postfix.append(self.progression_bitmask[val])
-      # This postfix and the next two postfixes are being reversed so we can
-      # operate on them using a plain ol' for loop in the interpreter Lua.
-      postfix.reverse()
-      self.items[item]['processedItemLogic'] = postfix
+      self.items[item]['processedItemLogic'] = self.process_shunted(self.items[item]['itemLogic'])
+      if 'checkLogic' in self.items[item]:
+        self.items[item]['processedCheckLogic'] = self.process_shunted(self.items[item]['checkLogic'])
 
     for shop in self.get_shop_names():
-      postfix = []
-      while self.shops[shop]['itemLogic']:
-        val = self.shops[shop]['itemLogic'].pop()
-        if val == '|':
-          postfix.append((-1, 1))
-        elif val == '+':
-          postfix.append((-2, 1))
-        elif val == 'ESSENCECOUNT':
-          postfix.append((-3, 1))
-        elif val == 'GRUBCOUNT':
-          postfix.append((-4, 1))
-        elif val == '200ESSENCE':
-          postfix.append((-5, 1))
-        else:
-          postfix.append(self.progression_bitmask[val])
-      postfix.reverse()
-      self.shops[shop]['processedItemLogic'] = postfix
+      self.shops[shop]['processedItemLogic'] = self.process_shunted(self.shops[shop]['itemLogic'])
 
     for waypoint in self.get_waypoints():
-      postfix = []
-      while self.waypoints[waypoint]['itemLogic']:
-        val = self.waypoints[waypoint]['itemLogic'].pop()
-        if val == '|':
-          postfix.append((-1, 1))
-        elif val == '+':
-          postfix.append((-2, 1))
-        elif val == 'ESSENCECOUNT':
-          postfix.append((-3, 1))
-        elif val == 'GRUBCOUNT':
-          postfix.append((-4, 1))
-        elif val == '200ESSENCE':
-          postfix.append((-5, 1))
-        else:
-          postfix.append(self.progression_bitmask[val])
-      postfix.reverse()
-      self.waypoints[waypoint]['processedItemLogic'] = postfix
+      self.waypoints[waypoint]['processedItemLogic'] = self.process_shunted(self.waypoints[waypoint]['itemLogic'])
 
 
   def shunting_yard(self, infix):

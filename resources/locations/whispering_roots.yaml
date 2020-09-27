@@ -8,6 +8,7 @@ whispering_roots:
     part_of: ancestral_mound
     qualified_name: Whispering_Root-Ancestral_Mound
     waypoint: Ancestral_Mound
+    check_infix: Ancestral_Mound + (WINGS | (CLAW + SPICYSKIPS))
   whispering_root_city:
     access_rules:
     - $DREAMNAIL
@@ -15,6 +16,7 @@ whispering_roots:
     waypoint: Left_Elevator
     x_coord: 2229
     y_coord: 1330
+    check_infix: Left_Elevator
   whispering_root_crossroads:
     access_rules:
     - mantis_claw,$DREAMNAIL
@@ -22,6 +24,7 @@ whispering_roots:
     waypoint: Crossroads
     x_coord: 1719
     y_coord: 657
+    check_infix: Crossroads + CLAW
   whispering_root_crystal_peak:
     access_rules:
     - mantis_claw,$DASH,$DREAMNAIL
@@ -31,6 +34,7 @@ whispering_roots:
     waypoint: Upper_Crystal_Peak
     x_coord: 2954
     y_coord: 399
+    check_infix: Upper_Crystal_Peak + (CLAW | WINGS) + (DASH | WINGS)
   whispering_root_deepnest:
     access_rules:
     - lumafly_lantern,mantis_claw,$DREAMNAIL
@@ -43,6 +47,7 @@ whispering_roots:
     waypoint: Dark_Deepnest
     x_coord: 501
     y_coord: 1951
+    check_infix: Dark_Deepnest + (LANTERN | DARKROOMS) + (CLAW | (WINGS + MILDSKIPS))
   whispering_root_greenpath:
     qualified_name: Whispering_Root-Greenpath
     waypoint: Greenpath
@@ -50,6 +55,7 @@ whispering_roots:
     y_coord: 1035
     access_rules:
     - mantis_claw,$DREAMNAIL,@far_queens_gardens
+    check_infix: Far_Queen's_Gardens + Greenpath + CLAW
   whispering_root_hive:
     access_rules:
     - $DREAMNAIL,mantis_claw,monarch_wings
@@ -59,6 +65,7 @@ whispering_roots:
     waypoint: Hive
     x_coord: 3653
     y_coord: 2056
+    check_infix: Hive + ((CLAW + WINGS) | (MILDSKIPS + (CLAW | WINGS)))
   whispering_root_howling_cliffs:
     access_rules:
     - mantis_claw,$DREAMNAIL
@@ -68,6 +75,7 @@ whispering_roots:
     waypoint: Howling_Cliffs
     x_coord: 852
     y_coord: 527
+    check_infix: Howling_Cliffs
   whispering_root_kingdoms_edge:
     access_rules:
     - mantis_claw,$DREAMNAIL
@@ -76,6 +84,7 @@ whispering_roots:
     waypoint: Upper_Kingdom's_Edge
     x_coord: 3508
     y_coord: 1576
+    check_infix: Upper_Kingdom's_Edge
   whispering_root_leg_eater:
     access_rules:
     - $DREAMNAIL
@@ -83,6 +92,7 @@ whispering_roots:
     waypoint: Right_Fog_Canyon
     x_coord: 1680
     y_coord: 1144
+    check_infix: Right_Fog_Canyon
   whispering_root_mantis_village:
     access_rules:
     - mantis_claw,$DREAMNAIL
@@ -90,6 +100,7 @@ whispering_roots:
     waypoint: Fungal_Wastes
     x_coord: 1625
     y_coord: 1562
+    check_infix: Fungal_Wastes + CLAW
   whispering_root_queens_gardens:
     access_rules:
     - mantis_claw,$DREAMNAIL
@@ -97,6 +108,7 @@ whispering_roots:
     waypoint: Bottom_Right_Queen's_Gardens
     x_coord: 928
     y_coord: 1432
+    check_infix: Bottom_Right_Queen's_Gardens
   whispering_root_resting_grounds:
     access_rules:
     - $DREAMNAIL
@@ -104,6 +116,7 @@ whispering_roots:
     waypoint: Upper_Resting_Grounds
     x_coord: 3200
     y_coord: 772
+    check_infix: Upper_Resting_Grounds
   whispering_root_spirits_glade:
     access_rules:
     - mantis_claw,$DREAMNAIL,$DASH
@@ -113,6 +126,7 @@ whispering_roots:
     waypoint: Spirits_Glade
     x_coord: 3457
     y_coord: 695
+    check_infix: Spirits_Glade + CLAW + (DASH | WINGS | AIRSTALL)
   whispering_root_waterways:
     access_rules:
     - mantis_claw,$DREAMNAIL
@@ -120,3 +134,4 @@ whispering_roots:
     waypoint: Waterways_Shaft
     x_coord: 2824
     y_coord: 1968
+    check_infix: Waterways_Shaft

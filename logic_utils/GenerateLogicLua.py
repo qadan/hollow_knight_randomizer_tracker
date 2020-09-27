@@ -47,6 +47,50 @@ class GenerateLogicLua:
     ])
 
 
+  def set_table_doc(self):
+    self.lines.extend([
+      '----',
+      '-- ITEM_TABLE and WAYPOINT_TABLE:',
+      '--   Tables containing information to be used to determine the accessibility of',
+      '--   items and waypoints, respectively, using item or waypoint names as keys,',
+      '--   paired with the following values:',
+      '--   - \'bitmask\': (Optional) A power of two; the bit representing this item or',
+      '--     waypoint in the PROGRESSION_BITMASK in its group. If absent, this item',
+      '--     does not provide progression.',
+      '--   - \'group\': (Optional) A number between 1 and 7; the group in the',
+      '--     PROGRESSION_BITMASK this item or waypoint is represented in. If absent,',
+      '--     this item does not provide progression.',
+      '--   - \'postfix\': A list of postfixed, processed logic representing access to',
+      '--     this item or waypoint. Each item is a bitmask/group pair representing',
+      '--     where to look in the PROGRESSION_BITMASK for access. Negative integers',
+      '--     represent operators; -2 is AND, and -1 is OR. Lower numbers are not',
+      '--     considered currently.',
+      '--   - \'status\': Currently unused, but should be used in the future to optimize',
+      '--     waypoint logic check passes.',
+      '--',
+      '-- For example, in \'lurien\' in the ITEM_TABLE, the first two postfixes are',
+      '-- {2, 6} (the \'right_city\' waypoint) and {8192, 1} (the mantis claw). These',
+      '-- will be compared using the {-2, 1} (an AND operator) such that one of the',
+      '-- potential access conditions for the item \'lurien\' is access to right_city',
+      '-- with the mantis claw.',
+      '----',
+    ])
+
+
+  def set_check_doc(self):
+    self.lines.extend([
+      '----',
+      '-- CHECK_TABLE:',
+      '--   Table containing mostly identical postfixes to the WAYPOINT and ITEM_TABLEs',
+      '--   but pared down to display only the access necessary to check the location',
+      '--   (e.g., being able to see a whispering root\'s prize without the Dreamnail).',
+      '--',
+      '--   Each item in the table is paired with the postfix list of accessibility',
+      '--   rules defining whether the item is checkable.',
+      '----',
+    ])
+
+
   def append_item(self, item, data, add_tracking):
     self.lines.append("  {} = {{".format(self.clean_name(item)))
     if item in self.logic_manager.progression_bitmask.keys():
@@ -94,13 +138,29 @@ class GenerateLogicLua:
     self.lines.append("}")
 
 
+  def add_checks(self):
+    self.lines.append("CHECK_TABLE = {")
+    for item, data in self.logic_manager.items.items():
+      if 'processedCheckLogic' in data:
+        self.lines.append("  {} = {{".format(self.clean_name(item)))
+        for postfix in data['processedCheckLogic']:
+          self.lines.append("    {{{}, {}}},".format(postfix[0], postfix[1]))
+        self.lines.append("  },")
+    self.lines.append("}")
+
+
+
   def print_lua(self):
     self.lines = []
     self.set_header()
     self.add_space()
+    self.set_table_doc()
     self.add_locations()
     self.add_space()
     self.add_waypoints()
+    self.add_space()
+    self.set_check_doc()
+    self.add_checks()
     with open(self.destination, 'w') as lua:
       for line in self.lines:
         lua.write(line)

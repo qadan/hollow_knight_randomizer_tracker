@@ -52,6 +52,7 @@ mask_shards:
     waypoint: Upper_Resting_Grounds
     x_coord: 3420
     y_coord: 912
+    check_infix: Upper_Resting_Grounds + QUAKE + CLAW
     access_rules:
     - $QUAKE,mantis_claw,monarch_wings,crystal_heart,ismas_tear,shade_cloak,@top_left_queens_gardens
   mask_shard_hive:

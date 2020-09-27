@@ -190,9 +190,8 @@ charms:
     display_name: Nailmaster's Glory
     qualified_name: Nailmaster's_Glory
     waypoint: Sly_Basement
-    part_of: sly_basement
     x_coord: 1748
-    y_coord: 611
+    y_coord: 615
   queen_fragment:
     access_rules:
     - shade_cloak,mantis_claw,$BOSS

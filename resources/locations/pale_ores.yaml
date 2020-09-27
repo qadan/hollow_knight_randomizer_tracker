@@ -18,6 +18,7 @@ pale_ores:
     part_of: colosseum
     qualified_name: Pale_Ore-Colosseum
     waypoint: Colosseum
+    check_infix: Colosseum
   pale_ore_crystal_peak:
     description: Beneath the Radiance statue
     qualified_name: Pale_Ore-Crystal_Peak

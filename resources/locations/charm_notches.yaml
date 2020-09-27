@@ -6,6 +6,7 @@ charm_notches:
     part_of: colosseum
     qualified_name: Charm_Notch-Colosseum
     waypoint: Colosseum
+    check_infix: Colosseum
   charm_notch_fog_canyon:
     access_rules:
     - mantis_claw,ismas_tear
