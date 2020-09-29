@@ -5,8 +5,7 @@ wanderers_journals:
     - monarch_wings,SHADESKIPS
     qualified_name: Wanderer's_Journal-Above_Mantis_Village
     waypoint: Fungal_Wastes
-    x_coord: 1644
-    y_coord: 1548
+    part_of: mantis_village_whispering_root
   wanderers_journal_ancient_basin:
     access_rules:
     - $DASH
@@ -95,5 +94,4 @@ wanderers_journals:
     - $QUAKE,monarch_wings
     qualified_name: Wanderer's_Journal-Resting_Grounds_Catacombs
     waypoint: Upper_Resting_Grounds
-    x_coord: 3499
-    y_coord: 971
+    part_of: soul_eater_group

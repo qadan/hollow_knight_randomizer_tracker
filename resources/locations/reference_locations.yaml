@@ -12,7 +12,7 @@ reference_locations:
   seer:
     display_name: Seer
     description: Rewards for Essence
-    x_coord: 3182
+    x_coord: 3142
     y_coord: 777
     qualified_name: Seer
     waypoint: Upper_Resting_Grounds
@@ -26,8 +26,8 @@ reference_locations:
     group_type: sectioned
   grimms_tent:
     display_name: Grimm's Tent
-    x_coord: 1683
-    y_coord: 592
+    x_coord: 1650
+    y_coord: 585
     waypoint: Dirtmouth
     access_rules:
     - grimmchild
@@ -83,3 +83,69 @@ reference_locations:
     y_coord: 272
     waypoint: Stag_Nest
     group_type: group
+  dark_deepnest_whispering_root_group:
+    display_name: Dark Deepnest Whispering Root
+    x_coord: 501
+    y_coord: 1951
+    waypoint: Dark_Deepnest
+    group_type: sectioned
+  weavers_den:
+    dispay_name: Weaver's Den
+    waypoint: Weaver's_Den
+    x_coord: 717
+    y_coord: 1913
+    group_type: sectioned
+  lifeblood_core_group:
+    display_name: Lifeblood Core
+    waypoint: Abyss
+    x_coord: 2306
+    y_coord: 2598
+    group_type: sectioned
+  greenpath_southwest:
+    display_name: Greenpath Southwest Items
+    waypoint: Greenpath
+    x_coord: 834
+    y_coord: 1028
+    group_type: sectioned
+  stone_sanctuary:
+    display_name: Stone Sanctuary
+    waypoint: Greenpath
+    x_coord: 1427
+    y_coord: 996
+    group_type: sectioned
+  mantis_lords_rewards:
+    display_name: Mantis Lords Rewards
+    waypoint: Mantis_Village
+    x_coord: 1734
+    y_coord: 1680
+    group_type: sectioned
+  crystal_peak_map_group:
+    display_name: Crystal Peak Map
+    waypoint: Upper_Crystal_Peak
+    x_coord: 2475
+    y_coord: 537
+    group_type: sectioned
+  crystallized_mound:
+    display_name: Crystallized Mound
+    waypoint: Crystallized_Mound
+    x_coord: 3068
+    y_coord: 724
+    group_type: sectioned
+  greenpath_map_group:
+    display_name: Greenpath Map
+    waypoint: Greenpath
+    x_coord: 1380
+    y_coord: 859
+    group_type: sectioned
+  soul_eater_group:
+    display_name: Soul Eater
+    waypoint: Upper_Resting_Grounds
+    x_coord: 3494
+    y_coord: 947
+    group_type: sectioned
+  mantis_village_whispering_root:
+    display_name: Mantis Village Whispering Root
+    waypoint: Fungal_Wastes
+    x_coord: 1625
+    y_coord: 1562
+    group_type: sectioned

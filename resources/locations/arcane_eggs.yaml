@@ -9,8 +9,7 @@ arcane_eggs:
     - $LIFEBLOOD,crystal_heart,monarch_wings
     qualified_name: Arcane_Egg-Lifeblood_Core
     waypoint: Abyss
-    x_coord: 2309
-    y_coord: 2629
+    part_of: lifeblood_core_group
   arcane_egg_seer:
     part_of: seer
     qualified_name: Arcane_Egg-Seer

@@ -165,8 +165,7 @@ charms:
     logic_group: lifeblood
     qualified_name: Lifeblood_Core
     waypoint: Abyss
-    x_coord: 2306
-    y_coord: 2598
+    part_of: lifeblood_core_group
   lifeblood_heart:
     display_name: Lifeblood Heart
     logic_group: lifeblood
@@ -184,8 +183,7 @@ charms:
     display_name: Mark of Pride
     qualified_name: Mark_of_Pride
     waypoint: Mantis_Village
-    x_coord: 1721
-    y_coord: 1671
+    part_of: mantis_lords_rewards
   nailmasters_glory:
     description: In Sly's Basement after all 3 nail skills
     display_name: Nailmaster's Glory
@@ -258,8 +256,7 @@ charms:
     display_name: Soul Eater
     qualified_name: Soul_Eater
     waypoint: Upper_Resting_Grounds
-    x_coord: 3494
-    y_coord: 947
+    part_of: soul_eater_group
   spell_twister:
     access_rules:
     - mantis_claw
@@ -329,5 +326,4 @@ charms:
     display_name: Weaversong
     qualified_name: Weaversong
     waypoint: Weaver's_Den
-    x_coord: 717
-    y_coord: 1913
+    part_of: weavers_den

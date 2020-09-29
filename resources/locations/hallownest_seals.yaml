@@ -82,8 +82,7 @@ hallownest_seals:
     - monarch_wings,SPICYSKIPS
     qualified_name: Hallownest_Seal-Mantis_Lords
     waypoint: Mantis_Village
-    x_coord: 1716
-    y_coord: 1666
+    part_of: mantis_lords_rewards
   hallownest_seal_queens_gardens:
     access_rules:
     - mantis_claw
@@ -116,7 +115,7 @@ hallownest_seals:
     - mantis_claw,$QUAKE
     qualified_name: Hallownest_Seal-Soul_Sanctum
     waypoint: Soul_Sanctum
-    x_coord: 2299
+    x_coord: 2319
     y_coord: 1264
   hallownest_seal_watcher_knight:
     access_rules:
@@ -125,4 +124,4 @@ hallownest_seals:
     qualified_name: Hallownest_Seal-Watcher_Knight
     waypoint: Right_City
     x_coord: 2709
-    y_coord: 1321
+    y_coord: 1338

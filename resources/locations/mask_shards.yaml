@@ -7,8 +7,8 @@ mask_shards:
     description: Rescue Bretta
     qualified_name: Mask_Shard-Bretta
     waypoint: Mantis_Outskirts
-    x_coord: 1820
-    y_coord: 594
+    x_coord: 1850
+    y_coord: 585
     access_rules:
     - mantis_claw,$DASH,@dirtmouth
     - mantis_claw,monarch_wings,@dirtmouth
@@ -44,7 +44,7 @@ mask_shards:
     description: Enraged Guardian Prize
     qualified_name: Mask_Shard-Enraged_Guardian
     waypoint: Upper_Crystal_Peak
-    x_coord: 2592
+    x_coord: 2622
     y_coord: 450
   mask_shard_grey_mourner:
     description: Deliver the fragile flower
@@ -95,8 +95,7 @@ mask_shards:
     description: In the Stone Sanctuary
     qualified_name: Mask_Shard-Stone_Sanctuary
     waypoint: Stone_Sanctuary
-    x_coord: 1427
-    y_coord: 996
+    part_of: stone_sanctuary
   mask_shard_waterways:
     description: Hidden in western Waterways
     qualified_name: Mask_Shard-Waterways

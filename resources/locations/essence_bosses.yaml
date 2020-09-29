@@ -62,8 +62,7 @@ essence_bosses:
     display_name: No Eyes
     qualified_name: No_Eyes
     waypoint: Stone_Sanctuary
-    x_coord: 1427
-    y_coord: 1000
+    part_of: stone_sanctuary
   soul_tyrant:
     access_rules:
     - mantis_claw,$DREAMNAIL,$BOSS

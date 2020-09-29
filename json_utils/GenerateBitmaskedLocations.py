@@ -12,7 +12,11 @@ class GenerateBitmaskedLocations:
 
   checkable_groups = [
     'seer',
-    'grubfather'
+    'grubfather',
+  ]
+
+  capturable_types = [
+    'whispering_roots',
   ]
 
   def __init__(self):
@@ -50,6 +54,8 @@ class GenerateBitmaskedLocations:
         "clear_as_group": False,
         "item_count": len(sly_parts_of),
         "access_rules": [self.bitmask_access_rules('sly')],
+        "capture_item": True,
+        "capture_item_layout": 'item_grid_tall',
       },
       {
         "name": "Sly (Shopkeeper's Key; maximum {} additional items)".format(len(sly_key_parts_of)),
@@ -57,6 +63,8 @@ class GenerateBitmaskedLocations:
         "clear_as_group": False,
         "item_count": len(sly_key_parts_of),
         "access_rules": [self.bitmask_access_rules('sly_key')],
+        "capture_item": True,
+        "capture_item_layout": 'item_grid_tall',
       },
     ]
 
@@ -72,27 +80,22 @@ class GenerateBitmaskedLocations:
         'size': 50,
       }],
     }
+    if data['type'] == 'shops':
+      definition['map_locations'][0]['visibility_rules'] = 'randomize_shops,{}'.format(self.bitmask_access_rules(location))
     parts_of = self.location_yaml.get_parts_of(location)
     definition['sections'] = []
-    if data['group_type'] == 'group':
-      definition['sections'].append({
-        'name': self.location_yaml.get_display_name(location),
-        'group': location,
-        'item_count': len(parts_of),
-        "clear_as_group": False,
-        'access_rules': [self.bitmask_access_rules(location)]
-      })
-      if data['type'] != 'reference_locations':
-        definition['map_locations'][0]['visibility_rules'] = ['randomize_{}'.format(data['type'])]
-    elif data['group_type'] == 'slys_special_magical_goddamn_group':
+    if data['group_type'] == 'slys_special_magical_goddamn_group':
       definition['sections'].extend(self.get_sly_sections())
       definition['map_locations'][0]['visibility_rules'] = ['randomize_shops']
     else:
       for part_loc, part_data in parts_of.items():
+        part_type = 'relics' if part_data['type'] in self.relic_types else part_data['type']
         definition['sections'].append({
           'name': self.location_yaml.get_display_name(part_loc),
           'item_count': 1,
-          'access_rules': ['randomize_{},{}'.format(part_data['type'], self.bitmask_access_rules(part_loc))],
+          'access_rules': ['randomize_{},{}'.format(part_type, self.bitmask_access_rules(location) if data['type'] == 'shops' else self.bitmask_access_rules(part_loc))],
+          'capture_item': part_type in self.capturable_types or data['group_type'] == 'group',
+          'capture_item_layout': 'item_grid_tall',
         })
     return definition
 
@@ -122,6 +125,8 @@ class GenerateBitmaskedLocations:
             'name': data['description'] if 'description' in data else self.location_yaml.get_display_name(location),
             'access_rules': access_rules,
             'item_count': 1,
-          }]
+            'capture_item': loc_type in self.capturable_types,
+            'capture_item_layout': 'item_grid_tall',
+          }],
         })
     return self.locations

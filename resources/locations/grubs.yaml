@@ -109,8 +109,7 @@ grubs:
   grub_fungus1_06:
     qualified_name: Grub-Fungus1_06
     waypoint: Greenpath
-    x_coord: 1379
-    y_coord: 836
+    part_of: greenpath_map_group
   grub_fungus1_07:
     qualified_name: Grub-Fungus1_07
     waypoint: Greenpath
@@ -126,8 +125,7 @@ grubs:
     - SHADESKIPS
     qualified_name: Grub-Fungus1_13
     waypoint: Greenpath
-    x_coord: 842
-    y_coord: 1028
+    part_of: greenpath_southwest
   grub_fungus1_21:
     qualified_name: Grub-Fungus1_21
     waypoint: Greenpath
@@ -157,7 +155,7 @@ grubs:
     qualified_name: Grub-Fungus3_10
     waypoint: Top_Left_Queen's_Gardens
     x_coord: 609
-    y_coord: 1362
+    y_coord: 1380
   grub_fungus3_22:
     access_rules:
     - mantis_claw,$DASH,crystal_heart
@@ -255,8 +253,7 @@ grubs:
     - $QUAKE,monarch_wings
     qualified_name: Grub-Mines_35
     waypoint: Crystallized_Mound
-    x_coord: 3068
-    y_coord: 701
+    part_of: crystallized_mound
   grub_restinggrounds_10:
     access_rules:
     - $QUAKE,mantis_claw
@@ -278,7 +275,7 @@ grubs:
     - mantis_claw,$QUAKE
     qualified_name: Grub-Ruins1_32
     waypoint: Soul_Sanctum
-    x_coord: 2275
+    x_coord: 2265
     y_coord: 1263
   grub_ruins2_03:
     access_rules:
@@ -302,7 +299,7 @@ grubs:
     qualified_name: Grub-Ruins2_11
     waypoint: Tower_of_Love
     x_coord: 3363
-    y_coord: 1474
+    y_coord: 1454
   grub_ruins_house_01:
     access_rules:
     - mantis_claw

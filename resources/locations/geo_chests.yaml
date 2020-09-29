@@ -4,14 +4,13 @@ geo_chests:
     - $stupidUpperCrystalPeakRules
     qualified_name: 80_Geo-Crystal_Peak_Chest
     waypoint: Upper_Crystal_Peak
-    x_coord: 2717
-    y_coord: 660
+    x_coord: 2737
+    y_coord: 650
   false_knight_chest:
     description: Behind the False Knight
     qualified_name: 200_Geo-False_Knight_Chest
     waypoint: Crossroads
-    x_coord: 1872
-    y_coord: 825
+    part_of: false_knight
   greenpath_chest:
     access_rules:
     - $DASH
@@ -31,9 +30,7 @@ geo_chests:
     - monarch_wings,SPICYSKIPS
     description: Mantis Lords Reward
     qualified_name: 620_Geo-Mantis_Lords_Chest
-    waypoint: Mantis_Village
-    x_coord: 1714
-    y_coord: 1680
+    part_of: mantis_lords_rewards
   resting_grounds_chest:
     access_rules:
     - $QUAKE
@@ -58,7 +55,7 @@ geo_chests:
     qualified_name: 655_Geo-Watcher_Knights_Chest
     waypoint: Right_City
     x_coord: 2710
-    y_coord: 1301
+    y_coord: 1280
   weavers_den_chest:
     access_rules:
     - mantis_claw,crystal_heart,SPIKETUNNELS
@@ -67,5 +64,4 @@ geo_chests:
     description: In the Weaver's Den
     qualified_name: 160_Geo-Weavers_Den_Chest
     waypoint: Weaver's_Den
-    x_coord: 737
-    y_coord: 1923
+    part_of: weavers_den

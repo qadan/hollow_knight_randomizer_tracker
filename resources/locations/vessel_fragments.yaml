@@ -38,8 +38,7 @@ vessel_fragments:
     description: Near the Queen's Garden
     qualified_name: Vessel_Fragment-Greenpath
     waypoint: Greenpath
-    x_coord: 834
-    y_coord: 1028
+    part_of: greenpath_southwest
   vessel_fragment_seer:
     part_of: seer
     qualified_name: Vessel_Fragment-Seer

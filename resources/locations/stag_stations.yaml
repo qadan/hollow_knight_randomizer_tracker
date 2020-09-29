@@ -15,8 +15,8 @@ stag_stations:
     display_name: Dirtmouth Stag
     qualified_name: Dirtmouth_Stag
     waypoint: Can_Stag
-    x_coord: 1773
-    y_coord: 593
+    x_coord: 1750
+    y_coord: 585
   distant_village_stag:
     display_name: Distant Village Stag
     qualified_name: Distant_Village_Stag

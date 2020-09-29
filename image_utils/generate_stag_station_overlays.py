@@ -14,7 +14,7 @@ def get_letter_pair(station):
 
 
 def get_overlay_params(text):
-  return '-background transparent -size 32x32 -pointsize 15 -gravity southeast -fill white label:\'{}\''.format(text)
+  return '-background transparent -font /mnt/c/Windows/Fonts/arialbd.ttf -size 32x32 -pointsize 14 -gravity southeast -fill white label:\'{}\''.format(text)
 
 
 def get_full_destination(destination, station):

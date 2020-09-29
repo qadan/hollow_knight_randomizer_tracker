@@ -63,8 +63,7 @@ rancid_eggs:
     description: Hidden in Dark Deepnest
     qualified_name: Rancid_Egg-Dark_Deepnest
     waypoint: Dark_Deepnest
-    x_coord: 490
-    y_coord: 1957
+    part_of: dark_deepnest_whispering_root_group
   rancid_egg_fungal_core:
     access_rules:
     - mantis_claw
@@ -153,5 +152,4 @@ rancid_eggs:
     description: Hidden in Weaver's Den
     qualified_name: Rancid_Egg-Weaver's_Den
     waypoint: Weaver's_Den
-    x_coord: 734
-    y_coord: 1921
+    part_of: weavers_den

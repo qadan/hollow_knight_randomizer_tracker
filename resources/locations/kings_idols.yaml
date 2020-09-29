@@ -10,8 +10,7 @@ kings_idols:
     - monarch_wings
     qualified_name: King's_Idol-Crystal_Peak
     waypoint: Upper_Crystal_Peak
-    x_coord: 2494
-    y_coord: 526
+    part_of: crystal_peak_map_group
   kings_idol_deepnest:
     qualified_name: King's_Idol-Deepnest
     waypoint: Failed_Tramway

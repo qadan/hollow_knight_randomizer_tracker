@@ -11,27 +11,48 @@ function add_items_to_bitmask()
 end
 
 ----
--- Adds the current simple keys to the progression bitmask.
+-- Helper to add a counted, additive item set to the progression bitmask.
 --
--- A bit of a hack; it doesn't really matter which keys we're adding but rather
--- the count, so 'which one it is' doesn't reeeeeally have to map back to which
--- one was picked up. This way we can just generate the logic procedurally for
--- keys from the randomizer without having to mess with it.
+-- Used to track items like simple keys and dreamers where the specific item
+-- picked up is not as important as the number of them the player has.
+--
+-- code (string): The tracker code defining this additive set.
+-- additives (table<string>): A table containing the names of each additive in
+-- the item set.
+----
+function add_additive_set(code, additives)
+  local count = Tracker:ProviderCountForCode(code)
+  for idx, item in ipairs(additives) do
+    if count > idx - 1 then
+      add_mask_to_group(ITEM_TABLE[item]['bitmask'], ITEM_TABLE[item]['group'])
+    end
+  end
+end
+
+----
+-- Adds the current simple keys to the progression bitmask.
 ----
 function add_simple_keys_to_bitmask()
-  local count = Tracker:ProviderCountForCode('simple_key')
-  if count > 0 then
-    add_mask_to_group(ITEM_TABLE['simple_key_sly']['bitmask'], ITEM_TABLE['simple_key_sly']['group'])
-  end
-  if count > 1 then
-    add_mask_to_group(ITEM_TABLE['simple_key_basin']['bitmask'], ITEM_TABLE['simple_key_basin']['group'])
-  end
-  if count > 2 then
-    add_mask_to_group(ITEM_TABLE['simple_key_city']['bitmask'], ITEM_TABLE['simple_key_city']['group'])
-  end
-  if count > 3 then
-    add_mask_to_group(ITEM_TABLE['simple_key_lurker']['bitmask'], ITEM_TABLE['simple_key_lurker']['group'])
-  end
+  local keys = {
+    'simple_key_sly',
+    'simple_key_basin',
+    'simple_key_city',
+    'simple_key_lurker',
+  }
+  add_additive_set('simple_key', keys)
+end
+
+----
+-- Adds the current dreamers to the progression bitmask.
+----
+function add_dreamers_to_bitmask()
+  local dreamers = {
+    'herrah',
+    'monomon',
+    'lurien',
+    'dreamer',
+  }
+  add_additive_set('dreamers', dreamers)
 end
 
 ----
@@ -66,6 +87,7 @@ function recalculate_access()
   if SHOULD_CALCULATE then
     add_items_to_bitmask()
     add_simple_keys_to_bitmask()
+    add_dreamers_to_bitmask()
     add_waypoints_to_bitmask()
     SHOULD_CALCULATE = false
   end

@@ -9,28 +9,20 @@
         "item_margin": "1,2",
         "rows": [
           [
-            "lurien",
-            "monomon",
-            "herrah",
-            "dreamer",
-            "mothwing_cloak",
-            "mantis_claw"
-          ],
-          [
+            "dreamers",
             "monarch_wings",
+            "mantis_claw",
+            "mothwing_cloak",
             "crystal_heart",
-            "ismas_tear",
-            "dream_nail",
-            "vengeful_spirit",
-            "desolate_dive"
+            "ismas_tear"
           ],
           [
             "howling_wraiths",
-            "queen_fragment",
+            "vengeful_spirit",
+            "desolate_dive",
             "cyclone_slash",
             "dash_slash",
-            "great_slash",
-            "kings_brand"
+            "great_slash"
           ],
           [
             "city_crest",
@@ -38,25 +30,26 @@
             "tram_pass",
             "simple_key",
             "elegant_key",
-            "shopkeepers_key"
+            "shopkeepers_key",
+            "love_key"
           ],
           [
-            "grubs",
-            "love_key",
-            "lifeblood_heart",
+            "queen_fragment",
+            "kings_brand",
+            "dream_nail",
             "lifeblood_core",
+            "grimmchild",
             "mark_of_pride",
-            "sharp_shadow",
-            "weaversong"
+            "grubs"
           ],
           [
             "spore_shroom",
             "glowing_womb",
-            "jonis_blessing",
             "dashmaster",
             "grubberflys_elegy",
             "sprintmaster",
-            "grimmchild"
+            "sharp_shadow",
+            "weaversong"
           ],
           [
             "dirtmouth_stag",

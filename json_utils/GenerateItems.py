@@ -66,10 +66,35 @@ class GenerateItems:
 
   def generate_items(self):
     if not self.items:
-      additives_added = []
-      # Start out with grub count and simple keys, which we won't generate on
-      # the fly.
+      additives_added = [
+        'Herrah',
+        'Monomon',
+        'Lurien',
+        'Dreamer',
+        'Joni\'s_Blessing',
+        'Lifeblood_Heart',
+        'Lifeblood_Core',
+      ]
+      # Start out with grub count, simple keys, and any manually generated
+      # additive sets.
       self.items = [
+        {
+          'name': 'Dreamers',
+          'type': 'consumable',
+          'img': 'images/items/dreamer.png',
+          'max_quantity': 4,
+          'codes': 'dreamers',
+          'allow_disabled': False,
+        },
+        {
+          'name': 'Lifeblood Charms',
+          'type': 'toggle',
+          'img': 'images/items/lifeblood_charms.png',
+          # Kind of a hack; only one of the three is required, so it doesn't
+          # really matter which one is toggled by this.
+          'codes': 'lifeblood_core',
+          'allow_disabled': False,
+        },
         {
           'name': 'Grubs',
           'type': 'consumable', # lol
@@ -86,15 +111,6 @@ class GenerateItems:
           'codes': 'simple_key',
           'allow_disabled': False,
         },
-        # Add in the fourth dreamer. This one's a weird case where we have an
-        # item that isn't attached to an original location, so hacking it in.
-        {
-          'name': 'Dreamer',
-          'type': 'toggle',
-          'img': 'images/items/dreamer.png',
-          'codes': 'dreamer',
-          'allow_disabled': False,
-        }
       ]
       for name, data in self.item_xml.get_items():
         if name not in additives_added:
@@ -109,4 +125,5 @@ class GenerateItems:
         if 'codes' in item and item['codes'].endswith('_stag'):
           self.items[idx]['img'] = 'images/items/stag_station.png'
           self.items[idx]['img_mods'] = 'overlay|images/overlays/{}_overlay.png'.format(item['codes'])
+        self.items[idx]['capturable'] = True
     return self.items

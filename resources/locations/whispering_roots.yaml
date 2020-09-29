@@ -45,8 +45,7 @@ whispering_roots:
     - '[monarch_wings,$DREAMNAIL]'
     qualified_name: Whispering_Root-Deepnest
     waypoint: Dark_Deepnest
-    x_coord: 501
-    y_coord: 1951
+    part_of: dark_deepnest_whispering_root_group
     check_infix: Dark_Deepnest + (LANTERN | DARKROOMS) + (CLAW | (WINGS + MILDSKIPS))
   whispering_root_greenpath:
     qualified_name: Whispering_Root-Greenpath
@@ -98,8 +97,7 @@ whispering_roots:
     - mantis_claw,$DREAMNAIL
     qualified_name: Whispering_Root-Mantis_Village
     waypoint: Fungal_Wastes
-    x_coord: 1625
-    y_coord: 1562
+    part_of: mantis_village_whispering_root
     check_infix: Fungal_Wastes + CLAW
   whispering_root_queens_gardens:
     access_rules:

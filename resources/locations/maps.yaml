@@ -21,8 +21,7 @@ maps:
     display_name: Crystal Peak Map
     qualified_name: Crystal_Peak_Map
     waypoint: Upper_Crystal_Peak
-    x_coord: 2475
-    y_coord: 537
+    part_of: crystal_peak_map_group
   deepnest_map_right_gives_quill:
     access_rules:
     - mantis_claw
@@ -56,8 +55,7 @@ maps:
     display_name: Greenpath Map
     qualified_name: Greenpath_Map
     waypoint: Greenpath
-    x_coord: 1380
-    y_coord: 859
+    part_of: greenpath_map_group
   howling_cliffs_map:
     display_name: Howling Cliffs Map
     qualified_name: Howling_Cliffs_Map

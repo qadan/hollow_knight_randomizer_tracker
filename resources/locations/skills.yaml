@@ -48,8 +48,7 @@ skills:
     display_name: Descending Dark
     qualified_name: Descending_Dark
     waypoint: Crystallized_Mound
-    x_coord: 3068
-    y_coord: 724
+    part_of: crystallized_mound
   desolate_dive:
     access_rules:
     - mantis_claw
