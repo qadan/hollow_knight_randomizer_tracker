@@ -49,15 +49,35 @@
           "item_margin": "1,2",
           "rows": [
             [
-              "MILDSKIPS",
-              "SHADESKIPS",
-              "FIREBALLSKIPS",
+              "mildskips_text",
+              "MILDSKIPS"
+            ],
+            [
+              "shadeskips_text",
+              "SHADESKIPS"
+            ],
+            [
+              "fireballskips_text",
+              "FIREBALLSKIPS"
+            ],
+            [
+              "acidskips_text",
               "ACIDSKIPS"
             ],
             [
-              "SPIKETUNNELS",
-              "DARKROOMS",
-              "SPICYSKIPS",
+              "spiketunnels_text",
+              "SPIKETUNNELS"
+            ],
+            [
+              "darkrooms_text",
+              "DARKROOMS"
+            ],
+            [
+              "spicyskips_text",
+              "SPICYSKIPS"
+            ],
+            [
+              "notcursed_text",
               "NOTCURSED"
             ]
           ]
