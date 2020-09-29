@@ -80,8 +80,6 @@ class GenerateBitmaskedLocations:
         'size': 50,
       }],
     }
-    if data['type'] == 'shops':
-      definition['map_locations'][0]['visibility_rules'] = 'randomize_shops,{}'.format(self.bitmask_access_rules(location))
     parts_of = self.location_yaml.get_parts_of(location)
     definition['sections'] = []
     if data['group_type'] == 'slys_special_magical_goddamn_group':
