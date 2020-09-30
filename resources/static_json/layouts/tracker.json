@@ -14,30 +14,90 @@
         "title": "Pools",
         "content": {
           "type": "itemgrid",
-          "item_margin": "2,2",
+          "item_margin": "0,0",
+          "item_size": "32",
           "rows": [
             [
+              "randomize_dreamers_text_1",
+              "randomize_dreamers_text_2",
+              "randomize_dreamers_text_3",
               "randomize_dreamers",
-              "randomize_skills",
+              "randomize_skills_text_2",
+              "randomize_skills_text_3",
+              "randomize_skills"
+            ],
+            [
+              "randomize_charms_text_1",
+              "randomize_charms_text_2",
+              "randomize_charms_text_3",
               "randomize_charms",
-              "randomize_keys",
+              "randomize_keys_text_2",
+              "randomize_keys_text_3",
+              "randomize_keys"
+            ],
+            [
+              "randomize_geo_chests_text_1",
+              "randomize_geo_chests_text_2",
+              "randomize_geo_chests_text_3",
               "randomize_geo_chests",
+              "randomize_mask_shards_text_2",
+              "randomize_mask_shards_text_3",
               "randomize_mask_shards"
             ],
             [
+              "randomize_vessel_fragments_text_1",
+              "randomize_vessel_fragments_text_2",
+              "randomize_vessel_fragments_text_3",
               "randomize_vessel_fragments",
-              "randomize_pale_ores",
+              "randomize_pale_ores_text_2",
+              "randomize_pale_ores_text_3",
+              "randomize_pale_ores"
+            ],
+            [
+              "randomize_charm_notches_text_1",
+              "randomize_charm_notches_text_2",
+              "randomize_charm_notches_text_3",
               "randomize_charm_notches",
-              "randomize_rancid_eggs",
+              "randomize_rancid_eggs_text_2",
+              "randomize_rancid_eggs_text_3",
+              "randomize_rancid_eggs"
+              
+            ],
+            [
+              "randomize_relics_text_1",
+              "randomize_relics_text_2",
+              "randomize_relics_text_3",
               "randomize_relics",
+              "randomize_maps_text_2",
+              "randomize_maps_text_3",
               "randomize_maps"
             ],
             [
+              "randomize_stag_stations_text_1",
+              "randomize_stag_stations_text_2",
+              "randomize_stag_stations_text_3",
               "randomize_stag_stations",
-              "randomize_grubs",
+              "randomize_grubs_text_2",
+              "randomize_grubs_text_3",
+              "randomize_grubs"
+            ],
+            [
+              "randomize_whispering_roots_text_1",
+              "randomize_whispering_roots_text_2",
+              "randomize_whispering_roots_text_3",
               "randomize_whispering_roots",
-              "randomize_shops",
-              "randomize_essence_bosses"
+              "randomize_shops_text_2",
+              "randomize_shops_text_3",
+              "randomize_shops"
+            ],
+            [
+              "empty_square",
+              "empty_square",
+              "randomize_essence_bosses_text_0",
+              "randomize_essence_bosses_text_1",
+              "randomize_essence_bosses_text_2",
+              "randomize_essence_bosses_text_3",
+              "randomize_essence_bosses",
             ]
           ]
         }
@@ -46,38 +106,63 @@
         "title": "Skips/Cursed",
         "content": {
           "type": "itemgrid",
-          "item_margin": "1,2",
+          "item_margin": "0,0",
+          "item_size": "32",
           "rows": [
             [
-              "mildskips_text",
+              "mildskips_text_0",
+              "mildskips_text_1",
+              "mildskips_text_2",
+              "mildskips_text_3",
               "MILDSKIPS"
             ],
             [
-              "shadeskips_text",
+              "shadeskips_text_0",
+              "shadeskips_text_1",
+              "shadeskips_text_2",
+              "shadeskips_text_3",
               "SHADESKIPS"
             ],
             [
-              "fireballskips_text",
+              "fireballskips_text_0",
+              "fireballskips_text_1",
+              "fireballskips_text_2",
+              "fireballskips_text_3",
               "FIREBALLSKIPS"
             ],
             [
-              "acidskips_text",
+              "acidskips_text_0",
+              "acidskips_text_1",
+              "acidskips_text_2",
+              "acidskips_text_3",
               "ACIDSKIPS"
             ],
             [
-              "spiketunnels_text",
+              "spiketunnels_text_0",
+              "spiketunnels_text_1",
+              "spiketunnels_text_2",
+              "spiketunnels_text_3",
               "SPIKETUNNELS"
             ],
             [
-              "darkrooms_text",
+              "darkrooms_text_0",
+              "darkrooms_text_1",
+              "darkrooms_text_2",
+              "darkrooms_text_3",
               "DARKROOMS"
             ],
             [
-              "spicyskips_text",
+              "spicyskips_text_0",
+              "spicyskips_text_1",
+              "spicyskips_text_2",
+              "spicyskips_text_3",
               "SPICYSKIPS"
             ],
             [
-              "notcursed_text",
+              "notcursed_text_0",
+              "notcursed_text_1",
+              "notcursed_text_2",
+              "notcursed_text_3",
               "NOTCURSED"
             ]
           ]

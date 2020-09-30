@@ -1,5 +1,6 @@
 Tracker:AddItems("items/start_locations.json")
 Tracker:AddItems("items/options.json")
+Tracker:AddItems("items/skips.json")
 Tracker:AddItems("items/items.json")
 
 if not (string.find(Tracker.ActiveVariantUID, "items_only")) then

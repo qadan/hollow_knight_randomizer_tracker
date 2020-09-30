@@ -10,7 +10,9 @@ from image_utils.generate_stag_station_overlays import generate_stag_station_ove
 from json_utils.GenerateItems import GenerateItems
 from json_utils.GenerateBitmaskedLocations import GenerateBitmaskedLocations
 from json_utils.GenerateOptions import GenerateOptions
+from json_utils.GenerateSkips import GenerateSkips
 from json_utils.GenerateStartLocations import GenerateStartLocations
+from logic_utils.GenerateLogicLua import GenerateLogicLua
 from yaml_utils.settings import get_setting
 from zipfile import ZipFile, ZIP_DEFLATED
 
@@ -91,6 +93,14 @@ def generate_options_json(folder):
     dump(opts_json.get_options(), fout, sort_keys=get_setting('sort_json_keys'), indent=get_setting('json_indent'))
 
 
+def generate_skips_json(folder):
+  print('Generating skips JSON ...')
+  skips_json = GenerateSkips(folder)
+  skips_json.flatten_images()
+  with open('{}/items/skips.json'.format(folder), 'w') as fout:
+    dump(skips_json.get_skips(), fout, sort_keys=get_setting('sort_json_keys'), indent=get_setting('json_indent'))
+
+
 def generate_start_locations_json(folder):
   print('Generating start location JSON ...')
   start_json = GenerateStartLocations()
@@ -107,13 +117,10 @@ def generate_items_json(folder):
     dump(item_json.generate_items(), fout, sort_keys=get_setting('sort_json_keys'), indent=get_setting('json_indent'))
 
 
-def dump_the_zip(out_folder, zip_target):
-  print('Zipping it all up ...')
-  zipf = ZipFile(zip_target, 'w', ZIP_DEFLATED)
-  for root, dirs, files in walk(out_folder):
-    for file in files:
-      zipf.write('{}/{}'.format(root, file))
-  zipf.close()
+def generate_bitmask_lua(folder):
+  print('Generating bitmask Lua ...')
+  logic = GenerateLogicLua('{}/scripts/bitmasks.lua'.format(folder))
+  logic.print_lua()
 
 
 if __name__ == '__main__':
@@ -123,6 +130,8 @@ if __name__ == '__main__':
   move_and_format_the_images(args['out_folder'])
   generate_location_json(args['out_folder'])
   generate_options_json(args['out_folder'])
+  generate_skips_json(args['out_folder'])
   generate_start_locations_json(args['out_folder'])
   generate_items_json(args['out_folder'])
   generate_stag_station_overlays(args['out_folder'])
+  generate_bitmask_lua(args['out_folder'])

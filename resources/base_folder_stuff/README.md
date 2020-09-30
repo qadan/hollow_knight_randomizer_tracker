@@ -47,10 +47,6 @@ To do this in Steam:
 
 ## TODO
 
-* Some of the map spots are too close together; they should either be moved, or reduced into 'part_of' grouped locations.
-* The text-rendered icons are all terrible and need some work. They're generated through imagemagick, and that's fine, but the commands could be seriously improved, or could just make better icons.
-* Some of the icons could be reduced; for example, the lifeblood requirements and dreamers and maybe some of the charms.
-* If there's a way to do so (probably), it would be good to make it so disabling pools completely removes items from the map.
 * Currently, the tracker is doing the maximum possible number of passes on waypoints to ensure locations are added to the logic; this has an associated click lag (as it's recalculating waypoint access 20 times per click), and it would be useful to calculate the maximum possible waypoint chain to reduce this number.
 * Round of testing.
 

@@ -25,7 +25,7 @@ class GenerateStartLocations:
 
 
   def get_image_config(self, text):
-    return '-background transparent -size 160x32 -pointsize 14 -fill white -gravity center -bordercolor gray50 -border 1x1 label:\'{}\''.format(text)
+    return '-background transparent -size 160x32 -pointsize 16 -fill white -gravity center -bordercolor gray50 -border 1x1 label:\'{}\''.format(text)
 
 
   def get_icon_text(self, location):

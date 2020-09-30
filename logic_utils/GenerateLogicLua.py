@@ -13,11 +13,11 @@ class GenerateLogicLua:
   natively in Lua.
   '''
 
-  def __init__(self):
+  def __init__(self, destination):
     self.logic_manager = LogicManager()
     self.logic_manager.parse_xml()
     self.lines = []
-    self.destination = 'resources/static_lua/bitmasks.lua'
+    self.destination = destination
 
 
   def set_header(self):
@@ -65,14 +65,21 @@ class GenerateLogicLua:
       '--     where to look in the PROGRESSION_BITMASK for access. Negative integers',
       '--     represent operators; -2 is AND, and -1 is OR. Lower numbers are not',
       '--     considered currently.',
-      '--   - \'status\': Currently unused, but should be used in the future to optimize',
-      '--     waypoint logic check passes.',
+      '--   - \'status\': Currently unused, but should be used in the future to',
+      '--     optimize waypoint logic check passes.',
       '--',
-      '-- For example, in \'lurien\' in the ITEM_TABLE, the first two postfixes are',
-      '-- {2, 6} (the \'right_city\' waypoint) and {8192, 1} (the mantis claw). These',
-      '-- will be compared using the {-2, 1} (an AND operator) such that one of the',
-      '-- potential access conditions for the item \'lurien\' is access to right_city',
-      '-- with the mantis claw.',
+      '-- For example, in \'lurien\' in the ITEM_TABLE, the first 5 postfixes match the',
+      '-- bitmask and bitmask groups of the \'right_city\' waypoint, the mantis_claw,',
+      '-- and \'dreamnail\', which has been expanded to mean one of dream_nail,',
+      '-- dream_gate, or awoken_dream_nail. The interpreter asks whether each of these',
+      '-- have been obtained, and adds a \'true\' or \'false\' to the stack. After this',
+      '-- the interpreter encounters a {-1, 1}, telling it to remove the top two things',
+      '-- things on the stack (awoken_dream_nail and dream_gate), logically OR them',
+      '-- together, and add the results of this comparison to the top of the stack.',
+      '--',
+      '-- Eventually, after adding to, removing from, and comparing things in the stack,',
+      '-- only one value will be left - the definitive assertion of whether or not the',
+      '-- item is accessible.',
       '----',
     ])
 

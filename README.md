@@ -8,11 +8,6 @@ It also contains a bunch of crufty utilities I used to make the tracker.
 
 You shouldn't use any of it.
 
-## TODO for 1.0.0
-
-* Change the text based skip icons to images
-* Make checkable locations also capturable
-
 ## Installation
 
 Go to the [releases page](https://github.com/qadan/hkr_3_fantallis/releases/latest) and grab that. Or (ideally) download via emotracker?

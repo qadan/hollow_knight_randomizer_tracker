@@ -172,6 +172,11 @@ class LogicManager:
       'itemLogic': [],
       'processedItemLogic': [],
     }
+    self.progression_bitmask['CURSED'] = (256, 1)
+    self.items['CURSED'] = {
+      'itemLogic': [],
+      'processedItemLogic': [],
+    }
 
 
   def process_shunted(self, shunted):
@@ -200,7 +205,7 @@ class LogicManager:
   def process_logic(self):
     self.add_settings()
 
-    idx = 8
+    idx = 9
 
     for item in self.get_item_names():
       if 'progression' in self.items[item] and self.items[item]['progression']:

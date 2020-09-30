@@ -56,6 +56,19 @@ function add_dreamers_to_bitmask()
 end
 
 ----
+-- Adds the 'CURSED' flag if NOTCURSED is off.
+--
+-- Kind of stupid in my opinion, but the source logic includes a flag for both
+-- CURSED and NOTCURSED, so gotta handle.
+----
+function add_cursed_to_bitmask()
+  local notcursed = Tracker:ProviderCountForCode('notcursed')
+  if notcursed > 0 then
+    add_mask_to_group(ITEM_TABLE['cursed']['bitmask'], ITEM_TABLE['cursed']['group'])
+  end
+end
+
+----
 -- Adds all currently-accessible waypoints to the progression bitmask.
 ----
 function add_waypoints_to_bitmask()
@@ -88,6 +101,7 @@ function recalculate_access()
     add_items_to_bitmask()
     add_simple_keys_to_bitmask()
     add_dreamers_to_bitmask()
+    add_cursed_to_bitmask()
     add_waypoints_to_bitmask()
     SHOULD_CALCULATE = false
   end

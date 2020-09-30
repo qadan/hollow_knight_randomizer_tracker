@@ -117,7 +117,7 @@ class GenerateBitmaskedLocations:
             'x': data['x_coord'],
             'y': data['y_coord'],
             'size': 50,
-            'visibility_rules': 'randomize_{}'.format(loc_type)
+            'visibility_rules': ['randomize_{}'.format(loc_type)]
           }],
           'sections': [{
             'name': data['description'] if 'description' in data else self.location_yaml.get_display_name(location),
