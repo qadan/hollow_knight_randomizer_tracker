@@ -1,4 +1,6 @@
 from collections import defaultdict
+from pathlib import Path
+from yaml import safe_load, parser
 
 class EnumerateWaypointPaths:
 
@@ -12,11 +14,18 @@ class EnumerateWaypointPaths:
   The answer was 'not in any way'.
   '''
 
-  def __init__(self, target, all_waypoints=[]):
+  def __init__(self, target):
     self.target = target
-    self.all_waypoints = all_waypoints
-    print(len(all_waypoints))
+    self.all_waypoints = {}
+    self.get_waypoints()
     self.waypoint_paths = {}
+
+
+  def get_waypoints(self):
+    with open(Path('resources/locations/waypoints.yaml'), 'r') as waypoint_yaml:
+      waypoints = safe_load(waypoint_yaml)
+      for waypoint, data in waypoints['waypoints'].items():
+        self.all_waypoints[waypoint] = [waypoint for waypoint in data['child_waypoints'].keys()]
 
 
   def get_paths_for(self, start_child):
@@ -43,3 +52,12 @@ class EnumerateWaypointPaths:
     if not self.waypoint_paths:
         self.waypoint_paths = sorted(self.get_paths_for(self.target))
     return self.waypoint_paths
+
+
+  def longest_waypoint_path(self):
+    longest = (None, 0)
+    for start, children in self.get_enumerated_waypoints().items():
+      for child in children:
+        if len(child) > longest[1]:
+          longest = (start, child)
+    return longest

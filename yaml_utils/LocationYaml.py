@@ -68,6 +68,13 @@ class LocationYaml(object):
     return [location for location in self.get_aggregate_locations().values() if location['type'] == location_type]
 
 
+  def get_location_data(self, location_type):
+    data = {}
+    for location in self.get_locations(location_type):
+      data[location] = self.get_aggregate_locations()[location]
+    return data
+
+
   def get_locations_with_parents(self):
     locations_with_parents = {}
     for location, attributes in self.get_aggregate_locations().items():

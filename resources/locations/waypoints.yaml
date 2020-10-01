@@ -664,3 +664,195 @@ waypoints:
     child_waypoints:
       left_fog_canyon:
         access_rules: null
+  crossroads:
+    child_waypoints:
+      can_stag:
+        access_rules: null
+      ancestral_mound:
+        access_rules: null
+      greenpath:
+        access_rules: null
+      right_fog_canyon:
+        access_rules: null
+      fungal_wastes:
+        access_rules: null
+      crystal_peak:
+        access_rules: null
+      upper_tram:
+        access_rules: null
+      blue_lake:
+        access_rules: null
+  hive:
+    child_waypoints:
+      lower_kingdoms_edge:
+        access_rules: null
+  central_kingdoms_edge:
+    child_waypoints:
+      lower_kings_station:
+        access_rules: null
+      center_right_kingdoms_edge:
+        access_rules: null
+      oro_bench:
+        access_rules: null
+  upper_left_waterways:
+    child_waypoints:
+      central_left_waterways:
+        access_rules: null
+      far_left_waterways:
+        access_rules: null
+  upper_kings_station:
+    child_waypoints:
+      can_stag:
+        access_rules: null
+      lower_kings_station:
+        access_rules: null
+      right_elevator:
+        access_rules: null
+      pleasure_house:
+        access_rules: null
+  top_kingdoms_edge:
+    child_waypoints:
+      upper_kingdoms_edge:
+        access_rules: null
+      colosseum:
+        access_rules: null
+      upper_kings_station:
+        access_rules: null
+  distant_village:
+    child_waypoints:
+      can_stag:
+        access_rules: null
+      dark_deepnest:
+        access_rules: null
+      beasts_den:
+        access_rules: null
+  top_left_queens_gardens:
+    child_waypoints:
+      top_right_queens_gardens:
+        access_rules: null
+      bottom_left_queens_gardens:
+        access_rules: null
+      far_queens_gardens:
+        access_rules: null
+  abyss:
+    child_waypoints:
+      lower_basin:
+        access_rules: null
+  greenpath:
+    child_waypoints:
+      can_stag:
+        access_rules: null
+      lake_of_unn:
+        access_rules: null
+      stone_sanctuary:
+        access_rules: null
+      greenpath_qg:
+        access_rules: null
+      left_fog_canyon:
+        access_rules: null
+      howling_cliffs:
+        access_rules: null
+  left_fog_canyon:
+    child_waypoints:
+      greenpath:
+        access_rules: null
+      overgrown_mound:
+        access_rules: null
+      right_fog_canyon:
+        access_rules: null
+      queens_station:
+        access_rules: null
+      top_right_queens_gardens:
+        access_rules: null
+  right_fog_canyon:
+    child_waypoints:
+      crossroads:
+        access_rules: null
+      left_fog_canyon:
+        access_rules: null
+      teachers_archives:
+        access_rules: null
+      fungal_wastes:
+        access_rules: null
+  fungal_wastes:
+    child_waypoints:
+      bottom_left_fungal_wastes:
+        access_rules: null
+      fungal_core:
+        access_rules: null
+      mantis_outskirts:
+        access_rules: null
+      mantis_village:
+        access_rules: null
+      left_city:
+        access_rules: null
+      crossroads:
+        access_rules: null
+      right_fog_canyon:
+        access_rules: null
+      queens_station:
+        access_rules: null
+  fungal_core:
+    child_waypoints:
+      far_right_deepnest:
+        access_rules: null
+      fungal_wastes:
+        access_rules: null
+  left_city:
+    child_waypoints:
+      fungal_wastes:
+        access_rules: null
+      left_elevator:
+        access_rules: null
+      soul_sanctum:
+        access_rules: null
+      right_city:
+        access_rules: null
+      upper_left_waterways:
+        access_rules: null
+  left_elevator:
+    child_waypoints:
+      left_city:
+        access_rules: null
+      soul_sanctum:
+        access_rules: null
+      can_stag:
+        access_rules: null
+      crossroads:
+        access_rules: null
+      fungal_wastes:
+        access_rules: null
+  queens_station:
+    child_waypoints:
+      can_stag:
+        access_rules: null
+      left_fog_canyon:
+        access_rules: null
+      fungal_wastes:
+        access_rules: null
+  crystallized_mound:
+    child_waypoints:
+      crystal_peak:
+        access_rules: null
+      upper_resting_grounds:
+        access_rules: null
+  stag_nest:
+    child_waypoints:
+      howling_cliffs:
+        access_rules: null
+  hallownests_crown:
+    child_waypoints:
+      upper_crystal_peak:
+        access_rules: null
+  kings_pass:
+    child_waypoints:
+      howling_cliffs:
+        access_rules: null
+      dirtmouth:
+        access_rules: null
+      upper_crystal_peak:
+        access_rules: null
+  ancestral_mound:
+    child_waypoints:
+      crossroads:
+        access_rules: null

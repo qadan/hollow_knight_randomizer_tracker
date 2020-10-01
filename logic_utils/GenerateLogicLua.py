@@ -111,7 +111,7 @@ class GenerateLogicLua:
         self.lines.append("      {{{}, {}}},".format(postfix[0], postfix[1]))
       self.lines.append("    },")
     if add_tracking:
-      self.lines.append("    status = 0,")
+      self.lines.append("    status = false,")
     self.lines.append("  },")
 
 

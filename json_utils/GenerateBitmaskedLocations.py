@@ -15,6 +15,11 @@ class GenerateBitmaskedLocations:
     'grubfather',
   ]
 
+  unsure_locs = [
+    'whispering_root_spirits_glade',
+    'kings_idol_glade_of_hope',
+  ]
+
   capturable_types = [
     'whispering_roots',
   ]
@@ -27,12 +32,16 @@ class GenerateBitmaskedLocations:
   def bitmask_access_rules(self, location):
     if location == 'stag_nest':
       return '$can_get_waypoint|{}'.format(location)
+    if location in self.unsure_locs:
+      return '$can_get_item|{},[]'.format(location)
     if location in self.checkable_groups:
       return '{{$can_get_item|{}}}'.format(location)
     return '$can_get_item|{}'.format(location)
 
 
   def bitmask_check_rules(self, location):
+    if location in self.unsure_locs:
+      return '$can_check_item|{},[]'.format(location)
     return '{{$can_check_item|{}}}'.format(location)
 
 

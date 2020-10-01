@@ -1,4 +1,15 @@
 ----
+-- Adds an item to the global progression bitmask.
+--
+-- mask (int): The mask to add as currently accessible.
+-- group (int): The mask group the given mask belongs to.
+----
+function add_mask_to_group(mask, group)
+  local new = PROGRESSION_BITMASK[group] | mask
+  PROGRESSION_BITMASK[group] = new
+end
+
+----
 -- Adds all current single-code tracked item codes to the progression bitmask.
 ----
 function add_items_to_bitmask()
@@ -75,19 +86,18 @@ function add_waypoints_to_bitmask()
   for waypoint, status in pairs(WAYPOINT_TABLE) do
     local count = Tracker:ProviderCountForCode(waypoint)
     if count > 0 then
-      add_mask_to_group(WAYPOINT_TABLE[waypoint]['bitmask'], WAYPOINT_TABLE[waypoint]['group'])
+      WAYPOINT_TABLE[waypoint]['status'] = true
+      add_mask_to_group(status['bitmask'], status['group'])
     end
   end
   -- The for loop here is a total hack. We're basically just brute forcing our
   -- way through the waypoint tree, checking continued access to each node.
-  -- @TODO: we could refine this number; 20 guarantees a path through the tree,
-  -- but with some introspection it can absolutely be reduced a great deal or
-  -- made dependent on your starting location (really I think like 5 passes is
-  -- probably more than sufficient).
-  for i = 1, 20 do
+  -- @TODO: this number could be further optimized
+  for i = 1, 15 do
     for waypoint, status in pairs(WAYPOINT_TABLE) do
-      if can_get(WAYPOINT_TABLE[waypoint]['postfix']) then
-        add_mask_to_group(WAYPOINT_TABLE[waypoint]['bitmask'], WAYPOINT_TABLE[waypoint]['group'])
+      if status['status'] == false and can_get(status['postfix']) then
+        WAYPOINT_TABLE[waypoint]['status'] = true
+        add_mask_to_group(status['bitmask'], status['group'])
       end
     end
   end
@@ -119,5 +129,8 @@ end
 ----
 function tracker_on_accessibility_updated()
   PROGRESSION_BITMASK = {0, 0, 0, 0, 0, 0, 0}
+  for waypoint, status in pairs(WAYPOINT_TABLE) do
+    WAYPOINT_TABLE[waypoint]['status'] = false
+  end
   SHOULD_CALCULATE = true
 end

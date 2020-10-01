@@ -125,6 +125,7 @@ whispering_roots:
     x_coord: 3457
     y_coord: 695
     check_infix: Spirits_Glade + CLAW + (DASH | WINGS | AIRSTALL)
+    description: Whispering Root (Locked Behind 200 Essence)
   whispering_root_waterways:
     access_rules:
     - mantis_claw,$DREAMNAIL

@@ -32,6 +32,7 @@ kings_idols:
     waypoint: Spirits_Glade
     x_coord: 3467
     y_coord: 745
+    description: King's Idol (Locked Behind 200 Essence)
   kings_idol_great_hopper:
     qualified_name: King's_Idol-Great_Hopper
     waypoint: Top_Kingdom's_Edge
