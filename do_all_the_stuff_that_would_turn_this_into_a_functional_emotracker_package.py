@@ -73,7 +73,6 @@ def move_and_format_the_images(folder):
   print('Copying and formatting images ...')
   destination = '{}/images/items'.format(folder)
   for file in glob('resources/images/items/*.png'):
-    print('Copying {} ...'.format(file))
     ResourceIncludedImage(file).copy_the_thing(destination)
 
 

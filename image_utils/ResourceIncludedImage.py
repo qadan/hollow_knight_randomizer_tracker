@@ -50,14 +50,13 @@ class ResourceIncludedImage:
 
   def resize(self, destination, padding):
     for pad in padding:
-      stream = popen('convert {} {}'.format(self.convert_params(pad), destination))
+      stream = popen('convert {} {} {}'.format(destination, self.convert_params(pad), destination))
       out = stream.read()
 
 
   def copy_the_thing(self, destination):
     if path.isdir(destination):
       destination = '{}/{}'.format(destination, path.basename(self.path))
-      print(destination)
     stream = popen('convert {} {} {}'.format(self.path, self.convert_params(self.im_params), destination))
     out = stream.read()
     padding = self.get_padding_required(destination)
