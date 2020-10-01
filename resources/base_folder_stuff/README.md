@@ -45,10 +45,11 @@ To do this in Steam:
 * Click "OK" to save your changes, then close the Properties window
 * Launch the game, and it should be in windowed fullscreen.
 
-## TODO
+## @TODO for 1.1.0 and beyond
 
-* Currently, the tracker is doing the maximum possible number of passes on waypoints to ensure locations are added to the logic; this has an associated click lag (as it's recalculating waypoint access 20 times per click), and it would be useful to calculate the maximum possible waypoint chain to reduce this number.
-* Round of testing.
+* There is likely a way to check the accessibility of locations with skips without adding an immense amount of calculation time per click. It can't be done in the tracker's current form because there's no way to tell whether or not access to a place was due to any one variable. This would take some doing, though ... but it's worth looking into. The ideal is to have each skip configuration be three levels: 'off' (not calculated), 'orange' (locations are orange if they would otherwise be red but the configured skip can be used to access them), and 'green' (skip is taken into account as part of access calculation). Perhaps we could run the access check once per orange configured skip if access came back 'false', and if access comes back 'true', colour it orange. That would need benchmarking.
+* The text in Pools/Skips/Cursed is currently generated using 32x32 tiles in an `itemgrid`, but there has to be a more sensible way of doing that.
+* The map is pretty gosh darn big; we could have a variant that's split by region.
 
 ## License
 
