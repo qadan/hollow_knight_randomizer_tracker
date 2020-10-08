@@ -1,25 +1,25 @@
 ---
 MILDSKIPS:
   display_name: Mild Skips
-  default_state: false
+  default_state: 1
 SHADESKIPS:
   display_name: Shade Skips
-  default_state: false
+  default_state: 0
 FIREBALLSKIPS:
   display_name: Fireball Skips
-  default_state: false
+  default_state: 0
 ACIDSKIPS:
   display_name: Acid Skips
-  default_state: false
+  default_state: 0
 SPIKETUNNELS:
   display_name: Spike Tunnel Skips
-  default_state: false
+  default_state: 0
 DARKROOMS:
   display_name: Dark Room Skips
-  default_state: false
+  default_state: 0
 SPICYSKIPS:
   display_name: Spicy Skips
-  default_state: false
+  default_state: 0
 NOTCURSED:
   display_name: Not Cursed Mode
-  default_state: true
+  default_state: 2

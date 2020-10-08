@@ -8,7 +8,17 @@
 ----
 function can_get_item(item_name)
   recalculate_access()
-  return can_get(ITEM_TABLE[item_name]['postfix'])
+  return can_get(ITEM_TABLE[item_name]['postfix'], PROGRESSION_BITMASK)
+end
+
+----
+-- Helper function to reference in location json; checks using skip bitmask.
+--
+-- item_name (string): The name of the item to look up.
+----
+function can_skip_to_item(item_name)
+  recalculate_access()
+  return can_get(ITEM_TABLE[item_name]['postfix'], SKIP_BITMASK)
 end
 
 ----
@@ -22,7 +32,7 @@ function can_get_waypoint(waypoint)
     return count
   end
   recalculate_access()
-  return can_get(WAYPOINT_TABLE[waypoint]['postfix'])
+  return can_get(WAYPOINT_TABLE[waypoint]['postfix'], PROGRESSION_BITMASK)
 end
 
 ----
@@ -32,7 +42,17 @@ end
 ----
 function can_check_item(item_name)
   recalculate_access()
-  return can_get(CHECK_TABLE[item_name])
+  return can_get(CHECK_TABLE[item_name], PROGRESSION_BITMASK)
+end
+
+----
+-- Helper function to determine checkability of an item with skips.
+--
+-- item (string): The item to determine checkability of.
+----
+function can_skip_to_check_item(item_name)
+  recalculate_access()
+  return can_get(CHECK_TABLE[item_name], SKIP_BITMASK)
 end
 
 ----
@@ -45,7 +65,7 @@ end
 --   with the group it comes from. No masks should be 0. Masks less than 1
 --   represent special data or operators.
 ----
-function can_get(logic)
+function can_get(logic, progression_bitmask)
   if next(logic) == nil then
     return true
   end
@@ -69,7 +89,7 @@ function can_get(logic)
     elseif postfix[1] < -2 then
       table.insert(stack, true)
     else
-      table.insert(stack, postfix[1] & PROGRESSION_BITMASK[postfix[2]] == postfix[1])
+      table.insert(stack, postfix[1] & progression_bitmask[postfix[2]] == postfix[1])
     end
   end
   return table.remove(stack)

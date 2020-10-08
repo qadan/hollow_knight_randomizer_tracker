@@ -18,6 +18,7 @@ class LogicManager:
     self.macros = {}
     self.start_locations = {}
     self.waypoints = {}
+    self.skips = {}
 
     self.progression_indexed_items = {}
     self.pool_indexed_items = {}
@@ -132,51 +133,24 @@ class LogicManager:
 
 
   def add_settings(self):
+    self.skips['SHADESKIPS'] = (1, 1)
+    self.skips['ACIDSKIPS'] = (2, 1)
+    self.skips['SPIKETUNNELS'] = (4, 1)
+    self.skips['SPICYSKIPS'] = (8, 1)
+    self.skips['FIREBALLSKIPS'] = (16, 1)
+    self.skips['DARKROOMS'] = (32, 1)
+    self.skips['MILDSKIPS'] = (64, 1)
+    self.skips['NOTCURSED'] = (128, 1)
+    self.skips['CURSED'] = (256, 1)
     self.progression_bitmask['SHADESKIPS'] = (1, 1)
-    self.items['SHADESKIPS'] = {
-      'itemLogic': [],
-      'processedItemLogic': [],
-    }
     self.progression_bitmask['ACIDSKIPS'] = (2, 1)
-    self.items['ACIDSKIPS'] = {
-      'itemLogic': [],
-      'processedItemLogic': [],
-    }
     self.progression_bitmask['SPIKETUNNELS'] = (4, 1)
-    self.items['SPIKETUNNELS'] = {
-      'itemLogic': [],
-      'processedItemLogic': [],
-    }
     self.progression_bitmask['SPICYSKIPS'] = (8, 1)
-    self.items['SPICYSKIPS'] = {
-      'itemLogic': [],
-      'processedItemLogic': [],
-    }
     self.progression_bitmask['FIREBALLSKIPS'] = (16, 1)
-    self.items['FIREBALLSKIPS'] = {
-      'itemLogic': [],
-      'processedItemLogic': [],
-    }
     self.progression_bitmask['DARKROOMS'] = (32, 1)
-    self.items['DARKROOMS'] = {
-      'itemLogic': [],
-      'processedItemLogic': [],
-    }
     self.progression_bitmask['MILDSKIPS'] = (64, 1)
-    self.items['MILDSKIPS'] = {
-      'itemLogic': [],
-      'processedItemLogic': [],
-    }
     self.progression_bitmask['NOTCURSED'] = (128, 1)
-    self.items['NOTCURSED'] = {
-      'itemLogic': [],
-      'processedItemLogic': [],
-    }
     self.progression_bitmask['CURSED'] = (256, 1)
-    self.items['CURSED'] = {
-      'itemLogic': [],
-      'processedItemLogic': [],
-    }
 
 
   def process_shunted(self, shunted):

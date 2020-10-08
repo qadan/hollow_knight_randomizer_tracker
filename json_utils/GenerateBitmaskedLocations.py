@@ -45,6 +45,12 @@ class GenerateBitmaskedLocations:
     return '{{$can_check_item|{}}}'.format(location)
 
 
+  def bitmask_check_with_skips(self, location):
+    if location not in self.unsure_locs:
+      return '$can_skip_to_check_item|{},[]'.format(location)
+    return None
+
+
   def get_locations(self):
     self.generate_locations()
     return [{
@@ -62,18 +68,18 @@ class GenerateBitmaskedLocations:
         "group": "sly",
         "clear_as_group": False,
         "item_count": len(sly_parts_of),
-        "access_rules": [self.bitmask_access_rules('sly')],
+        "access_rules": [self.bitmask_access_rules('sly'), '$can_skip_to_item|sly,[]'],
         "capture_item": True,
-        "capture_item_layout": 'item_grid_tall',
+        "capture_item_layout": 'item_grid_capturables',
       },
       {
         "name": "Sly (Shopkeeper's Key; maximum {} additional items)".format(len(sly_key_parts_of)),
         "group": "sly_key",
         "clear_as_group": False,
         "item_count": len(sly_key_parts_of),
-        "access_rules": [self.bitmask_access_rules('sly_key')],
+        "access_rules": [self.bitmask_access_rules('sly_key'), '$can_skip_to_item|sly_key,[]'],
         "capture_item": True,
-        "capture_item_layout": 'item_grid_tall',
+        "capture_item_layout": 'item_grid_capturables',
       },
     ]
 
@@ -100,9 +106,12 @@ class GenerateBitmaskedLocations:
         definition['sections'].append({
           'name': self.location_yaml.get_display_name(part_loc),
           'item_count': 1,
-          'access_rules': ['randomize_{},{}'.format(part_type, self.bitmask_access_rules(location) if data['type'] == 'shops' else self.bitmask_access_rules(part_loc))],
+          'access_rules': [
+            'randomize_{},{}'.format(part_type, self.bitmask_access_rules(location) if data['type'] == 'shops' else self.bitmask_access_rules(part_loc)),
+            'randomize_{},$can_skip_to_item|{},[]'.format(part_type, location if data['type'] == 'shops' else part_loc),
+          ],
           'capture_item': part_type in self.capturable_types or data['group_type'] == 'group',
-          'capture_item_layout': 'item_grid_tall',
+          'capture_item_layout': 'item_grid_capturables',
         })
     return definition
 
@@ -116,9 +125,15 @@ class GenerateBitmaskedLocations:
         self.locations.append(self.get_group_definition(location, data))
       else:
         loc_type = data['type'] if data['type'] not in self.relic_types else 'relics'
-        access_rules = [self.bitmask_access_rules(location)]
+        access_rules = [
+          self.bitmask_access_rules(location),
+          '$can_skip_to_item|{},[]'.format(location),
+        ]
         if 'check_infix' in data:
           access_rules.append(self.bitmask_check_rules(location))
+          check_with_skips = self.bitmask_check_with_skips(location)
+          if check_with_skips:
+            access_rules.append(check_with_skips)
         self.locations.append({
           'name': self.location_yaml.get_display_name(location),
           'map_locations': [{
@@ -133,7 +148,7 @@ class GenerateBitmaskedLocations:
             'access_rules': access_rules,
             'item_count': 1,
             'capture_item': loc_type in self.capturable_types,
-            'capture_item_layout': 'item_grid_tall',
+            'capture_item_layout': 'item_grid_capturables',
           }],
         })
     return self.locations

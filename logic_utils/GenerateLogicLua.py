@@ -65,8 +65,6 @@ class GenerateLogicLua:
       '--     where to look in the PROGRESSION_BITMASK for access. Negative integers',
       '--     represent operators; -2 is AND, and -1 is OR. Lower numbers are not',
       '--     considered currently.',
-      '--   - \'status\': Currently unused, but should be used in the future to',
-      '--     optimize waypoint logic check passes.',
       '--',
       '-- For example, in \'lurien\' in the ITEM_TABLE, the first 5 postfixes match the',
       '-- bitmask and bitmask groups of the \'right_city\' waypoint, the mantis_claw,',
@@ -98,7 +96,16 @@ class GenerateLogicLua:
     ])
 
 
-  def append_item(self, item, data, add_tracking):
+  def set_skip_doc(self):
+    self.lines.extend([
+      '----',
+      '-- SKIP_TABLE:',
+      '--   Table containing the groups and values for each skip configuration bitmask.',
+      '----'
+    ])
+
+
+  def append_item(self, item, data):
     self.lines.append("  {} = {{".format(self.clean_name(item)))
     if item in self.logic_manager.progression_bitmask.keys():
       self.lines.append("    bitmask = {},".format(self.logic_manager.progression_bitmask[item][0]))
@@ -110,17 +117,15 @@ class GenerateLogicLua:
       for postfix in data['processedItemLogic']:
         self.lines.append("      {{{}, {}}},".format(postfix[0], postfix[1]))
       self.lines.append("    },")
-    if add_tracking:
-      self.lines.append("    status = false,")
     self.lines.append("  },")
 
 
   def add_locations(self):
     self.lines.append("ITEM_TABLE = {")
     for item, data in self.logic_manager.items.items():
-      self.append_item(item, data, False)
+      self.append_item(item, data)
     for item, data in self.logic_manager.shops.items():
-      self.append_item(item, data, False)
+      self.append_item(item, data)
     self.lines.append("}")
 
 
@@ -141,7 +146,7 @@ class GenerateLogicLua:
   def add_waypoints(self):
     self.lines.append("WAYPOINT_TABLE = {")
     for item, data in self.logic_manager.waypoints.items():
-      self.append_item(item, data, True)
+      self.append_item(item, data)
     self.lines.append("}")
 
 
@@ -156,6 +161,15 @@ class GenerateLogicLua:
     self.lines.append("}")
 
 
+  def add_skips(self):
+    self.lines.append("SKIP_TABLE = {")
+    for skip, data in self.logic_manager.skips.items():
+      self.lines.append("  {} = {{".format(self.clean_name(skip)))
+      self.lines.append("    bitmask = {},".format(data[0]))
+      self.lines.append("    group = {},".format(data[1]))
+      self.lines.append("  },")
+    self.lines.append("}")
+
 
   def print_lua(self):
     self.lines = []
@@ -168,6 +182,9 @@ class GenerateLogicLua:
     self.add_space()
     self.set_check_doc()
     self.add_checks()
+    self.add_space()
+    self.set_skip_doc()
+    self.add_skips()
     with open(self.destination, 'w') as lua:
       for line in self.lines:
         lua.write(line)

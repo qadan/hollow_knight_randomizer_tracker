@@ -12,6 +12,7 @@ from json_utils.GenerateBitmaskedLocations import GenerateBitmaskedLocations
 from json_utils.GenerateOptions import GenerateOptions
 from json_utils.GenerateSkips import GenerateSkips
 from json_utils.GenerateStartLocations import GenerateStartLocations
+from json_utils.GenerateCapturables import GenerateCapturables
 from logic_utils.GenerateLogicLua import GenerateLogicLua
 from yaml_utils.settings import get_setting
 from zipfile import ZipFile, ZIP_DEFLATED
@@ -116,6 +117,13 @@ def generate_items_json(folder):
     dump(item_json.generate_items(), fout, sort_keys=get_setting('sort_json_keys'), indent=get_setting('json_indent'))
 
 
+def generate_capturables_json(folder):
+  print('Generating capturables JSON ...')
+  cap_json = GenerateCapturables()
+  with open('{}/items/capturables.json'.format(folder), 'w') as fout:
+    dump(cap_json.get_capturables(), fout, sort_keys=get_setting('sort_json_keys'), indent=get_setting('json_indent'))
+
+
 def generate_bitmask_lua(folder):
   print('Generating bitmask Lua ...')
   logic = GenerateLogicLua('{}/scripts/bitmasks.lua'.format(folder))
@@ -132,5 +140,6 @@ if __name__ == '__main__':
   generate_skips_json(args['out_folder'])
   generate_start_locations_json(args['out_folder'])
   generate_items_json(args['out_folder'])
+  generate_capturables_json(args['out_folder'])
   generate_stag_station_overlays(args['out_folder'])
   generate_bitmask_lua(args['out_folder'])

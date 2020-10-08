@@ -29,8 +29,12 @@ class GenerateSkips:
 
   def flatten_images(self):
     for idx, option in enumerate(self.get_skips()):
-      if isinstance(option['img'], TextGeneratedImage):
+      if 'img' in option and isinstance(option['img'], TextGeneratedImage):
         self.skips[idx]['img'] = str(option['img'].get_path())
+      elif 'stages' in option:
+        for stage_idx, stage in enumerate(option['stages']):
+          if isinstance(stage['img'], TextGeneratedImage):
+            self.skips[idx]['stages'][stage_idx]['img'] = str(stage['img'].get_path())
 
 
   def cut_apart_image(self, image):
@@ -68,15 +72,27 @@ class GenerateSkips:
           'img': image_thing.replace('.png', '_3.png'),
           'codes': self.get_skip_text_code(option, 3)
         })
-        skip_button = {
+        self.skips.append({
           'name': data['display_name'],
-          'type': 'toggle',
-          'img': 'images/options/check_on.png',
-          'disabled_img': 'images/options/check_off.png',
-          'codes': option,
+          'type': 'progressive',
+          'allow_disabled': False,
+          'initial_stage_idx': data['default_state'],
           'loop': True,
-        }
-        if 'default_state' in data:
-          skip_button['initial_active_state'] = data['default_state']
-        self.skips.append(skip_button)
+          'stages': [
+            {
+              'codes': '{},{}_red'.format(option, option),
+              'img': 'images/options/skip_red.png',
+            },
+            {
+              'codes': '{},{}_yellow'.format(option, option),
+              'img': 'images/options/skip_yellow.png',
+              'inherit_codes': False,
+            },
+            {
+              'codes': '{},{}_green'.format(option, option),
+              'img': 'images/options/skip_green.png',
+              'inherit_codes': False,
+            },
+          ],
+        })
     return self.skips

@@ -69,5 +69,120 @@
         ]
       }
     ]
+  },
+  "item_grid_capturables": {
+    "type": "array",
+    "orientation": "vertical",
+    "content": [
+      {
+        "type": "itemgrid",
+        "h_alignment": "center",
+        "item_margin": "1,2",
+        "rows": [
+          [
+            "dreamers",
+            "monarch_wings",
+            "mantis_claw",
+            "mothwing_cloak",
+            "crystal_heart",
+            "ismas_tear"
+          ],
+          [
+            "howling_wraiths",
+            "vengeful_spirit",
+            "desolate_dive",
+            "cyclone_slash",
+            "dash_slash",
+            "great_slash"
+          ],
+          [
+            "city_crest",
+            "lumafly_lantern",
+            "tram_pass",
+            "simple_key",
+            "elegant_key",
+            "shopkeepers_key",
+            "love_key"
+          ],
+          [
+            "queen_fragment",
+            "kings_brand",
+            "dream_nail",
+            "lifeblood_core",
+            "grimmchild",
+            "mark_of_pride",
+            "grubs"
+          ],
+          [
+            "spore_shroom",
+            "glowing_womb",
+            "dashmaster",
+            "grubberflys_elegy",
+            "sprintmaster",
+            "sharp_shadow",
+            "weaversong"
+          ],
+          [
+            "dirtmouth_stag",
+            "crossroads_stag",
+            "greenpath_stag",
+            "queens_station_stag",
+            "queens_gardens_stag",
+            "city_storerooms_stag"
+          ],
+          [
+            "kings_station_stag",
+            "resting_grounds_stag",
+            "distant_village_stag",
+            "hidden_station_stag",
+            "stag_nest_stag"
+          ],
+          [
+            "arcane_eggs",
+            "charm_notches",
+            "essence",
+            "mask_shards",
+            "pale_ores",
+            "vessel_fragments"
+          ],
+          [
+            "wayward_compass",
+            "gathering_swarm",
+            "stalwart_shell",
+            "soul_catcher",
+            "shaman_stone",
+            "soul_eater",
+            "grubsong",
+          ],
+          [
+            "unbreakable_heart",
+            "unbreakable_greed",
+            "unbreakable_strength",
+            "spell_twister",
+            "steady_body",
+            "heavy_blow",
+            "quick_slash"
+          ],
+          [
+            "longnail",
+            "fury_of_the_fallen",
+            "thorns_of_agony",
+            "baldur_shell",
+            "flukenest",
+            "defenders_crest",
+            "quick_focus"
+          ],
+          [
+            "deep_focus",
+            "hiveblood",
+            "shape_of_unn",
+            "nailmasters_glory",
+            "dream_wielder",
+            "dreamshield",
+            "carefree_melody"
+          ]
+        ]
+      }
+    ]
   }
 }
