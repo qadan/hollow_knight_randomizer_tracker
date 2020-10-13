@@ -37,41 +37,11 @@ class GenerateSkips:
             self.skips[idx]['stages'][stage_idx]['img'] = str(stage['img'].get_path())
 
 
-  def cut_apart_image(self, image):
-    stream = popen('convert {}/{} -crop 4x1@ +repage +adjoin {}/{}_\%d.png'.format(self.destination, image, self.destination, image.replace('.png', '')))
-    stream.read()
-
-
   def get_skips(self):
     if not self.skips:
       self.skips = []
       for option, data in self.load_skips().items():
         image_thing = self.get_skip_text_img(option, data['display_name'])
-        self.cut_apart_image(image_thing)
-        self.skips.append({
-          'name': '{} Text'.format(data['display_name']),
-          'type': 'static',
-          'img': image_thing.replace('.png', '_0.png'),
-          'codes': self.get_skip_text_code(option, 0)
-        })
-        self.skips.append({
-          'name': '{} Text'.format(data['display_name']),
-          'type': 'static',
-          'img': image_thing.replace('.png', '_1.png'),
-          'codes': self.get_skip_text_code(option, 1)
-        })
-        self.skips.append({
-          'name': '{} Text'.format(data['display_name']),
-          'type': 'static',
-          'img': image_thing.replace('.png', '_2.png'),
-          'codes': self.get_skip_text_code(option, 2)
-        })
-        self.skips.append({
-          'name': '{} Text'.format(data['display_name']),
-          'type': 'static',
-          'img': image_thing.replace('.png', '_3.png'),
-          'codes': self.get_skip_text_code(option, 3)
-        })
         self.skips.append({
           'name': data['display_name'],
           'type': 'progressive',

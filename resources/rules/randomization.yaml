@@ -64,6 +64,6 @@ randomize_whispering_roots:
   default_state: true
   image: map_pin_tree.png
 randomize_essence_bosses:
-  display_name: Randomize Essence Bosses
+  display_name: Randomize Bosses
   default_state: true
   image: essence.png

@@ -4,6 +4,7 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
   Tracker:AddItems("items/start_locations.json")
   Tracker:AddItems("items/options.json")
   Tracker:AddItems("items/skips.json")
+  Tracker:AddItems("items/capturables.json")
   Tracker:AddMaps("maps/map.json")
   ScriptHost:LoadScript("scripts/bitmasks.lua")
   ScriptHost:LoadScript("scripts/progression_interpreter.lua")

@@ -13,158 +13,320 @@
       {
         "title": "Pools",
         "content": {
-          "type": "itemgrid",
-          "item_margin": "0,0",
-          "item_size": "32",
-          "rows": [
-            [
-              "randomize_dreamers_text_1",
-              "randomize_dreamers_text_2",
-              "randomize_dreamers_text_3",
-              "randomize_dreamers",
-              "randomize_skills_text_2",
-              "randomize_skills_text_3",
-              "randomize_skills"
-            ],
-            [
-              "randomize_charms_text_1",
-              "randomize_charms_text_2",
-              "randomize_charms_text_3",
-              "randomize_charms",
-              "randomize_keys_text_2",
-              "randomize_keys_text_3",
-              "randomize_keys"
-            ],
-            [
-              "randomize_geo_chests_text_1",
-              "randomize_geo_chests_text_2",
-              "randomize_geo_chests_text_3",
-              "randomize_geo_chests",
-              "randomize_mask_shards_text_2",
-              "randomize_mask_shards_text_3",
-              "randomize_mask_shards"
-            ],
-            [
-              "randomize_vessel_fragments_text_1",
-              "randomize_vessel_fragments_text_2",
-              "randomize_vessel_fragments_text_3",
-              "randomize_vessel_fragments",
-              "randomize_pale_ores_text_2",
-              "randomize_pale_ores_text_3",
-              "randomize_pale_ores"
-            ],
-            [
-              "randomize_charm_notches_text_1",
-              "randomize_charm_notches_text_2",
-              "randomize_charm_notches_text_3",
-              "randomize_charm_notches",
-              "randomize_rancid_eggs_text_2",
-              "randomize_rancid_eggs_text_3",
-              "randomize_rancid_eggs"
-              
-            ],
-            [
-              "randomize_relics_text_1",
-              "randomize_relics_text_2",
-              "randomize_relics_text_3",
-              "randomize_relics",
-              "randomize_maps_text_2",
-              "randomize_maps_text_3",
-              "randomize_maps"
-            ],
-            [
-              "randomize_stag_stations_text_1",
-              "randomize_stag_stations_text_2",
-              "randomize_stag_stations_text_3",
-              "randomize_stag_stations",
-              "randomize_grubs_text_2",
-              "randomize_grubs_text_3",
-              "randomize_grubs"
-            ],
-            [
-              "randomize_whispering_roots_text_1",
-              "randomize_whispering_roots_text_2",
-              "randomize_whispering_roots_text_3",
-              "randomize_whispering_roots",
-              "randomize_shops_text_2",
-              "randomize_shops_text_3",
-              "randomize_shops"
-            ],
-            [
-              "empty_square",
-              "empty_square",
-              "randomize_essence_bosses_text_0",
-              "randomize_essence_bosses_text_1",
-              "randomize_essence_bosses_text_2",
-              "randomize_essence_bosses_text_3",
-              "randomize_essence_bosses",
-            ]
+          "type": "canvas",
+          "width": 214,
+          "height": 304,
+          "content": [
+            {
+              "type": "image",
+              "image": "images/options/randomize_dreamers.png",
+              "canvas_left": 0,
+              "canvas_top": 0
+            },
+            {
+              "type": "item",
+              "item": "randomize_dreamers",
+              "canvas_left": 74,
+              "canvas_top": 0
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_skills.png",
+              "canvas_left": 106,
+              "canvas_top": 0
+            },
+            {
+              "type": "item",
+              "item": "randomize_skills",
+              "canvas_left": 180,
+              "canvas_top": 0
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_charms.png",
+              "canvas_left": 0,
+              "canvas_top": 34
+            },
+            {
+              "type": "item",
+              "item": "randomize_charms",
+              "canvas_left": 74,
+              "canvas_top": 34
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_keys.png",
+              "canvas_left": 106,
+              "canvas_top": 34
+            },
+            {
+              "type": "item",
+              "item": "randomize_keys",
+              "canvas_left": 180,
+              "canvas_top": 34
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_geo_chests.png",
+              "canvas_left": 0,
+              "canvas_top": 68
+            },
+            {
+              "type": "item",
+              "item": "randomize_geo_chests",
+              "canvas_left": 74,
+              "canvas_top": 68
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_mask_shards.png",
+              "canvas_left": 106,
+              "canvas_top": 68
+            },
+            {
+              "type": "item",
+              "item": "randomize_mask_shards",
+              "canvas_left": 180,
+              "canvas_top": 68
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_vessel_fragments.png",
+              "canvas_left": 0,
+              "canvas_top": 102
+            },
+            {
+              "type": "item",
+              "item": "randomize_vessel_fragments",
+              "canvas_left": 74,
+              "canvas_top": 102
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_pale_ores.png",
+              "canvas_left": 106,
+              "canvas_top": 102
+            },
+            {
+              "type": "item",
+              "item": "randomize_pale_ores",
+              "canvas_left": 180,
+              "canvas_top": 102
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_charm_notches.png",
+              "canvas_left": 0,
+              "canvas_top": 136
+            },
+            {
+              "type": "item",
+              "item": "randomize_charm_notches",
+              "canvas_left": 74,
+              "canvas_top": 136
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_rancid_eggs.png",
+              "canvas_left": 106,
+              "canvas_top": 136
+            },
+            {
+              "type": "item",
+              "item": "randomize_rancid_eggs",
+              "canvas_left": 180,
+              "canvas_top": 136
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_relics.png",
+              "canvas_left": 0,
+              "canvas_top": 170
+            },
+            {
+              "type": "item",
+              "item": "randomize_relics",
+              "canvas_left": 74,
+              "canvas_top": 170
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_maps.png",
+              "canvas_left": 106,
+              "canvas_top": 170
+            },
+            {
+              "type": "item",
+              "item": "randomize_maps",
+              "canvas_left": 180,
+              "canvas_top": 170
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_stag_stations.png",
+              "canvas_left": 0,
+              "canvas_top": 204
+            },
+            {
+              "type": "item",
+              "item": "randomize_stag_stations",
+              "canvas_left": 74,
+              "canvas_top": 204
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_grubs.png",
+              "canvas_left": 106,
+              "canvas_top": 204
+            },
+            {
+              "type": "item",
+              "item": "randomize_grubs",
+              "canvas_left": 180,
+              "canvas_top": 204
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_whispering_roots.png",
+              "canvas_left": 0,
+              "canvas_top": 238
+            },
+            {
+              "type": "item",
+              "item": "randomize_whispering_roots",
+              "canvas_left": 74,
+              "canvas_top": 238
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_shops.png",
+              "canvas_left": 106,
+              "canvas_top": 238
+            },
+            {
+              "type": "item",
+              "item": "randomize_shops",
+              "canvas_left": 180,
+              "canvas_top": 238
+            },
+            {
+              "type": "image",
+              "image": "images/options/randomize_essence_bosses.png",
+              "canvas_left": 53,
+              "canvas_top": 272
+            },
+            {
+              "type": "item",
+              "item": "randomize_essence_bosses",
+              "canvas_left": 127,
+              "canvas_top": 272
+            }
           ]
         }
       },
       {
         "title": "Skips/Cursed",
         "content": {
-          "type": "itemgrid",
-          "item_margin": "0,0",
-          "item_size": "32",
-          "rows": [
-            [
-              "mildskips_text_0",
-              "mildskips_text_1",
-              "mildskips_text_2",
-              "mildskips_text_3",
-              "MILDSKIPS"
-            ],
-            [
-              "shadeskips_text_0",
-              "shadeskips_text_1",
-              "shadeskips_text_2",
-              "shadeskips_text_3",
-              "SHADESKIPS"
-            ],
-            [
-              "fireballskips_text_0",
-              "fireballskips_text_1",
-              "fireballskips_text_2",
-              "fireballskips_text_3",
-              "FIREBALLSKIPS"
-            ],
-            [
-              "acidskips_text_0",
-              "acidskips_text_1",
-              "acidskips_text_2",
-              "acidskips_text_3",
-              "ACIDSKIPS"
-            ],
-            [
-              "spiketunnels_text_0",
-              "spiketunnels_text_1",
-              "spiketunnels_text_2",
-              "spiketunnels_text_3",
-              "SPIKETUNNELS"
-            ],
-            [
-              "darkrooms_text_0",
-              "darkrooms_text_1",
-              "darkrooms_text_2",
-              "darkrooms_text_3",
-              "DARKROOMS"
-            ],
-            [
-              "spicyskips_text_0",
-              "spicyskips_text_1",
-              "spicyskips_text_2",
-              "spicyskips_text_3",
-              "SPICYSKIPS"
-            ],
-            [
-              "notcursed_text_0",
-              "notcursed_text_1",
-              "notcursed_text_2",
-              "notcursed_text_3",
-              "NOTCURSED"
-            ]
+          "type": "canvas",
+          "width": 178,
+          "height": 284,
+          "content": [
+            {
+              "type": "image",
+              "image": "images/options/mildskips_text.png",
+              "canvas_left": 0,
+              "canvas_top": 0
+            },
+            {
+              "type": "item",
+              "item": "mildskips",
+              "canvas_left": 146,
+              "canvas_top": 0
+            },
+            {
+              "type": "image",
+              "image": "images/options/shadeskips_text.png",
+              "canvas_left": 0,
+              "canvas_top": 36
+            },
+            {
+              "type": "item",
+              "item": "shadeskips",
+              "canvas_left": 146,
+              "canvas_top": 36
+            },
+            {
+              "type": "image",
+              "image": "images/options/fireballskips_text.png",
+              "canvas_left": 0,
+              "canvas_top": 72
+            },
+            {
+              "type": "item",
+              "item": "fireballskips",
+              "canvas_left": 146,
+              "canvas_top": 72
+            },
+            {
+              "type": "image",
+              "image": "images/options/acidskips_text.png",
+              "canvas_left": 0,
+              "canvas_top": 108
+            },
+            {
+              "type": "item",
+              "item": "acidskips",
+              "canvas_left": 146,
+              "canvas_top": 108
+            },
+            {
+              "type": "image",
+              "image": "images/options/spiketunnels_text.png",
+              "canvas_left": 0,
+              "canvas_top": 144
+            },
+            {
+              "type": "item",
+              "item": "spiketunnels",
+              "canvas_left": 146,
+              "canvas_top": 144
+            },
+            {
+              "type": "image",
+              "image": "images/options/darkrooms_text.png",
+              "canvas_left": 0,
+              "canvas_top": 180
+            },
+            {
+              "type": "item",
+              "item": "darkrooms",
+              "canvas_left": 146,
+              "canvas_top": 180
+            },
+            {
+              "type": "image",
+              "image": "images/options/spicyskips_text.png",
+              "canvas_left": 0,
+              "canvas_top": 216
+            },
+            {
+              "type": "item",
+              "item": "spicyskips",
+              "canvas_left": 146,
+              "canvas_top": 216
+            },
+            {
+              "type": "image",
+              "image": "images/options/notcursed_text.png",
+              "canvas_left": 0,
+              "canvas_top": 252
+            },
+            {
+              "type": "item",
+              "item": "notcursed",
+              "canvas_left": 146,
+              "canvas_top": 252
+            }
           ]
         }
       }

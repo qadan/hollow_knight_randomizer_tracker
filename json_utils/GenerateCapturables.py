@@ -17,26 +17,36 @@ class GenerateCapturables:
     'vessel_fragments',
   ]
 
+  unbreakables = [
+    'unbreakable_greed',
+    'unbreakable_heart',
+    'unbreakable_strength',
+  ]
+
   def __init__(self):
     self.capturables = []
     self.items = ItemXml()
 
 
   def get_name(self, item):
-    item = item.replace('_', ' ')
-    return item.replace('-', ' ')
+    item = item.replace(' ', '_')
+    item = item.replace('\'', '')
+    return item.replace('-', '_').lower()
 
 
   def get_charm_capturables(self):
     charm_capturables = []
     for item, data in self.items.get_items():
       if data['pool'] == 'Charm' and ('progression' not in data or not data['progression']):
+        name = self.get_name(item)
         charm_capturables.append({
-          'name': self.get_name(item),
+          'name': self.get_name(name),
           'type': 'toggle',
-          'img': 'images/items/{}.png'.format(item.lower()),
-          'codes': self.get_name(item),
+          'img': 'images/items/{}.png'.format(name),
+          'codes': self.get_name(name),
         })
+    # The unbreakable charms are not included for whatever reason.
+
     return charm_capturables
 
 
@@ -49,5 +59,12 @@ class GenerateCapturables:
           'img': 'images/items/{}.png'.format(capturable_type),
           'codes': capturable_type,
         })
-      self.capturables.append(self.get_charm_capturables())
+      self.capturables.extend(self.get_charm_capturables())
+      for unbreakable in self.unbreakables:
+        self.capturables.append({
+          'name': unbreakable,
+          'type': 'toggle',
+          'img': 'images/items/{}.png'.format(unbreakable),
+          'codes': unbreakable,
+        })
     return self.capturables
