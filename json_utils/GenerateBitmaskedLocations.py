@@ -1,5 +1,6 @@
 from logic_utils.LogicManager import LogicManager
 from yaml_utils.LocationYaml import LocationYaml
+from xml_utils.ItemXml import ItemXml
 
 class GenerateBitmaskedLocations:
 
@@ -20,12 +21,15 @@ class GenerateBitmaskedLocations:
     'kings_idol_glade_of_hope',
   ]
 
-  capturable_types = [
-    'whispering_roots',
+  capturable_cost_types = [
+    'Dreamnail',
+    'Wraiths',
+    'whisperingRoot',
   ]
 
   def __init__(self):
     self.location_yaml = LocationYaml()
+    self.item_xml = ItemXml()
     self.locations = []
 
 
@@ -84,6 +88,17 @@ class GenerateBitmaskedLocations:
     ]
 
 
+  def is_capturable(self, location, data):
+    if 'group_type' in data and data['group_type'] == 'group':
+      return True
+    location_xml = self.item_xml.get_by_qualified_name(data['qualified_name'])
+    if 'costType' in location_xml and location_xml['costType'] in self.capturable_cost_types:
+      return True
+    if 'cost' in location_xml and location_xml['cost']:
+      return True
+    return False
+
+
   def get_group_definition(self, location, data):
     definition = {
       'name': self.location_yaml.get_display_name(location),
@@ -110,7 +125,7 @@ class GenerateBitmaskedLocations:
             'randomize_{},{}'.format(part_type, self.bitmask_access_rules(location) if data['type'] == 'shops' else self.bitmask_access_rules(part_loc)),
             'randomize_{},$can_skip_to_item|{},[]'.format(part_type, location if data['type'] == 'shops' else part_loc),
           ],
-          'capture_item': part_type in self.capturable_types or data['group_type'] == 'group',
+          'capture_item': self.is_capturable(part_type, part_data),
           'capture_item_layout': 'item_grid_capturables',
         })
     return definition
@@ -147,7 +162,7 @@ class GenerateBitmaskedLocations:
             'name': data['description'] if 'description' in data else self.location_yaml.get_display_name(location),
             'access_rules': access_rules,
             'item_count': 1,
-            'capture_item': loc_type in self.capturable_types,
+            'capture_item': self.is_capturable(location, data),
             'capture_item_layout': 'item_grid_capturables',
           }],
         })

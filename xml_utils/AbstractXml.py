@@ -52,9 +52,9 @@ class AbstractXml:
 
 
   def get_by_qualified_name(self, name):
-    items = self.get_items()
-    if name in items:
-      return items[name]
+    self.get_items()
+    if name in self.items:
+      return self.items[name]
     return None
 
 
