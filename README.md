@@ -14,6 +14,7 @@ Go to the [releases page](https://github.com/qadan/hkr_3_fantallis/releases/late
 
 This needs to run:
 
+* ImageMagick `convert` should be in path to handle all the lovely pictures
 * Python 3.8, maybe less, definitely not 2.7, don't do that
 * Pillow
 * JSON
