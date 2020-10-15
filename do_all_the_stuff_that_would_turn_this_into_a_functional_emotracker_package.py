@@ -53,12 +53,12 @@ def prep_a_folder(folder):
 def move_some_static_stuff_into_the_folder(folder):
   print('Copying some static stuff into the folder ...')
   to_move = {
-    'images/maps/map.png': 'images/maps',
+    'images/maps/*.png': 'images/maps',
     'images/options/*.png': 'images/options',
     'images/overlays/*.png': 'images/overlays',
     'static_json/manifest.json': '.',
     'static_json/settings.json': '.',
-    'static_json/maps/map.json': 'maps',
+    'static_json/maps/*.json': 'maps',
     'static_json/layouts/*.json': 'layouts',
     'static_json/items_only/*.json': 'items_only',
     'static_json/items_only/layouts/*.json': 'items_only/layouts',

@@ -10,25 +10,26 @@
 function add_mask_to_group(bitmask, mask, group)
   bitmask[group] = bitmask[group] | mask
   return bitmask
+
 end
 
 ----
--- Adds all current single-code tracked item codes to the progression bitmask.
+-- Adds all toggleable progression item codes to the given bitmask table.
 --
 -- bitmask (table<int>): The bitmask table to add items to.
 ----
 function add_items_to_bitmask(bitmask)
   for item, mask in pairs(ITEM_TABLE) do
-    local count = Tracker:ProviderCountForCode(item)
-    if count > 0 then
-      bitmask = add_mask_to_group(bitmask, mask['bitmask'], mask['group'])
+    -- Non-progression items won't have bitmasks.
+    if mask['bitmask'] ~= nil then
+      local count = Tracker:ProviderCountForCode(item)
+      if count > 0 then
+        bitmask = add_mask_to_group(bitmask, mask['bitmask'], mask['group'])
+      end
     end
   end
   return bitmask
 end
-
-----
--- Adds all currently-configured skips to the skip bitmask.
 
 ----
 -- Helper to add a counted, additive item set to the progression bitmask.
@@ -128,12 +129,14 @@ function add_waypoints_to_bitmask(bitmask)
       bitmask = add_mask_to_group(bitmask, status['bitmask'], status['group'])
     end
   end
-  -- The for loop here is a total hack. We're basically just brute forcing our
-  -- way through the waypoint tree, checking continued access to each node.
-  -- @TODO: this number could be further optimized
-  for i = 1, 15 do
+  -- Traverse the waypoint tree. If we make a pass and no new waypoints are
+  -- accessible, we can stop.
+  local pass_again = true
+  while pass_again do
+    pass_again = false
     for waypoint, status in pairs(WAYPOINT_TABLE) do
-      if can_get(status['postfix'], bitmask) then
+      if status['bitmask'] & bitmask[status['group']] ~= status['bitmask'] and can_get(status['postfix'], bitmask) then
+        pass_again = true
         bitmask = add_mask_to_group(bitmask, status['bitmask'], status['group'])
       end
     end
@@ -165,18 +168,16 @@ end
 ----
 -- Implementation of tracker_on_accessibility_updated().
 --
--- Zeroes out the PROGRESSION_BITMASK and SKIP_BITMASKS and flags that they
--- should be recalculated at the first opportunity. Before access to any item
--- or waypoint is calculated, all current items and settings are bitwise or'd
--- into these flags, and then accessible waypoints are bitwise or'd multiple
--- times to recurse through the entire waypoint graph until we're sure we've
--- calculated a fully valid set of waypoint access.
+-- Resets the following global variables:
+--   PROGRESSION_BITMASK (table<int>): Seven 32-bit integers representing the
+--   player's current clear access.
+--   SKIP_BITMASK (table<int>): Seven 32-bit integers representing what the
+--   player would have access to via currently-yellow skips.
+--   SHOULD_CALCULATE (bool): Whether or not to recalculate all access when
+--   checking a new location.
 ----
 function tracker_on_accessibility_updated()
   PROGRESSION_BITMASK = {0, 0, 0, 0, 0, 0, 0}
   SKIP_BITMASK = {0, 0, 0, 0, 0, 0, 0}
-  for waypoint, status in pairs(WAYPOINT_TABLE) do
-    WAYPOINT_TABLE[waypoint]['status'] = false
-  end
   SHOULD_CALCULATE = true
 end
