@@ -3,10 +3,11 @@ essence_bosses:
     access_rules:
     - $DREAMNAIL,$AERIALMINIBOSS
     display_name: Elder Hu
+    map_locations:
+    - x_coord: 2018
+      y_coord: 1325
     qualified_name: Elder_Hu
     waypoint: Fungal_Wastes
-    x_coord: 2018
-    y_coord: 1325
   failed_champion:
     access_rules:
     - mantis_claw,$DREAMNAIL,$BOSS
@@ -15,54 +16,60 @@ essence_bosses:
     qualified_name: Failed_Champion
     waypoint: Crossroads
   galien:
-    display_name: Galien
-    qualified_name: Galien
-    waypoint: Galien
-    x_coord: 709
-    y_coord: 1820
     access_rules:
     - lumafly_lantern,$DREAMNAIL,$AERIALMINIBOSS,@failed_tramway
     - DARKROOMS,$DREAMNAIL,$AERIALMINIBOSS,@failed_tramway
     - mantis_claw,$DREAMNAIL,$AERIALMINIBOSS,@dark_deepnest
+    display_name: Galien
+    map_locations:
+    - x_coord: 709
+      y_coord: 1820
+    qualified_name: Galien
+    waypoint: Galien
   gorb:
     access_rules:
     - $DREAMNAIL,$AERIALMINIBOSS
     display_name: Gorb
+    map_locations:
+    - x_coord: 1031
+      y_coord: 303
     qualified_name: Gorb
     waypoint: Howling_Cliffs
-    x_coord: 1031
-    y_coord: 303
   lost_kin:
     access_rules:
     - mantis_claw,$DREAMNAIL,$BOSS
     - monarch_wings,MILDSKIPS,$DREAMNAIL,$BOSS
     display_name: Lost Kin
-    part_of: broken_vessel
     qualified_name: Lost_Kin
     waypoint: Far_Left_Basin
+    map_locations:
+    - x_coord: 1860
+      y_coord: 2206
   markoth:
     access_rules:
     - shade_cloak,$DREAMNAIL,$AERIALMINIBOSS
     display_name: Markoth
+    map_locations:
+    - x_coord: 3865
+      y_coord: 1744
     qualified_name: Markoth
     waypoint: Upper_Kingdom's_Edge
-    x_coord: 3865
-    y_coord: 1744
   marmu:
     access_rules:
     - $DREAMNAIL,$AERIALMINIBOSS
     display_name: Marmu
+    map_locations:
+    - x_coord: 458
+      y_coord: 1333
     qualified_name: Marmu
     waypoint: Top_Left_Queen's_Gardens
-    x_coord: 458
-    y_coord: 1333
   no_eyes:
     access_rules:
     - lumafly_lantern,$DREAMNAIL,$AERIALMINIBOSS
     display_name: No Eyes
+    part_of: stone_sanctuary
     qualified_name: No_Eyes
     waypoint: Stone_Sanctuary
-    part_of: stone_sanctuary
   soul_tyrant:
     access_rules:
     - mantis_claw,$DREAMNAIL,$BOSS
@@ -75,7 +82,8 @@ essence_bosses:
     access_rules:
     - $DREAMNAIL,$AERIALMINIBOSS
     display_name: Xero
+    map_locations:
+    - x_coord: 2954
+      y_coord: 908
     qualified_name: Xero
     waypoint: Upper_Resting_Grounds
-    x_coord: 2954
-    y_coord: 908

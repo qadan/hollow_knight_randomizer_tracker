@@ -12,67 +12,74 @@ rancid_eggs:
     - monarch_wings
     - crystal_heart
     description: Above the Blue Lake
+    map_locations:
+    - x_coord: 2639
+      y_coord: 948
     qualified_name: Rancid_Egg-Blue_Lake
     waypoint: Blue_Lake
-    x_coord: 2639
-    y_coord: 948
-  rancid_egg_city_of_tears_pleasure_house:
-    description: Along the Pleasure House shaft
-    qualified_name: Rancid_Egg-City_of_Tears_Pleasure_House
-    waypoint: Pleasure_House
-    x_coord: 2981
-    y_coord: 1418
   rancid_egg_city_of_tears_left:
     access_rules:
     - mantis_claw
     - monarch_wings
     - MILDSKIPS
+    map_locations:
+    - x_coord: 2466
+      y_coord: 1513
     qualified_name: Rancid_Egg-City_of_Tears_Left
     waypoint: Left_City
-    x_coord: 2466
-    y_coord: 1513
+  rancid_egg_city_of_tears_pleasure_house:
+    description: Along the Pleasure House shaft
+    map_locations:
+    - x_coord: 2981
+      y_coord: 1418
+    qualified_name: Rancid_Egg-City_of_Tears_Pleasure_House
+    waypoint: Pleasure_House
   rancid_egg_crystal_peak_dark_room:
     description: Crystal Peak dark room
+    map_locations:
+    - x_coord: 2621
+      y_coord: 750
     qualified_name: Rancid_Egg-Crystal_Peak_Dark_Room
     waypoint: Crystal_Peak
-    x_coord: 2621
-    y_coord: 750
   rancid_egg_crystal_peak_dive_entrance:
-    description: Desolate Dive into Crystal Peak
-    qualified_name: Rancid_Egg-Crystal_Peak_Dive_Entrance
-    waypoint: Crystal_Peak
-    x_coord: 2404
-    y_coord: 718
     access_rules:
     - mantis_claw,monarch_wings
     - mantis_claw,crystal_heart
     - $QUAKE,monarch_wings,@crossroads
     - $QUAKE,$DASH,@crossroads
+    description: Desolate Dive into Crystal Peak
+    map_locations:
+    - x_coord: 2404
+      y_coord: 718
+    qualified_name: Rancid_Egg-Crystal_Peak_Dive_Entrance
+    waypoint: Crystal_Peak
   rancid_egg_crystal_peak_tall_room:
     access_rules:
     - $QUAKE
     description: Crystal Peak tall room
+    map_locations:
+    - x_coord: 2712
+      y_coord: 457
     qualified_name: Rancid_Egg-Crystal_Peak_Tall_Room
     waypoint: Upper_Crystal_Peak
-    x_coord: 2712
-    y_coord: 457
   rancid_egg_dark_deepnest:
     access_rules:
     - mantis_claw
     - monarch_wings,MILDSKIPS
     description: Hidden in Dark Deepnest
+    part_of: dark_deepnest_whispering_root_group
     qualified_name: Rancid_Egg-Dark_Deepnest
     waypoint: Dark_Deepnest
-    part_of: dark_deepnest_whispering_root_group
   rancid_egg_fungal_core:
     access_rules:
     - mantis_claw
     - monarch_wings
     description: Along the secret Deepnest path
+    map_locations:
+    - x_coord: 1486
+      y_coord: 1534
     qualified_name: Rancid_Egg-Fungal_Core
     waypoint: Fungal_Core
-    x_coord: 1486
-    y_coord: 1534
   rancid_egg_grubs:
     part_of: grubfather
     qualified_name: Rancid_Egg-Grubs
@@ -82,29 +89,32 @@ rancid_eggs:
     - $QUAKE,mantis_claw
     - $QUAKE,monarch_wings
     description: Beneath Oro
+    map_locations:
+    - x_coord: 4044
+      y_coord: 1910
     qualified_name: Rancid_Egg-Near_Quick_Slash
     waypoint: Oro_Bench
-    x_coord: 3981
-    y_coord: 1910
   rancid_egg_queens_gardens:
     access_rules:
     - mantis_claw
     - monarch_wings
     - $DASH
+    map_locations:
+    - x_coord: 851
+      y_coord: 1243
     qualified_name: Rancid_Egg-Queen's_Gardens
     waypoint: Top_Right_Queen's_Gardens
-    x_coord: 851
-    y_coord: 1243
   rancid_egg_sheo:
     access_rules:
     - mantis_claw,$DASH,crystal_heart
     - mantis_claw,$DASH,monarch_wings
     - mantis_claw,monarch_wings,crystal_heart
     description: Below Sheo
+    map_locations:
+    - x_coord: 193
+      y_coord: 950
     qualified_name: Rancid_Egg-Sheo
     waypoint: Greenpath
-    x_coord: 193
-    y_coord: 950
   rancid_egg_sly:
     part_of: sly
     qualified_name: Rancid_Egg-Sly
@@ -112,44 +122,49 @@ rancid_eggs:
     access_rules:
     - mantis_claw
     - monarch_wings
+    map_locations:
+    - x_coord: 3510
+      y_coord: 1324
     qualified_name: Rancid_Egg-Upper_Kingdom's_Edge
     waypoint: Upper_Kingdom's_Edge
-    x_coord: 3510
-    y_coord: 1324
   rancid_egg_waterways_east:
     description: Above the path to Isma's Grove
+    map_locations:
+    - x_coord: 2902
+      y_coord: 1913
     qualified_name: Rancid_Egg-Waterways_East
     waypoint: Right_Waterways
-    x_coord: 2902
-    y_coord: 1913
   rancid_egg_waterways_main:
+    access_rules:
+    - mantis_claw
+    - monarch_wings
+    - SPICYSKIPS
+    map_locations:
+    - x_coord: 2426
+      y_coord: 1813
     qualified_name: Rancid_Egg-Waterways_Main
     waypoint: Central_Left_Waterways
-    x_coord: 2426
-    y_coord: 1813
-    access_rules:
-    - mantis_claw
-    - monarch_wings
-    - SPICYSKIPS
   rancid_egg_waterways_west_bluggsac:
+    map_locations:
+    - x_coord: 2173
+      y_coord: 1772
     qualified_name: Rancid_Egg-Waterways_West_Bluggsac
     waypoint: Upper_Left_Waterways
-    x_coord: 2173
-    y_coord: 1772
   rancid_egg_waterways_west_pickup:
-    qualified_name: Rancid_Egg-Waterways_West_Pickup
-    waypoint: Upper_Left_Waterways
-    x_coord: 1946
-    y_coord: 1737
     access_rules:
     - mantis_claw
     - monarch_wings
     - SPICYSKIPS
+    map_locations:
+    - x_coord: 1946
+      y_coord: 1737
+    qualified_name: Rancid_Egg-Waterways_West_Pickup
+    waypoint: Upper_Left_Waterways
   rancid_egg_weavers_den:
     access_rules:
     - SPIKETUNNELS
     - $DASH
     description: Hidden in Weaver's Den
+    part_of: weavers_den
     qualified_name: Rancid_Egg-Weaver's_Den
     waypoint: Weaver's_Den
-    part_of: weavers_den

@@ -4,10 +4,11 @@ skills:
     - howling_wraiths
     description: Abyss Shriek Upgrade
     display_name: Abyss Shriek
+    map_locations:
+    - x_coord: 2126
+      y_coord: 2727
     qualified_name: Abyss_Shriek
     waypoint: Abyss
-    x_coord: 2126
-    y_coord: 2727
   awoken_dream_nail:
     display_name: Awoken Dream Nail
     part_of: seer
@@ -22,33 +23,36 @@ skills:
     - monarch_wings,SHADESKIPS
     description: Crystal Peak Treasure
     display_name: Crystal Heart
+    map_locations:
+    - x_coord: 3167
+      y_coord: 599
     qualified_name: Crystal_Heart
     waypoint: Upper_Crystal_Peak
-    x_coord: 3167
-    y_coord: 599
   cyclone_slash:
     description: Nailmaster Mato Skill
     display_name: Cyclone Slash
+    map_locations:
+    - x_coord: 1165
+      y_coord: 354
     qualified_name: Cyclone_Slash
     waypoint: Howling_Cliffs
-    x_coord: 1165
-    y_coord: 354
   dash_slash:
     description: Nailmaster Oro Skill
     display_name: Dash Slash
+    map_locations:
+    - x_coord: 4051
+      y_coord: 1808
     qualified_name: Dash_Slash
     waypoint: Oro_Bench
-    x_coord: 4051
-    y_coord: 1808
   descending_dark:
     access_rules:
     - $QUAKE,mantis_claw
     - $QUAKE,monarch_wings
     description: Snail Shaman Treasure
     display_name: Descending Dark
+    part_of: crystallized_mound
     qualified_name: Descending_Dark
     waypoint: Crystallized_Mound
-    part_of: crystallized_mound
   desolate_dive:
     access_rules:
     - mantis_claw
@@ -66,10 +70,11 @@ skills:
   dream_nail:
     description: Dream Nail
     display_name: Dream Nail
+    map_locations:
+    - x_coord: 3079
+      y_coord: 914
     qualified_name: Dream_Nail
     waypoint: Upper_Resting_Grounds
-    x_coord: 3079
-    y_coord: 914
   great_slash:
     access_rules:
     - mantis_claw,$DASH,crystal_heart
@@ -77,24 +82,27 @@ skills:
     - mantis_claw,monarch_wings,crystal_heart
     description: Nailmaster Sheo Skill
     display_name: Great Slash
+    map_locations:
+    - x_coord: 235
+      y_coord: 916
     qualified_name: Great_Slash
     waypoint: Greenpath
-    x_coord: 235
-    y_coord: 916
   howling_wraiths:
     description: Overgrown Mound Treasure
     display_name: Howling Wraiths
+    map_locations:
+    - x_coord: 850
+      y_coord: 1152
     qualified_name: Howling_Wraiths
     waypoint: Overgrown_Mound
-    x_coord: 850
-    y_coord: 1152
   ismas_tear:
     description: Isma's Grove Treasure
     display_name: Isma's Tear
+    map_locations:
+    - x_coord: 3140
+      y_coord: 1914
     qualified_name: Isma's_Tear
     waypoint: Isma's_Grove
-    x_coord: 3140
-    y_coord: 1914
   mantis_claw:
     access_rules:
     - $DASH
@@ -103,26 +111,30 @@ skills:
     - MILDSKIPS
     description: Mantis Village Treasure
     display_name: Mantis Claw
+    map_locations:
+    - x_coord: 1561
+      y_coord: 1600
     qualified_name: Mantis_Claw
     waypoint: Mantis_Village
-    x_coord: 1561
-    y_coord: 1600
   monarch_wings:
     access_rules:
     - mantis_claw,$MINIBOSS
     - monarch_wings,MILDSKIPS,$MINIBOSS
     description: Broken Vessel Prize
     display_name: Monarch Wings
-    part_of: broken_vessel
     qualified_name: Monarch_Wings
     waypoint: Far_Left_Basin
+    map_locations:
+    - x_coord: 1619
+      y_coord: 2236
   mothwing_cloak:
     description: Hornet 1 Prize
     display_name: Mothwing Cloak
+    map_locations:
+    - x_coord: 575
+      y_coord: 688
     qualified_name: Mothwing_Cloak
     waypoint: Greenpath
-    x_coord: 575
-    y_coord: 688
   shade_cloak:
     access_rules:
     - mantis_claw,$DASH
@@ -133,19 +145,21 @@ skills:
     description: Abyss Treasure
     display_name: Shade Cloak
     force_additive: true
+    map_locations:
+    - x_coord: 3398
+      y_coord: 2702
     qualified_name: Shade_Cloak
     waypoint: Abyss
-    x_coord: 3398
-    y_coord: 2702
   shade_soul:
     access_rules:
     - elegant_key,$MINIBOSS
     description: Elegant Room Charm
     display_name: Shade Soul
+    map_locations:
+    - x_coord: 2446
+      y_coord: 1305
     qualified_name: Shade_Soul
     waypoint: Soul_Sanctum
-    x_coord: 2446
-    y_coord: 1305
   vengeful_spirit:
     description: Ancestral Mound Upgrade
     display_name: Vengeful Spirit

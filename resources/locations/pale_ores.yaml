@@ -6,25 +6,27 @@ pale_ores:
     - $DASH,MILDSKIPS
     - SPICYSKIPS
     description: Guarded by two Lesser Mawleks
+    map_locations:
+    - x_coord: 2113
+      y_coord: 2084
     qualified_name: Pale_Ore-Basin
     waypoint: Mid_Basin
-    x_coord: 2113
-    y_coord: 2084
   pale_ore_colosseum:
     access_rules:
     - $BOSS,mantis_claw
     - $BOSS,SPICYSKIPS,monarch_wings
+    check_infix: Colosseum
     description: Complete the Trial of the Conqueror
     part_of: colosseum
     qualified_name: Pale_Ore-Colosseum
     waypoint: Colosseum
-    check_infix: Colosseum
   pale_ore_crystal_peak:
     description: Beneath the Radiance statue
+    map_locations:
+    - x_coord: 2881
+      y_coord: 73
     qualified_name: Pale_Ore-Crystal_Peak
     waypoint: Hallownest's_Crown
-    x_coord: 2881
-    y_coord: 73
   pale_ore_grubs:
     part_of: grubfather
     qualified_name: Pale_Ore-Grubs
@@ -35,10 +37,11 @@ pale_ores:
     - mantis_claw,$BOSS,crystal_heart
     - mantis_claw,$BOSS,SHADESKIPS
     description: Nosk Prize
+    map_locations:
+    - x_coord: 1310
+      y_coord: 2100
     qualified_name: Pale_Ore-Nosk
     waypoint: Deepnest
-    x_coord: 1310
-    y_coord: 2100
   pale_ore_seer:
     part_of: seer
     qualified_name: Pale_Ore-Seer

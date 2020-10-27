@@ -13,26 +13,29 @@ dreamers:
     - mantis_claw,$DREAMNAIL,MILDSKIPS,$BOSS
     description: The Watcher
     display_name: Lurien
+    map_locations:
+    - x_coord: 2806
+      y_coord: 1085
     qualified_name: Lurien
     waypoint: Right_City
-    x_coord: 2806
-    y_coord: 1085
   monomon:
     access_rules:
     - mantis_claw,$DREAMNAIL,$AERIALMINIBOSS,ismas_tear
     - mantis_claw,$DREAMNAIL,$AERIALMINIBOSS,crystal_heart
     description: The Teacher
     display_name: Monomon
+    map_locations:
+    - x_coord: 1358
+      y_coord: 1192
     qualified_name: Monomon
     waypoint: Teacher's_Archives
-    x_coord: 1358
-    y_coord: 1192
   world_sense:
     access_rules:
     - lurien,monomon,herrah
     description: Percentage Tracker
     display_name: World Sense
+    map_locations:
+    - x_coord: 1996
+      y_coord: 668
     qualified_name: World_Sense
     waypoint: Crossroads
-    x_coord: 1996
-    y_coord: 668

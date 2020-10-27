@@ -4,41 +4,45 @@ vessel_fragments:
     - mantis_claw
     - monarch_wings
     description: Give 3000 geo to the fountain
+    map_locations:
+    - x_coord: 2553
+      y_coord: 2098
     qualified_name: Vessel_Fragment-Basin
     waypoint: Mid_Basin
-    x_coord: 2553
-    y_coord: 2098
   vessel_fragment_city:
     access_rules:
     - $MINIBOSS
     description: Above King's Station
+    map_locations:
+    - x_coord: 3218
+      y_coord: 1447
     qualified_name: Vessel_Fragment-City
     waypoint: Upper_King's_Station
-    x_coord: 3218
-    y_coord: 1447
   vessel_fragment_crossroads:
     description: Left of the Crossroads lift
+    map_locations:
+    - x_coord: 1844
+      y_coord: 952
     qualified_name: Vessel_Fragment-Crossroads
     waypoint: Left_Elevator
-    x_coord: 1844
-    y_coord: 952
   vessel_fragment_deepnest:
     access_rules:
     - mantis_claw
     - monarch_wings
     description: Above the Deepnest tram
+    map_locations:
+    - x_coord: 1575
+      y_coord: 1948
     qualified_name: Vessel_Fragment-Deepnest
     waypoint: Deepnest
-    x_coord: 1575
-    y_coord: 1948
   vessel_fragment_greenpath:
     access_rules:
     - mantis_claw
     - SPICYSKIPS,monarch_wings
     description: Near the Queen's Garden
+    part_of: greenpath_southwest
     qualified_name: Vessel_Fragment-Greenpath
     waypoint: Greenpath
-    part_of: greenpath_southwest
   vessel_fragment_seer:
     part_of: seer
     qualified_name: Vessel_Fragment-Seer

@@ -2,15 +2,16 @@ geo_chests:
   crystal_peak_chest:
     access_rules:
     - $stupidUpperCrystalPeakRules
+    map_locations:
+    - x_coord: 2737
+      y_coord: 650
     qualified_name: 80_Geo-Crystal_Peak_Chest
     waypoint: Upper_Crystal_Peak
-    x_coord: 2737
-    y_coord: 650
   false_knight_chest:
     description: Behind the False Knight
+    part_of: false_knight
     qualified_name: 200_Geo-False_Knight_Chest
     waypoint: Crossroads
-    part_of: false_knight
   greenpath_chest:
     access_rules:
     - $DASH
@@ -20,48 +21,50 @@ geo_chests:
     - $AIRSTALL
     - SHADESKIPS
     description: Along the path to Queen's Garden
+    map_locations:
+    - x_coord: 898
+      y_coord: 1048
     qualified_name: 85_Geo-Greenpath_Chest
     waypoint: Greenpath
-    x_coord: 898
-    y_coord: 1048
   mantis_lords_chest:
     access_rules:
     - mantis_claw
     - monarch_wings,SPICYSKIPS
     description: Mantis Lords Reward
-    qualified_name: 620_Geo-Mantis_Lords_Chest
     part_of: mantis_lords_rewards
+    qualified_name: 620_Geo-Mantis_Lords_Chest
   resting_grounds_chest:
     access_rules:
     - $QUAKE
     description: Beneath the Grey Mourner
+    map_locations:
+    - x_coord: 3353
+      y_coord: 948
     qualified_name: 150_Geo-Resting_Grounds_Chest
     waypoint: Upper_Resting_Grounds
-    x_coord: 3353
-    y_coord: 948
   soul_master_chest:
     access_rules:
     - mantis_claw
     description: Behind the Soul Master's Room
+    map_locations:
+    - x_coord: 2272
+      y_coord: 1157
     qualified_name: 380_Geo-Soul_Master_Chest
     waypoint: Soul_Sanctum
-    x_coord: 2272
-    y_coord: 1157
   watcher_knights_chest:
     access_rules:
     - mantis_claw,$BOSS,monarch_wings
     - mantis_claw,$BOSS,MILDSKIPS
     description: Near the Watcher Knights
+    part_of: watchers_prizes
     qualified_name: 655_Geo-Watcher_Knights_Chest
     waypoint: Right_City
-    x_coord: 2710
-    y_coord: 1280
   weavers_den_chest:
     access_rules:
     - mantis_claw,crystal_heart,SPIKETUNNELS
     - mantis_claw,crystal_heart,$DASH
     - monarch_wings,$DASH
     description: In the Weaver's Den
+    part_of: weavers_den
     qualified_name: 160_Geo-Weavers_Den_Chest
     waypoint: Weaver's_Den
-    part_of: weavers_den

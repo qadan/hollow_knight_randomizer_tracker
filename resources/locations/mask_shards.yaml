@@ -4,77 +4,89 @@ mask_shards:
     qualified_name: Mask_Shard-5_Grubs
     waypoint: Crossroads
   mask_shard_bretta:
-    description: Rescue Bretta
-    qualified_name: Mask_Shard-Bretta
-    waypoint: Mantis_Outskirts
-    x_coord: 1850
-    y_coord: 585
     access_rules:
     - mantis_claw,$DASH,@dirtmouth
     - mantis_claw,monarch_wings,@dirtmouth
     - mantis_claw,crystal_heart,@dirtmouth
     - mantis_claw,$AIRSTALL,SHADESKIPS,@dirtmouth
+    description: Rescue Bretta
+    map_locations:
+    - x_coord: 1850
+      y_coord: 585
+    - x_coord: 1779
+      y_coord: 1732
+    qualified_name: Mask_Shard-Bretta
+    waypoint: Mantis_Outskirts
   mask_shard_brooding_mawlek:
     access_rules:
     - $MINIBOSS
     description: Defeat the Brooding Mawlek
+    map_locations:
+    - x_coord: 1691
+      y_coord: 837
     qualified_name: Mask_Shard-Brooding_Mawlek
     waypoint: Crossroads
-    x_coord: 1691
-    y_coord: 837
   mask_shard_crossroads_goam:
     access_rules:
     - mantis_claw
     - monarch_wings
     - MILDSKIPS
     description: Avoid the Goams
+    map_locations:
+    - x_coord: 1891
+      y_coord: 907
     qualified_name: Mask_Shard-Crossroads_Goam
     waypoint: Crossroads
-    x_coord: 1881
-    y_coord: 907
   mask_shard_deepnest:
     description: Take the alternate route into Deepnest
+    map_locations:
+    - x_coord: 1459
+      y_coord: 1813
     qualified_name: Mask_Shard-Deepnest
     waypoint: Fungal_Core
-    x_coord: 1459
-    y_coord: 1813
   mask_shard_enraged_guardian:
     access_rules:
     - mantis_claw,monarch_wings,$BOSS
     description: Enraged Guardian Prize
+    map_locations:
+    - x_coord: 2622
+      y_coord: 450
     qualified_name: Mask_Shard-Enraged_Guardian
     waypoint: Upper_Crystal_Peak
-    x_coord: 2622
-    y_coord: 450
   mask_shard_grey_mourner:
-    description: Deliver the fragile flower
-    qualified_name: Mask_Shard-Grey_Mourner
-    waypoint: Upper_Resting_Grounds
-    x_coord: 3420
-    y_coord: 912
-    check_infix: Upper_Resting_Grounds + QUAKE + CLAW
     access_rules:
     - $QUAKE,mantis_claw,monarch_wings,crystal_heart,ismas_tear,shade_cloak,@top_left_queens_gardens
+    check_infix: Upper_Resting_Grounds + QUAKE + CLAW
+    description: Deliver the fragile flower
+    map_locations:
+    - x_coord: 3420
+      y_coord: 912
+    - x_coord: 587
+      y_coord: 1278
+    qualified_name: Mask_Shard-Grey_Mourner
+    waypoint: Upper_Resting_Grounds
   mask_shard_hive:
     access_rules:
     - mantis_claw,monarch_wings
     - MILDSKIPS,mantis_claw
     - MILDSKIPS,monarch_wings
     description: Destroy the wall in Hive
+    map_locations:
+    - x_coord: 3564
+      y_coord: 1934
     qualified_name: Mask_Shard-Hive
     waypoint: Hive
-    x_coord: 3564
-    y_coord: 1934
   mask_shard_queens_station:
     access_rules:
     - monarch_wings
     - mantis_claw,$DASH
     - mantis_claw,crystal_heart
     description: Hidden in Queen's Station
+    map_locations:
+    - x_coord: 1370
+      y_coord: 1375
     qualified_name: Mask_Shard-Queen's_Station
     waypoint: Queen's_Station
-    x_coord: 1370
-    y_coord: 1375
   mask_shard_seer:
     part_of: seer
     qualified_name: Mask_Shard-Seer
@@ -93,12 +105,13 @@ mask_shards:
     qualified_name: Mask_Shard-Sly4
   mask_shard_stone_sanctuary:
     description: In the Stone Sanctuary
+    part_of: stone_sanctuary
     qualified_name: Mask_Shard-Stone_Sanctuary
     waypoint: Stone_Sanctuary
-    part_of: stone_sanctuary
   mask_shard_waterways:
     description: Hidden in western Waterways
+    map_locations:
+    - x_coord: 1919
+      y_coord: 1781
     qualified_name: Mask_Shard-Waterways
     waypoint: Upper_Left_Waterways
-    x_coord: 1919
-    y_coord: 1781

@@ -3,95 +3,107 @@ wanderers_journals:
     access_rules:
     - mantis_claw
     - monarch_wings,SHADESKIPS
+    part_of: mantis_village_whispering_root
     qualified_name: Wanderer's_Journal-Above_Mantis_Village
     waypoint: Fungal_Wastes
-    part_of: mantis_village_whispering_root
   wanderers_journal_ancient_basin:
     access_rules:
     - $DASH
     - SPIKETUNNELS
+    map_locations:
+    - x_coord: 2729
+      y_coord: 2001
     qualified_name: Wanderer's_Journal-Ancient_Basin
     waypoint: Upper_Basin
-    x_coord: 2729
-    y_coord: 2001
   wanderers_journal_city_storerooms:
+    map_locations:
+    - x_coord: 2082
+      y_coord: 1253
     qualified_name: Wanderer's_Journal-City_Storerooms
     waypoint: Left_Elevator
-    x_coord: 2082
-    y_coord: 1253
   wanderers_journal_cliffs:
+    map_locations:
+    - x_coord: 914
+      y_coord: 497
     qualified_name: Wanderer's_Journal-Cliffs
     waypoint: Howling_Cliffs
-    x_coord: 914
-    y_coord: 497
   wanderers_journal_crystal_peak_crawlers:
     access_rules:
     - mantis_claw
     - monarch_wings
     - MILDSKIPS
+    map_locations:
+    - x_coord: 2762
+      y_coord: 423
     qualified_name: Wanderer's_Journal-Crystal_Peak_Crawlers
     waypoint: Upper_Crystal_Peak
-    x_coord: 2762
-    y_coord: 423
   wanderers_journal_fungal_wastes_thorns_gauntlet:
     access_rules:
     - mantis_claw,monarch_wings
     - mantis_claw,$DASH
     - mantis_claw,crystal_heart
     - mantis_claw,$AIRSTALL
+    map_locations:
+    - x_coord: 1621
+      y_coord: 1314
     qualified_name: Wanderer's_Journal-Fungal_Wastes_Thorns_Gauntlet
     waypoint: Fungal_Wastes
-    x_coord: 1621
-    y_coord: 1314
   wanderers_journal_greenpath_lower:
     access_rules:
     - mantis_claw
+    map_locations:
+    - x_coord: 1229
+      y_coord: 1039
     qualified_name: Wanderer's_Journal-Greenpath_Lower
     waypoint: Greenpath
-    x_coord: 1229
-    y_coord: 1039
   wanderers_journal_greenpath_stag:
+    map_locations:
+    - x_coord: 740
+      y_coord: 727
     qualified_name: Wanderer's_Journal-Greenpath_Stag
     waypoint: Greenpath
-    x_coord: 740
-    y_coord: 727
-  wanderers_journal_kingdoms_edge_requires_dive:
-    access_rules:
-    - $QUAKE
-    qualified_name: Wanderer's_Journal-Kingdom's_Edge_Requires_Dive
-    waypoint: Center_Right_Kingdom's_Edge
-    x_coord: 3717
-    y_coord: 1734
   wanderers_journal_kingdoms_edge_camp:
     access_rules:
     - monarch_wings
     - mantis_claw,SPICYSKIPS
     - mantis_claw,$access_cached|cast_off_shell
+    map_locations:
+    - x_coord: 3789
+      y_coord: 1546
     qualified_name: Wanderer's_Journal-Kingdom's_Edge_Camp
     waypoint: Center_Right_Kingdom's_Edge
-    x_coord: 3789
-    y_coord: 1546
   wanderers_journal_kingdoms_edge_entrance:
     access_rules:
     - mantis_claw
+    map_locations:
+    - x_coord: 3436
+      y_coord: 1623
     qualified_name: Wanderer's_Journal-Kingdom's_Edge_Entrance
     waypoint: Central_Kingdom's_Edge
-    x_coord: 3436
-    y_coord: 1623
+  wanderers_journal_kingdoms_edge_requires_dive:
+    access_rules:
+    - $QUAKE
+    map_locations:
+    - x_coord: 3717
+      y_coord: 1734
+    qualified_name: Wanderer's_Journal-Kingdom's_Edge_Requires_Dive
+    waypoint: Center_Right_Kingdom's_Edge
   wanderers_journal_kings_station:
+    map_locations:
+    - x_coord: 3182
+      y_coord: 1551
     qualified_name: Wanderer's_Journal-King's_Station
     waypoint: Upper_King's_Station
-    x_coord: 3182
-    y_coord: 1551
   wanderers_journal_pleasure_house:
+    map_locations:
+    - x_coord: 2977
+      y_coord: 1525
     qualified_name: Wanderer's_Journal-Pleasure_House
     waypoint: Pleasure_House
-    x_coord: 2977
-    y_coord: 1525
   wanderers_journal_resting_grounds_catacombs:
     access_rules:
     - $QUAKE,mantis_claw
     - $QUAKE,monarch_wings
+    part_of: soul_eater_group
     qualified_name: Wanderer's_Journal-Resting_Grounds_Catacombs
     waypoint: Upper_Resting_Grounds
-    part_of: soul_eater_group

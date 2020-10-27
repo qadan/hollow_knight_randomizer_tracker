@@ -1,151 +1,171 @@
----
 reference_locations:
-  deep_abyss:
-    display_name: Deep Abyss
-    description: Dive beneath Abyss with the Void Heart
-    x_coord: 2402
-    y_coord: 2745
-    waypoint: Abyss
-    access_rules:
-    - $KINGSOUL
-    group_type: sectioned
-  seer:
-    display_name: Seer
-    description: Rewards for Essence
-    x_coord: 3142
-    y_coord: 777
-    qualified_name: Seer
-    waypoint: Upper_Resting_Grounds
-    group_type: group
-  colosseum:
-    display_name: Colosseum
-    description: Rewards for Trials
-    x_coord: 3415
-    y_coord: 1236
-    waypoint: Colosseum
-    group_type: sectioned
-  grimms_tent:
-    display_name: Grimm's Tent
-    x_coord: 1650
-    y_coord: 585
-    waypoint: Dirtmouth
-    access_rules:
-    - grimmchild
-    group_type: sectioned
-  grubfather:
-    display_name: Grubfather
-    description: Rewards for collecting Grubs
-    x_coord: 1650
-    y_coord: 670
-    qualified_name: Grubfather
-    waypoint: Crossroads
-    group_type: group
   ancestral_mound:
     display_name: Ancestral Mound
-    x_coord: 1813
-    y_coord: 802
+    group_type: sectioned
+    map_locations:
+    - x_coord: 1813
+      y_coord: 802
     waypoint: Ancestral_Mound
-    group_type: sectioned
   beast_den:
-    display_name: Beast's Den
     description: Spider Town
-    x_coord: 84
-    y_coord: 1829
-    waypoint: Beast's_Den
+    display_name: Beast's Den
     group_type: sectioned
+    map_locations:
+    - x_coord: 84
+      y_coord: 1829
+    waypoint: Beast's_Den
+  colosseum:
+    description: Rewards for Trials
+    display_name: Colosseum
+    group_type: sectioned
+    map_locations:
+    - x_coord: 3415
+      y_coord: 1236
+    waypoint: Colosseum
+  crystal_peak_map_group:
+    display_name: Crystal Peak Map
+    group_type: sectioned
+    map_locations:
+    - x_coord: 2475
+      y_coord: 537
+    waypoint: Upper_Crystal_Peak
+  crystallized_mound:
+    display_name: Crystallized Mound
+    group_type: sectioned
+    map_locations:
+    - x_coord: 3068
+      y_coord: 724
+    waypoint: Crystallized_Mound
+  dark_deepnest_whispering_root_group:
+    display_name: Dark Deepnest Whispering Root
+    group_type: sectioned
+    map_locations:
+    - x_coord: 501
+      y_coord: 1951
+    waypoint: Dark_Deepnest
+  deep_abyss:
+    access_rules:
+    - $KINGSOUL
+    description: Dive beneath Abyss with the Void Heart
+    display_name: Deep Abyss
+    group_type: sectioned
+    map_locations:
+    - x_coord: 2402
+      y_coord: 2745
+    waypoint: Abyss
   false_knight:
     display_name: False Knight
-    x_coord: 1899
-    y_coord: 812
-    waypoint: Crossroads
     group_type: sectioned
+    map_locations:
+    - x_coord: 1899
+      y_coord: 812
+    waypoint: Crossroads
+  greenpath_map_group:
+    display_name: Greenpath Map
+    group_type: sectioned
+    map_locations:
+    - x_coord: 1380
+      y_coord: 859
+    waypoint: Greenpath
+  greenpath_southwest:
+    display_name: Greenpath Southwest Items
+    group_type: sectioned
+    map_locations:
+    - x_coord: 834
+      y_coord: 1028
+    waypoint: Greenpath
+  grimms_tent:
+    access_rules:
+    - grimmchild
+    display_name: Grimm's Tent
+    group_type: sectioned
+    map_locations:
+    - x_coord: 1650
+      y_coord: 585
+    waypoint: Dirtmouth
+  grubfather:
+    description: Rewards for collecting Grubs
+    display_name: Grubfather
+    group_type: group
+    map_locations:
+    - x_coord: 1650
+      y_coord: 670
+    qualified_name: Grubfather
+    waypoint: Crossroads
+  lifeblood_core_group:
+    display_name: Lifeblood Core
+    group_type: sectioned
+    map_locations:
+    - x_coord: 2306
+      y_coord: 2598
+    waypoint: Abyss
+  mantis_lords_rewards:
+    display_name: Mantis Lords Rewards
+    group_type: sectioned
+    map_locations:
+    - x_coord: 1734
+      y_coord: 1680
+    - x_coord: 1626
+      y_coord: 1820
+    waypoint: Mantis_Village
+  mantis_village_whispering_root:
+    display_name: Mantis Village Whispering Root
+    group_type: sectioned
+    map_locations:
+    - x_coord: 1625
+      y_coord: 1562
+    waypoint: Fungal_Wastes
+  seer:
+    description: Rewards for Essence
+    display_name: Seer
+    group_type: group
+    map_locations:
+    - x_coord: 3142
+      y_coord: 777
+    qualified_name: Seer
+    waypoint: Upper_Resting_Grounds
+  soul_eater_group:
+    display_name: Soul Eater
+    group_type: sectioned
+    map_locations:
+    - x_coord: 3494
+      y_coord: 947
+    waypoint: Upper_Resting_Grounds
   soul_master:
-    display_name: Soul Master
-    x_coord: 2390
-    y_coord: 1174
-    waypoint: Soul_Sanctum
     access_rules:
     - mantis_claw
     - monarch_wings
+    display_name: Soul Master
     group_type: sectioned
-  broken_vessel:
-    display_name: Broken Vessel
-    x_coord: 1860
-    y_coord: 2206
-    waypoint: Far_Left_Basin
-    access_rules:
-    - mantis_claw,$MINIBOSS
-    - monarch_wings,MILDSKIPS,$MINIBOSS
-    group_type: sectioned
+    map_locations:
+    - x_coord: 2390
+      y_coord: 1174
+    waypoint: Soul_Sanctum
   stag_nest:
     display_name: Stag Nest
-    x_coord: 980
-    y_coord: 272
-    waypoint: Stag_Nest
     group_type: group
-  dark_deepnest_whispering_root_group:
-    display_name: Dark Deepnest Whispering Root
-    x_coord: 501
-    y_coord: 1951
-    waypoint: Dark_Deepnest
-    group_type: sectioned
-  weavers_den:
-    dispay_name: Weaver's Den
-    waypoint: Weaver's_Den
-    x_coord: 717
-    y_coord: 1913
-    group_type: sectioned
-  lifeblood_core_group:
-    display_name: Lifeblood Core
-    waypoint: Abyss
-    x_coord: 2306
-    y_coord: 2598
-    group_type: sectioned
-  greenpath_southwest:
-    display_name: Greenpath Southwest Items
-    waypoint: Greenpath
-    x_coord: 834
-    y_coord: 1028
-    group_type: sectioned
+    map_locations:
+    - x_coord: 980
+      y_coord: 272
+    waypoint: Stag_Nest
   stone_sanctuary:
     display_name: Stone Sanctuary
+    group_type: sectioned
+    map_locations:
+    - x_coord: 1427
+      y_coord: 996
     waypoint: Greenpath
-    x_coord: 1427
-    y_coord: 996
+  watchers_prizes:
+    display_name: Watcher Knight Prizes
     group_type: sectioned
-  mantis_lords_rewards:
-    display_name: Mantis Lords Rewards
-    waypoint: Mantis_Village
-    x_coord: 1734
-    y_coord: 1680
+    map_locations:
+    - x_coord: 2709
+      y_coord: 1338
+    waypoint: Right_City
+  weavers_den:
+    dispay_name: Weaver's Den
     group_type: sectioned
-  crystal_peak_map_group:
-    display_name: Crystal Peak Map
-    waypoint: Upper_Crystal_Peak
-    x_coord: 2475
-    y_coord: 537
-    group_type: sectioned
-  crystallized_mound:
-    display_name: Crystallized Mound
-    waypoint: Crystallized_Mound
-    x_coord: 3068
-    y_coord: 724
-    group_type: sectioned
-  greenpath_map_group:
-    display_name: Greenpath Map
-    waypoint: Greenpath
-    x_coord: 1380
-    y_coord: 859
-    group_type: sectioned
-  soul_eater_group:
-    display_name: Soul Eater
-    waypoint: Upper_Resting_Grounds
-    x_coord: 3494
-    y_coord: 947
-    group_type: sectioned
-  mantis_village_whispering_root:
-    display_name: Mantis Village Whispering Root
-    waypoint: Fungal_Wastes
-    x_coord: 1625
-    y_coord: 1562
-    group_type: sectioned
+    map_locations:
+    - x_coord: 717
+      y_coord: 1913
+    waypoint: Weaver's_Den

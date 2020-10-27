@@ -25,6 +25,7 @@ class GenerateBitmaskedLocations:
     'Dreamnail',
     'Wraiths',
     'whisperingRoot',
+    'Essence',
   ]
 
   def __init__(self):
@@ -89,8 +90,12 @@ class GenerateBitmaskedLocations:
 
 
   def is_capturable(self, location, data):
-    if 'group_type' in data and data['group_type'] == 'group':
+    if 'group_type' in data and (data['group_type'] == 'group' or data['group_type'] == 'shop'):
       return True
+    if 'part_of' in data:
+      parent = self.location_yaml.get_by_index(data['part_of'])
+      if 'group_type' in parent and parent['group_type'] == 'shop':
+        return True
     location_xml = self.item_xml.get_by_qualified_name(data['qualified_name'])
     if 'costType' in location_xml and location_xml['costType'] in self.capturable_cost_types:
       return True
@@ -99,23 +104,33 @@ class GenerateBitmaskedLocations:
     return False
 
 
+  def get_map_locations(self, map_locations, visibility_rule = None):
+    json_locations = []
+    for map_location in map_locations:
+      new_location = {
+        'map': 'hallownest',
+        'x': map_location['x_coord'],
+        'y': map_location['y_coord'],
+        'size': 50,
+      }
+      if visibility_rule is not None:
+        new_location['visibility_rules'] = [visibility_rule]
+      json_locations.append(new_location)
+    return json_locations
+
+
   def get_group_definition(self, location, data):
     definition = {
       'name': self.location_yaml.get_display_name(location),
       'group': location,
-      'map_locations': [{
-        'map': 'hallownest',
-        'x': data['x_coord'],
-        'y': data['y_coord'],
-        'size': 50,
-      }],
     }
     parts_of = self.location_yaml.get_parts_of(location)
     definition['sections'] = []
     if data['group_type'] == 'slys_special_magical_goddamn_group':
       definition['sections'].extend(self.get_sly_sections())
-      definition['map_locations'][0]['visibility_rules'] = ['randomize_shops']
+      definition['map_locations'] = self.get_map_locations(data['map_locations'], visibility_rule = 'randomize_shops')
     else:
+      definition['map_locations'] = self.get_map_locations(data['map_locations'])
       for part_loc, part_data in parts_of.items():
         part_type = 'relics' if part_data['type'] in self.relic_types else part_data['type']
         definition['sections'].append({
@@ -151,13 +166,7 @@ class GenerateBitmaskedLocations:
             access_rules.append(check_with_skips)
         self.locations.append({
           'name': self.location_yaml.get_display_name(location),
-          'map_locations': [{
-            'map': 'hallownest',
-            'x': data['x_coord'],
-            'y': data['y_coord'],
-            'size': 50,
-            'visibility_rules': ['randomize_{}'.format(loc_type)]
-          }],
+          'map_locations': self.get_map_locations(data['map_locations'], visibility_rule = 'randomize_{}'.format(loc_type)),
           'sections': [{
             'name': data['description'] if 'description' in data else self.location_yaml.get_display_name(location),
             'access_rules': access_rules,

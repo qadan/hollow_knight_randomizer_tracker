@@ -11,10 +11,11 @@ keys:
     - love_key,$BOSS,monarch_wings,SPICYSKIPS
     description: Defeat the Collector
     display_name: Collector's Map
+    map_locations:
+    - x_coord: 3365
+      y_coord: 1509
     qualified_name: Collector's_Map
     waypoint: Tower_of_Love
-    x_coord: 3365
-    y_coord: 1509
   elegant_key:
     display_name: Elegant Key
     part_of: sly_key
@@ -24,19 +25,21 @@ keys:
     - simple_key:4
     description: Open Godseeker's coffin
     display_name: Godtuner
+    map_locations:
+    - x_coord: 1851
+      y_coord: 1932
     qualified_name: Godtuner
     waypoint: Junk_Pit
-    x_coord: 1851
-    y_coord: 1932
   kings_brand:
     access_rules:
     - $BOSS
     description: Hornet 2 Prize
     display_name: King's Brand
+    map_locations:
+    - x_coord: 4069
+      y_coord: 1703
     qualified_name: King's_Brand
     waypoint: Cast_Off_Shell
-    x_coord: 4069
-    y_coord: 1703
   love_key:
     access_rules:
     - ismas_tear
@@ -46,10 +49,11 @@ keys:
     - SPICYSKIPS,sharp_shadow,shade_cloak,monarch_wings
     description: Deep in the Queen's Gardens
     display_name: Love Key
+    map_locations:
+    - x_coord: 1105
+      y_coord: 1446
     qualified_name: Love_Key
     waypoint: Bottom_Right_Queen's_Gardens
-    x_coord: 1105
-    y_coord: 1446
   lumafly_lantern:
     display_name: Lumafly Lantern
     part_of: sly
@@ -60,18 +64,20 @@ keys:
     - monarch_wings
     description: In the Crystal Peak Storerooms
     display_name: Shopkeeper's Key
+    map_locations:
+    - x_coord: 2562
+      y_coord: 444
     qualified_name: Shopkeeper's_Key
     waypoint: Upper_Crystal_Peak
-    x_coord: 2562
-    y_coord: 444
   simple_key_basin:
     description: Deep in Ancient Basin
     display_name: Simple Key (Basin)
     logic_group: simple_keys
+    map_locations:
+    - x_coord: 1897
+      y_coord: 2342
     qualified_name: Simple_Key-Basin
     waypoint: Far_Left_Basin
-    x_coord: 1897
-    y_coord: 2342
   simple_key_city:
     access_rules:
     - $DASH
@@ -81,20 +87,22 @@ keys:
     description: In the City Storerooms
     display_name: Simple Key (City)
     logic_group: simple_keys
+    map_locations:
+    - x_coord: 2230
+      y_coord: 1285
     qualified_name: Simple_Key-City
     waypoint: Left_Elevator
-    x_coord: 2230
-    y_coord: 1285
   simple_key_lurker:
     access_rules:
     - mantis_claw,$BOSS
     description: Pale Lurker Prize
     display_name: Simple Key (Lurker)
     logic_group: simple_keys
+    map_locations:
+    - x_coord: 3845
+      y_coord: 1298
     qualified_name: Simple_Key-Lurker
     waypoint: Pale_Lurker_Area
-    x_coord: 3845
-    y_coord: 1298
   simple_key_sly:
     display_name: Simple Key (Sly)
     logic_group: simple_keys
@@ -106,7 +114,8 @@ keys:
     - monarch_wings,MILDSKIPS
     description: In the derelict tram
     display_name: Tram Pass
+    map_locations:
+    - x_coord: 643
+      y_coord: 1707
     qualified_name: Tram_Pass
     waypoint: Failed_Tramway
-    x_coord: 643
-    y_coord: 1707

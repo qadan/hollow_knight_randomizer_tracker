@@ -1,49 +1,55 @@
 kings_idols:
   kings_idol_cliffs:
+    map_locations:
+    - x_coord: 769
+      y_coord: 548
     qualified_name: King's_Idol-Cliffs
     waypoint: Howling_Cliffs
-    x_coord: 769
-    y_coord: 548
   kings_idol_crystal_peak:
     access_rules:
     - mantis_claw,$DASH
     - monarch_wings
+    part_of: crystal_peak_map_group
     qualified_name: King's_Idol-Crystal_Peak
     waypoint: Upper_Crystal_Peak
-    part_of: crystal_peak_map_group
   kings_idol_deepnest:
+    map_locations:
+    - x_coord: 1011
+      y_coord: 1810
     qualified_name: King's_Idol-Deepnest
     waypoint: Failed_Tramway
-    x_coord: 1011
-    y_coord: 1810
   kings_idol_dung_defender:
     access_rules:
     - mantis_claw,$QUAKE,$BOSS
     - monarch_wings,SPICYSKIPS,$QUAKE,$BOSS
+    map_locations:
+    - x_coord: 2751
+      y_coord: 1813
     qualified_name: King's_Idol-Dung_Defender
     waypoint: Central_Left_Waterways
-    x_coord: 2751
-    y_coord: 1813
   kings_idol_glade_of_hope:
     access_rules:
     - mantis_claw
     - monarch_wings,$DASH
+    description: King's Idol (Locked Behind 200 Essence)
+    map_locations:
+    - x_coord: 3467
+      y_coord: 745
     qualified_name: King's_Idol-Glade_of_Hope
     waypoint: Spirits_Glade
-    x_coord: 3467
-    y_coord: 745
-    description: King's Idol (Locked Behind 200 Essence)
   kings_idol_great_hopper:
+    map_locations:
+    - x_coord: 3323
+      y_coord: 1305
     qualified_name: King's_Idol-Great_Hopper
     waypoint: Top_Kingdom's_Edge
-    x_coord: 3323
-    y_coord: 1305
   kings_idol_grubs:
     part_of: grubfather
     qualified_name: King's_Idol-Grubs
     waypoint: Crossroads
   kings_idol_pale_lurker:
+    map_locations:
+    - x_coord: 3970
+      y_coord: 1348
     qualified_name: King's_Idol-Pale_Lurker
     waypoint: Pale_Lurker_Area
-    x_coord: 3970
-    y_coord: 1302

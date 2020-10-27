@@ -2,104 +2,116 @@ grubs:
   grub_abyss_17:
     access_rules:
     - $QUAKE
+    map_locations:
+    - x_coord: 2307
+      y_coord: 2110
     qualified_name: Grub-Abyss_17
     waypoint: Mid_Basin
-    x_coord: 2307
-    y_coord: 2110
   grub_abyss_19:
     access_rules:
     - monarch_wings,mantis_claw
     - monarch_wings,$AIRSTALL,SPICYSKIPS
+    map_locations:
+    - x_coord: 1966
+      y_coord: 2135
     qualified_name: Grub-Abyss_19
     waypoint: Far_Left_Basin
-    x_coord: 1966
-    y_coord: 2135
   grub_crossroads_03:
+    map_locations:
+    - x_coord: 2152
+      y_coord: 766
     qualified_name: Grub-Crossroads_03
     waypoint: Crossroads
-    x_coord: 2152
-    y_coord: 766
   grub_crossroads_05:
     access_rules:
     - MILDSKIPS
     - $DASH
     - monarch_wings
     - crystal_heart
+    map_locations:
+    - x_coord: 1876
+      y_coord: 722
     qualified_name: Grub-Crossroads_05
     waypoint: Crossroads
-    x_coord: 1876
-    y_coord: 722
   grub_crossroads_31:
+    map_locations:
+    - x_coord: 2211
+      y_coord: 868
     qualified_name: Grub-Crossroads_31
     waypoint: Crossroads
-    x_coord: 2211
-    y_coord: 868
   grub_crossroads_35:
+    map_locations:
+    - x_coord: 1490
+      y_coord: 892
     qualified_name: Grub-Crossroads_35
     waypoint: Crossroads
-    x_coord: 1490
-    y_coord: 892
   grub_crossroads_48:
+    map_locations:
+    - x_coord: 2327
+      y_coord: 670
     qualified_name: Grub-Crossroads_48
     waypoint: Crossroads
-    x_coord: 2327
-    y_coord: 670
   grub_deepnest_03:
     access_rules:
     - mantis_claw
     - monarch_wings
+    map_locations:
+    - x_coord: 1044
+      y_coord: 1854
     qualified_name: Grub-Deepnest_03
     waypoint: Deepnest
-    x_coord: 1044
-    y_coord: 1854
   grub_deepnest_31:
     access_rules:
     - crystal_heart
     - monarch_wings
     - mantis_claw,SHADESKIPS
+    map_locations:
+    - x_coord: 1009
+      y_coord: 2053
     qualified_name: Grub-Deepnest_31
     waypoint: Deepnest
-    x_coord: 1009
-    y_coord: 2053
   grub_deepnest_36:
-    description: Don't get bamboozled
-    qualified_name: Grub-Deepnest_36
-    waypoint: Grub_Deepnest_36
-    x_coord: 1367
-    y_coord: 1589
-    waypoint: Upper_Deepnest
     access_rules:
     - monarch_wings
     - mantis_claw,$DASH
     - mantis_claw,crystal_heart
     - '@bottom_left_fungal_wastes'
+    description: Don't get bamboozled
+    map_locations:
+    - x_coord: 1367
+      y_coord: 1589
+    qualified_name: Grub-Deepnest_36
+    waypoint: Upper_Deepnest
   grub_deepnest_39:
     access_rules:
     - mantis_claw
     - monarch_wings
+    map_locations:
+    - x_coord: 586
+      y_coord: 1902
     qualified_name: Grub-Deepnest_39
     waypoint: Dark_Deepnest
-    x_coord: 586
-    y_coord: 1902
   grub_deepnest_east_11:
     access_rules:
     - mantis_claw
     - monarch_wings
     - MILDSKIPS,$DASH
+    map_locations:
+    - x_coord: 3760
+      y_coord: 1701
     qualified_name: Grub-Deepnest_East_11
     waypoint: Center_Right_Kingdom's_Edge
-    x_coord: 3760
-    y_coord: 1701
   grub_deepnest_east_14:
     access_rules:
     - mantis_claw,$QUAKE,MILDSKIPS
     - mantis_claw,$QUAKE,$DASH
     - monarch_wings,$QUAKE,MILDSKIPS
     - monarch_wings,$QUAKE,$DASH
+    map_locations:
+    - x_coord: 4139
+      y_coord: 1911
     qualified_name: Grub-Deepnest_East_14
     waypoint: Oro_Bench
-    x_coord: 4139
-    y_coord: 1911
   grub_deepnest_spider_town:
     access_rules:
     - mantis_claw
@@ -107,14 +119,15 @@ grubs:
     qualified_name: Grub-Deepnest_Spider_Town
     waypoint: Beast's_Den
   grub_fungus1_06:
+    part_of: greenpath_map_group
     qualified_name: Grub-Fungus1_06
     waypoint: Greenpath
-    part_of: greenpath_map_group
   grub_fungus1_07:
+    map_locations:
+    - x_coord: 1319
+      y_coord: 941
     qualified_name: Grub-Fungus1_07
     waypoint: Greenpath
-    x_coord: 1319
-    y_coord: 941
   grub_fungus1_13:
     access_rules:
     - $DASH
@@ -123,211 +136,237 @@ grubs:
     - crystal_heart
     - $AIRSTALL
     - SHADESKIPS
+    part_of: greenpath_southwest
     qualified_name: Grub-Fungus1_13
     waypoint: Greenpath
-    part_of: greenpath_southwest
   grub_fungus1_21:
+    map_locations:
+    - x_coord: 780
+      y_coord: 658
     qualified_name: Grub-Fungus1_21
     waypoint: Greenpath
-    x_coord: 780
-    y_coord: 658
   grub_fungus1_28:
+    map_locations:
+    - x_coord: 1067
+      y_coord: 547
     qualified_name: Grub-Fungus1_28
     waypoint: Howling_Cliffs
-    x_coord: 1067
-    y_coord: 547
   grub_fungus2_18:
+    map_locations:
+    - x_coord: 1636
+      y_coord: 1401
     qualified_name: Grub-Fungus2_18
     waypoint: Fungal_Wastes
-    x_coord: 1636
-    y_coord: 1401
   grub_fungus2_20:
     access_rules:
     - mantis_claw
     - monarch_wings
     - $DASH
     - crystal_heart
+    map_locations:
+    - x_coord: 1242
+      y_coord: 1482
     qualified_name: Grub-Fungus2_20
     waypoint: Bottom_Left_Fungal_Wastes
-    x_coord: 1242
-    y_coord: 1482
   grub_fungus3_10:
+    map_locations:
+    - x_coord: 609
+      y_coord: 1380
     qualified_name: Grub-Fungus3_10
     waypoint: Top_Left_Queen's_Gardens
-    x_coord: 609
-    y_coord: 1380
   grub_fungus3_22:
     access_rules:
     - mantis_claw,$DASH,crystal_heart
+    map_locations:
+    - x_coord: 616
+      y_coord: 984
     qualified_name: Grub-Fungus3_22
     waypoint: Far_Queen's_Gardens
-    x_coord: 616
-    y_coord: 984
   grub_fungus3_47:
     access_rules:
     - crystal_heart
+    map_locations:
+    - x_coord: 1317
+      y_coord: 1172
     qualified_name: Grub-Fungus3_47
     waypoint: Right_Fog_Canyon
-    x_coord: 1317
-    y_coord: 1172
   grub_fungus3_48:
     access_rules:
     - mantis_claw
+    map_locations:
+    - x_coord: 255
+      y_coord: 1122
     qualified_name: Grub-Fungus3_48
     waypoint: Top_Left_Queen's_Gardens
-    x_coord: 255
-    y_coord: 1122
   grub_hive_03:
     access_rules:
     - mantis_claw,$QUAKE,ismas_tear
     - mantis_claw,$QUAKE,crystal_heart,ACIDSKIPS
     - monarch_wings,$QUAKE,ismas_tear
+    map_locations:
+    - x_coord: 3331
+      y_coord: 1862
     qualified_name: Grub-Hive_03
     waypoint: Lower_Kingdom's_Edge
-    x_coord: 3331
-    y_coord: 1872
   grub_hive_04:
     access_rules:
     - mantis_claw,monarch_wings,crystal_heart
     - mantis_claw,monarch_wings,SPICYSKIPS
+    map_locations:
+    - x_coord: 3662
+      y_coord: 1890
     qualified_name: Grub-Hive_04
     waypoint: Hive
-    x_coord: 3662
-    y_coord: 1890
   grub_mines_03:
     access_rules:
     - mantis_claw,$DASH
     - monarch_wings,SPIKETUNNELS,$DASH
     - monarch_wings,SPIKETUNNELS,$AIRSTALL
+    map_locations:
+    - x_coord: 2558
+      y_coord: 664
     qualified_name: Grub-Mines_03
     waypoint: Crystal_Peak
-    x_coord: 2558
-    y_coord: 664
   grub_mines_04:
     access_rules:
     - $DASH
     - mantis_claw,crystal_heart
     - dashmaster,sprintmaster
+    map_locations:
+    - x_coord: 2703
+      y_coord: 692
     qualified_name: Grub-Mines_04
     waypoint: Upper_Crystal_Peak
-    x_coord: 2703
-    y_coord: 692
   grub_mines_16:
-    qualified_name: Grub-Mines_16
-    waypoint: Grub_Mines_16
-    x_coord: 2047
-    y_coord: 615
     access_rules:
     - monarch_wings,crystal_heart
     - mantis_claw,crystal_heart,@upper_crystal_peak
+    map_locations:
+    - x_coord: 2047
+      y_coord: 615
+    qualified_name: Grub-Mines_16
+    waypoint: Grub_Mines_16
   grub_mines_19:
     access_rules:
     - $DASH,mantis_claw
     - $DASH,monarch_wings
+    map_locations:
+    - x_coord: 2645
+      y_coord: 565
     qualified_name: Grub-Mines_19
     waypoint: Upper_Crystal_Peak
-    x_coord: 2645
-    y_coord: 565
   grub_mines_24:
-    qualified_name: Grub-Mines_24
-    waypoint: Grub_Mines_24
-    x_coord: 3150
-    y_coord: 400
     access_rules:
     - $DASH,mantis_claw
     - $DASH,monarch_wings
     - $DASH,@hallownests_crown
     - crystal_heart,@hallownests_crown
     - monarch_wings,@hallownests_crown
+    map_locations:
+    - x_coord: 3150
+      y_coord: 400
+    qualified_name: Grub-Mines_24
+    waypoint: Grub_Mines_24
   grub_mines_31:
     access_rules:
     - mantis_claw,crystal_heart
     - monarch_wings
+    map_locations:
+    - x_coord: 2815
+      y_coord: 566
     qualified_name: Grub-Mines_31
     waypoint: Upper_Crystal_Peak
-    x_coord: 2815
-    y_coord: 566
   grub_mines_35:
     access_rules:
     - $QUAKE,mantis_claw
     - $QUAKE,monarch_wings
+    part_of: crystallized_mound
     qualified_name: Grub-Mines_35
     waypoint: Crystallized_Mound
-    part_of: crystallized_mound
   grub_restinggrounds_10:
     access_rules:
     - $QUAKE,mantis_claw
     - $QUAKE,monarch_wings
+    map_locations:
+    - x_coord: 3312
+      y_coord: 948
     qualified_name: Grub-RestingGrounds_10
     waypoint: Upper_Resting_Grounds
-    x_coord: 3312
-    y_coord: 948
   grub_ruins1_05:
     access_rules:
     - mantis_claw
     - monarch_wings
+    map_locations:
+    - x_coord: 2500
+      y_coord: 1445
     qualified_name: Grub-Ruins1_05
     waypoint: Left_City
-    x_coord: 2500
-    y_coord: 1445
   grub_ruins1_32:
     access_rules:
     - mantis_claw,$QUAKE
+    map_locations:
+    - x_coord: 2265
+      y_coord: 1263
     qualified_name: Grub-Ruins1_32
     waypoint: Soul_Sanctum
-    x_coord: 2265
-    y_coord: 1263
   grub_ruins2_03:
     access_rules:
     - mantis_claw,monarch_wings
     - mantis_claw,MILDSKIPS
+    map_locations:
+    - x_coord: 2756
+      y_coord: 1409
     qualified_name: Grub-Ruins2_03
     waypoint: Right_City
-    x_coord: 2756
-    y_coord: 1409
   grub_ruins2_07:
+    map_locations:
+    - x_coord: 3308
+      y_coord: 1696
     qualified_name: Grub-Ruins2_07
     waypoint: Lower_King's_Station
-    x_coord: 3308
-    y_coord: 1696
   grub_ruins2_11:
     access_rules:
     - love_key,mantis_claw,$BOSS
     - love_key,monarch_wings,SPICYSKIPS,$BOSS
     count: 3
     description: The Collector's Grubs
+    map_locations:
+    - x_coord: 3363
+      y_coord: 1454
     qualified_name: Grub-Ruins2_11
     waypoint: Tower_of_Love
-    x_coord: 3363
-    y_coord: 1454
   grub_ruins_house_01:
     access_rules:
     - mantis_claw
     - monarch_wings
     - $DASH
     - $access_cached|upper_kings_station
+    map_locations:
+    - x_coord: 3024
+      y_coord: 1659
     qualified_name: Grub-Ruins_House_01
     waypoint: Right_City
-    x_coord: 3024
-    y_coord: 1659
   grub_waterways_04:
+    map_locations:
+    - x_coord: 2308
+      y_coord: 1791
     qualified_name: Grub-Waterways_04
     waypoint: Upper_Left_Waterways
-    x_coord: 2308
-    y_coord: 1791
   grub_waterways_13:
     access_rules:
     - mantis_claw,ismas_tear
     - mantis_claw,$SKIPACID
+    map_locations:
+    - x_coord: 3153
+      y_coord: 1813
     qualified_name: Grub-Waterways_13
     waypoint: Isma's_Grove
-    x_coord: 3153
-    y_coord: 1813
   grub_waterways_14:
     access_rules:
     - mantis_claw,crystal_heart,monarch_wings
     - mantis_claw,ismas_tear
+    map_locations:
+    - x_coord: 3147
+      y_coord: 1738
     qualified_name: Grub-Waterways_14
     waypoint: Lower_Kingdom's_Edge
-    x_coord: 3147
-    y_coord: 1738

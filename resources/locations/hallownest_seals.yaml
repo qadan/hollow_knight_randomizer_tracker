@@ -4,32 +4,31 @@ hallownest_seals:
     qualified_name: Hallownest_Seal-Beast's_Den
     waypoint: Beast's_Den
   hallownest_seal_city_rafters:
+    map_locations:
+    - x_coord: 2292
+      y_coord: 1579
     qualified_name: Hallownest_Seal-City_Rafters
     waypoint: Left_City
-    x_coord: 2292
-    y_coord: 1579
   hallownest_seal_crossroads_well:
     access_rules:
     - mantis_claw
     - monarch_wings,SHADESKIPS
     - monarch_wings,$INFECTED
     - $INFECTED,$DASH,$AIRSTALL
+    map_locations:
+    - x_coord: 1840
+      y_coord: 636
     qualified_name: Hallownest_Seal-Crossroads_Well
     waypoint: Crossroads
-    x_coord: 1840
-    y_coord: 636
   hallownest_seal_deepnest_by_mantis_lords:
     access_rules:
     - mantis_claw
+    map_locations:
+    - x_coord: 1321
+      y_coord: 1715
     qualified_name: Hallownest_Seal-Deepnest_By_Mantis_Lords
     waypoint: Far_Right_Deepnest
-    x_coord: 1321
-    y_coord: 1715
   hallownest_seal_fog_canyon_east:
-    qualified_name: Hallownest_Seal-Fog_Canyon_East
-    waypoint: Crossroads
-    x_coord: 1575
-    y_coord: 995
     access_rules:
     - ismas_tear
     - SKIPACID
@@ -41,16 +40,23 @@ hallownest_seals:
     - crystal_heart,$SKIPACID,@crossroads
     - SPICYSKIPS,ismas_tear,@crossroads
     - SPICYSKIPS,$SKIPACID,@crossroads
+    map_locations:
+    - x_coord: 1575
+      y_coord: 995
+    qualified_name: Hallownest_Seal-Fog_Canyon_East
+    waypoint: Crossroads
   hallownest_seal_fog_canyon_west:
+    map_locations:
+    - x_coord: 1048
+      y_coord: 1097
     qualified_name: Hallownest_Seal-Fog_Canyon_West
     waypoint: Left_Fog_Canyon
-    x_coord: 1048
-    y_coord: 1097
   hallownest_seal_fungal_wastes_sporgs:
+    map_locations:
+    - x_coord: 1546
+      y_coord: 1274
     qualified_name: Hallownest_Seal-Fungal_Wastes_Sporgs
     waypoint: Fungal_Wastes
-    x_coord: 1546
-    y_coord: 1274
   hallownest_seal_greenpath:
     access_rules:
     - ismas_tear
@@ -60,10 +66,11 @@ hallownest_seals:
     - $DASH,monarch_wings
     - $DASH,mantis_claw
     - crystal_heart
+    map_locations:
+    - x_coord: 874
+      y_coord: 947
     qualified_name: Hallownest_Seal-Greenpath
     waypoint: Greenpath
-    x_coord: 874
-    y_coord: 947
   hallownest_seal_grubs:
     part_of: grubfather
     qualified_name: Hallownest_Seal-Grubs
@@ -72,40 +79,44 @@ hallownest_seals:
     access_rules:
     - mantis_claw
     - monarch_wings
+    map_locations:
+    - x_coord: 3211
+      y_coord: 1607
     qualified_name: Hallownest_Seal-King's_Station
     waypoint: Upper_King's_Station
-    x_coord: 3211
-    y_coord: 1607
   hallownest_seal_mantis_lords:
     access_rules:
     - mantis_claw
     - monarch_wings,SPICYSKIPS
+    part_of: mantis_lords_rewards
     qualified_name: Hallownest_Seal-Mantis_Lords
     waypoint: Mantis_Village
-    part_of: mantis_lords_rewards
   hallownest_seal_queens_gardens:
     access_rules:
     - mantis_claw
     - monarch_wings
     - $DASH,SPICYSKIPS
+    map_locations:
+    - x_coord: 247
+      y_coord: 1253
     qualified_name: Hallownest_Seal-Queen's_Gardens
     waypoint: Top_Left_Queen's_Gardens
-    x_coord: 247
-    y_coord: 1253
   hallownest_seal_queens_station:
     access_rules:
     - monarch_wings
+    map_locations:
+    - x_coord: 1248
+      y_coord: 1380
     qualified_name: Hallownest_Seal-Queen's_Station
     waypoint: Queen's_Station
-    x_coord: 1248
-    y_coord: 1380
   hallownest_seal_resting_grounds_catacombs:
     access_rules:
     - $QUAKE
+    map_locations:
+    - x_coord: 3218
+      y_coord: 954
     qualified_name: Hallownest_Seal-Resting_Grounds_Catacombs
     waypoint: Upper_Resting_Grounds
-    x_coord: 3218
-    y_coord: 954
   hallownest_seal_seer:
     part_of: seer
     qualified_name: Hallownest_Seal-Seer
@@ -113,15 +124,15 @@ hallownest_seals:
   hallownest_seal_soul_sanctum:
     access_rules:
     - mantis_claw,$QUAKE
+    map_locations:
+    - x_coord: 2319
+      y_coord: 1264
     qualified_name: Hallownest_Seal-Soul_Sanctum
     waypoint: Soul_Sanctum
-    x_coord: 2319
-    y_coord: 1264
   hallownest_seal_watcher_knight:
     access_rules:
     - mantis_claw,$BOSS,monarch_wings
     - mantis_claw,$BOSS,MILDSKIPS
+    part_of: watchers_prizes
     qualified_name: Hallownest_Seal-Watcher_Knight
     waypoint: Right_City
-    x_coord: 2709
-    y_coord: 1338

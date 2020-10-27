@@ -7,9 +7,9 @@ arcane_eggs:
     access_rules:
     - $LIFEBLOOD,crystal_heart,mantis_claw
     - $LIFEBLOOD,crystal_heart,monarch_wings
+    part_of: lifeblood_core_group
     qualified_name: Arcane_Egg-Lifeblood_Core
     waypoint: Abyss
-    part_of: lifeblood_core_group
   arcane_egg_seer:
     part_of: seer
     qualified_name: Arcane_Egg-Seer
@@ -18,7 +18,8 @@ arcane_eggs:
     access_rules:
     - mantis_claw,shade_cloak
     - monarch_wings,shade_cloak
+    map_locations:
+    - x_coord: 3340
+      y_coord: 2741
     qualified_name: Arcane_Egg-Shade_Cloak
     waypoint: Abyss
-    x_coord: 3340
-    y_coord: 2741

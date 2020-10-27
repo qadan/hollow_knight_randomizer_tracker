@@ -1,67 +1,77 @@
 stag_stations:
   city_storerooms_stag:
     display_name: City Storerooms Stag
+    map_locations:
+    - x_coord: 2231
+      y_coord: 1231
     qualified_name: City_Storerooms_Stag
     waypoint: Left_Elevator
-    x_coord: 2231
-    y_coord: 1231
   crossroads_stag:
     display_name: Crossroads Stag
+    map_locations:
+    - x_coord: 2087
+      y_coord: 872
     qualified_name: Crossroads_Stag
     waypoint: Crossroads
-    x_coord: 2087
-    y_coord: 872
   dirtmouth_stag:
     display_name: Dirtmouth Stag
+    map_locations:
+    - x_coord: 1750
+      y_coord: 585
     qualified_name: Dirtmouth_Stag
     waypoint: Can_Stag
-    x_coord: 1750
-    y_coord: 585
   distant_village_stag:
-    display_name: Distant Village Stag
-    qualified_name: Distant_Village_Stag
-    waypoint: Distant_Village
-    x_coord: 221
-    y_coord: 1775
     access_rules:
     - mantis_claw
     - monarch_wings
+    display_name: Distant Village Stag
+    map_locations:
+    - x_coord: 221
+      y_coord: 1775
+    qualified_name: Distant_Village_Stag
+    waypoint: Distant_Village
   greenpath_stag:
     display_name: Greenpath Stag
+    map_locations:
+    - x_coord: 650
+      y_coord: 736
     qualified_name: Greenpath_Stag
     waypoint: Greenpath
-    x_coord: 650
-    y_coord: 736
   hidden_station_stag:
     display_name: Hidden Station Stag
+    map_locations:
+    - x_coord: 2980
+      y_coord: 2197
     qualified_name: Hidden_Station_Stag
     waypoint: Palace_Grounds
-    x_coord: 2980
-    y_coord: 2197
   kings_station_stag:
     display_name: King's Station Stag
+    map_locations:
+    - x_coord: 3262
+      y_coord: 1636
     qualified_name: King's_Station_Stag
     waypoint: Kings_Station_Stag
-    x_coord: 3262
-    y_coord: 1636
   queens_gardens_stag:
     display_name: Queen's Gardens Stag
+    map_locations:
+    - x_coord: 589
+      y_coord: 1333
     qualified_name: Queen's_Gardens_Stag
     waypoint: Queens_Gardens_Stag
-    x_coord: 589
-    y_coord: 1333
   queens_station_stag:
     display_name: Queen's Station Stag
+    map_locations:
+    - x_coord: 1222
+      y_coord: 1425
     qualified_name: Queen's_Station_Stag
     waypoint: Queen's_Station
-    x_coord: 1222
-    y_coord: 1425
   resting_grounds_stag:
     display_name: Resting Grounds Stag
+    map_locations:
+    - x_coord: 3301
+      y_coord: 826
     qualified_name: Resting_Grounds_Stag
     waypoint: Upper_Resting_Grounds
-    x_coord: 3301
-    y_coord: 826
   stag_nest_stag:
     display_name: Stag Nest Stag
     part_of: stag_nest

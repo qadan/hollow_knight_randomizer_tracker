@@ -2,11 +2,11 @@ charm_notches:
   charm_notch_colosseum:
     access_rules:
     - $BOSS
+    check_infix: Colosseum
     description: Complete the Trial of the Warrior
     part_of: colosseum
     qualified_name: Charm_Notch-Colosseum
     waypoint: Colosseum
-    check_infix: Colosseum
   charm_notch_fog_canyon:
     access_rules:
     - mantis_claw,ismas_tear
@@ -15,10 +15,11 @@ charm_notches:
     - mantis_calw,monarch_wings,$AIRSTALL,ACIDSKIPS
     - mantis_claw,$DASH,SPICYSKIPS
     description: Avoid the jellies
+    map_locations:
+    - x_coord: 1449
+      y_coord: 1063
     qualified_name: Charm_Notch-Fog_Canyon
     waypoint: Right_Fog_Canyon
-    x_coord: 1449
-    y_coord: 1063
   charm_notch_grimm:
     access_rules:
     - grimmchild,$BOSS
@@ -28,7 +29,8 @@ charm_notches:
     waypoint: Dirtmouth
   charm_notch_shrumal_ogres:
     description: Defeat the two Shrumal Ogres
+    map_locations:
+    - x_coord: 1665
+      y_coord: 1228
     qualified_name: Charm_Notch-Shrumal_Ogres
     waypoint: Fungal_Wastes
-    x_coord: 1665
-    y_coord: 1228

@@ -1,37 +1,23 @@
----
 shops:
-  sly:
-    display_name: Sly
-    description: Save Sly in Crossroads
-    x_coord: 1700
-    y_coord: 585
-    qualified_name: Sly
-    waypoint: Sly
-    group_type: slys_special_magical_goddamn_group
-  sly_key:
-    display_name: Sly (Shop Key)
-    description: Give Sly the Shop Key
-    part_of: sly
-    qualified_name: Sly_(Key)
-    waypoint: Sly
-    access_rules:
-    - shopkeepers_key
-    group_type: group
   iselda:
-    display_name: Iselda
     description: Map Shop (Probably a few items here)
-    x_coord: 1800
-    y_coord: 585
+    display_name: Iselda
+    group_type: shop
+    map_locations:
+    - x_coord: 1800
+      y_coord: 585
     qualified_name: Iselda
     waypoint: Dirtmouth
-    group_type: group
+  leg_eater:
+    description: Scam Shop
+    display_name: Leg Eater
+    group_type: shop
+    map_locations:
+    - x_coord: 1873
+      y_coord: 1155
+    qualified_name: Leg_Eater
+    waypoint: Leg_Eater
   salubra:
-    display_name: Salubra
-    description: Charm Shop
-    x_coord: 2436
-    y_coord: 977
-    qualified_name: Salubra
-    waypoint: Crossroads
     access_rules:
     - mantis_claw
     - monarch_wings
@@ -41,12 +27,31 @@ shops:
     - $SCREAM,FIREBALLSKIPS
     - $FIREBALL,FIREBALLSKIPS
     - SHADESKIPS
-    group_type: group
-  leg_eater:
-    display_name: Leg Eater
-    description: Scam Shop
-    x_coord: 1873
-    y_coord: 1155
-    qualified_name: Leg_Eater
-    waypoint: Leg_Eater
-    group_type: group
+    description: Charm Shop
+    display_name: Salubra
+    group_type: shop
+    map_locations:
+    - x_coord: 2436
+      y_coord: 977
+    qualified_name: Salubra
+    waypoint: Crossroads
+  sly:
+    description: Save Sly in Crossroads
+    display_name: Sly
+    group_type: slys_special_magical_goddamn_group
+    map_locations:
+    - x_coord: 1700
+      y_coord: 585
+    - x_coord: 2350
+      y_coord: 994
+    qualified_name: Sly
+    waypoint: Sly
+  sly_key:
+    access_rules:
+    - shopkeepers_key
+    description: Give Sly the Shop Key
+    display_name: Sly (Shop Key)
+    group_type: shop
+    part_of: sly
+    qualified_name: Sly_(Key)
+    waypoint: Sly
